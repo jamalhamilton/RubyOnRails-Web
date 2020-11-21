@@ -1,0 +1,433 @@
+!!!
+%html{ 'ng-app' => 'Joynus' }
+  %head
+    / Google Tag Manager
+    :javascript
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-K4LZ28M');
+    / End Google Tag Manager
+    = render 'layouts/google'
+
+    =yield :title
+    %link{:href => "https://www.joynus.com/en", hreflang: "en", rel: "alternate"}
+    %link{:href => "https://www.joynus.com/kr", hreflang: "kr", rel: "alternate"}
+    %meta{:content => "FF5602DD4F6C0E7D069D5E299111A76C", :name => "msvalidate.01"}
+    %meta{ charset: 'utf-8'}
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+    %link{:href => "https://fonts.googleapis.com/css?family=Montserrat|Ubuntu", :rel => "stylesheet"}/
+
+
+
+    - unless Rails.env.development?
+      / Start of HubSpot Embed Code
+      %script#hs-script-loader{:async => "", :defer => "defer", :src => "//js.hs-scripts.com/6831067.js", :type => "text/javascript"}
+      / End of HubSpot Embed Code
+
+      / Global site tag (gtag.js) - Google Ads: 974726899
+      %script{:async => "", :src => "https://www.googletagmanager.com/gtag/js?id=AW-974726899"}
+        :cdata
+          gtag('config', 'AW-974726899');
+
+      :javascript
+        window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-974726899');
+    /%link{:as => "style", :href => "vendor/assets/stylesheets/fontello.scss", :rel => "preload"}
+    = stylesheet_link_tag 'application', media: 'all'
+    = favicon_link_tag 'favicon.ico'
+    = yield :js_head
+    = csrf_meta_tags
+
+  %body{ class: "#{'logged-in' if current_user} #{params[:controller]} #{params[:action]}" }
+    - unless Rails.env.development?
+      / Google Tag Manager (noscript)
+      %noscript
+        %iframe{:height => "0", :src => "https://www.googletagmanager.com/ns.html?id=GTM-K4LZ28M", :style => "display:none;visibility:hidden", :width => "0"}
+      / End Google Tag Manager (noscript)
+
+
+    - if current_user
+      .user-nav
+        .user-nav-container
+          %ul.inline-list.left
+
+            /%li= link_to 'Add Blog Post', new_post_path
+            %li= link_to 'Add Podcast', new_podcast_path
+            %li.hide-for-large-up= link_to 'Log Out', logout_path
+
+          %a.button.dropdown.tiny.right.hide-for-small-only.hide-for-medium-only{ aria: { controls: 'drop1', expanded: false }, data: { dropdown: 'drop1' }, href: '#' }= current_user.email
+
+          %ul#drop1.f-dropdown{ aria: { hidden: true }, data: { dropdown: { content: '' } }, tabindex: '-1' }
+            %li= link_to 'Edit Profile', edit_user_path(current_user.id)
+            - if current_user.admin?
+              %li= link_to 'Manage Users', users_path
+            %li= link_to 'Log Out', logout_path
+
+    //navigation header
+    %header
+      %nav(role='navigation')
+        .navbar-container
+          %div
+            .navbar-header
+              = active_link_to root_url do
+                .img-logo
+            %ul.menu
+              .hide-for-medium-up
+                %a.closemenu{ href: '#', data: { action: 'toggleMenu' } }
+                  %i.icon-cancel{:style=>"transform: scale(1.5); "}
+
+                %li.menu-item{:style=>"width:30%;"}
+                  = active_link_to t('header.home'), root_url
+
+
+              %li.menu-item
+                = active_link_to t('header.about'), about_index_path
+              %li.menu-item
+                = active_link_to t('header.services'), services_path
+              .dropdown
+                .dropbtn#droptoggleS
+                  = t('header.specialization')
+                  %i.icon-down-dir
+
+                #myDropdownS.dropdown-content{:style=>"min-width:250px;"}
+                  = active_link_to t('footer.accounting'), specialization_accounting_path
+                  = active_link_to t('footer.healthcare'), specialization_healthcare_path
+                  = active_link_to t('footer.it'), specialization_it_path
+                  = active_link_to t('footer.manufacturing'), specialization_manufacturing_path
+
+
+              - if I18n.locale == :en
+                %li.menu-item
+                  /= active_link_to t('header.blog'), "https://blog.joynus.com"
+                  = active_link_to t('header.blog'), posts_path
+                %li.menu-item
+                  = active_link_to t('header.podcast'), podcasts_path
+              %li.menu-item
+                = active_link_to t('header.faq'), faq_index_path
+
+
+
+              %li.menu-item.hide-for-xxlarge-up
+                = link_to t('header.contact-us'), contact_index_path,  class: 'button landing-blue radius'
+              %li.menu-item#success.hide-for-xxlarge-up
+                = link_to t('header.signin'), "https://app.employstream.com/profile/#/joynus/login?signup=true", class: 'button success radius' , target: '_blank'
+              - if I18n.locale == :en || I18n.locale == :kr
+                - unless request.fullpath.start_with?('/blog') || request.fullpath.start_with?('/podcasts')
+
+                  .dropdown.hide-for-xxlarge-up
+                    .dropbtn#droptoggle2
+                      =image_tag "global-white-icon.png", alt: 'Language'
+                      %i.icon-down-dir
+
+                    #myDropdown2.dropdown-content.text-center
+                      = link_to "English", { locale: "en" }
+                      = link_to "한국어", { locale: "kr" }
+              .menu-footer.hide-for-xxlarge-up
+                %ul.social-icons{:style=>"display:flex; margin:0"}
+                  %li
+                    %a{:href=> 'https://facebook.com/joynusstaffing', target:"_blank"}
+                      =image_tag 'facebook-icon.png', :class=>"social-images", :alt=>"facebook"
+                  %li
+                    %a{:href=> 'https://www.linkedin.com/company/3499330?trk=vsrp_jobs_res_name&trkInfo=VSRPsearchId%3A2080338161420490145807%2CVSRPtargetId%3A38262556%2CVSRPcmpt%3Aprimary', target:"_blank"}
+                      =image_tag 'linkedin-icon.png', :class=>"social-images", :alt=>"linkedin"
+                  %li
+                    %a{href: 'https://twitter.com/joynusstaffing', target:"_blank"}
+                      =image_tag 'twitter-icon.png', :class=>"social-images", :alt=>"twitter"
+                  %li
+                    %a{href: 'https://www.instagram.com/joynus.official/', target:"_blank"}
+                      =image_tag 'instagram-icon.png', :class=>"social-images", :alt=>"instagram"
+                  %li
+                    %a{href: 'https://www.youtube.com/channel/UCnVjLZydDtfaEsgEdI6NP3g', target:"_blank"}
+                      =image_tag 'youtube-icon.png', :class=>"social-images", :alt=>"youtube"
+
+                .copyright.m-top3
+                  %small &#169; Joynus Staffing #{Time.now.year}.
+
+
+
+          %ul.menu.show-for-xxlarge-up
+            - if I18n.locale == :en || I18n.locale == :kr
+              - unless request.fullpath.start_with?('/blog') || request.fullpath.start_with?('/podcasts')
+                .dropdown
+                  .dropbtn#droptoggle
+                    =image_tag "global-icon.png", alt: 'Language'
+                    %i.icon-down-dir
+                  #myDropdown.dropdown-content.text-center{:style=>"left: -85px;"}
+                    = link_to "English", { locale: "en" }
+                    = link_to "한국어", { locale: "kr" }
+
+            %li.menu-item= link_to t('header.contact-us'), contact_index_path, class: 'button landing-blue radius'
+            %li.menu-item#success= link_to t('header.signin'), "https://app.employstream.com/profile/#/joynus/login?signup=true", class: 'button success radius' , target: '_blank'
+
+
+            .menu-footer
+              .hide-for-large-up
+
+
+                %ul#language-dropdown2
+
+                  %li{:style=>"margin-top:4%;"}=active_link_to "English", { locale: "en" }, class: 'en-link'
+                  %li{:style=>"margin-top:4%;"}=active_link_to "한국어", { locale: "kr" }, class: 'kr-link'
+              %ul.inline-list.social-icons
+                %li
+                  %a.fa.fa-facebook{href: 'https://facebook.com/joynusstaffing'}
+                %li
+                  %a.fa.fa-twitter{href: 'https://twitter.com/joynusstaffing'}
+
+                %li
+                  %a.fa.fa-linkedin{href: 'https://www.linkedin.com/company/3499330?trk=vsrp_jobs_res_name&trkInfo=VSRPsearchId%3A2080338161420490145807%2CVSRPtargetId%3A38262556%2CVSRPcmpt%3Aprimary'}
+              .copyright
+                %small &#169; Joynus Staffing #{Time.now.year}.
+
+          %a.mobile-menu.icon-menu{ href: '#', data: { action: 'toggleMenu' } }
+
+
+
+    %main{ role: 'main', id: controller_name }
+      - if flash[:notice]
+        = render 'shared/success_notice'
+
+      = yield
+
+    #pusher
+    //footer
+    %footer
+      .row
+        .columns.xlarge-3.medium-6
+          %h3
+            %b
+              = active_link_to t('footer.about'), about_index_path
+
+          %ul.links
+            %li
+              = active_link_to t('footer.corevalue'), about_index_path(:anchor => "corevalue")
+            %li{:style => "margin-bottom:30px"}
+              = active_link_to t('footer.MBE Affiliations'), mbe_affiliations_path
+
+        .columns.xlarge-3.medium-6
+          %h3
+            %b
+              = active_link_to t('footer.services'),services_path
+
+
+          %ul.links
+            %li
+              = active_link_to t('footer.staffing'), staffing_index_path
+
+            %li
+              = active_link_to t('footer.directhire'), directhire_index_path
+            %li
+              = active_link_to t('footer.rpo'), rpo_index_path, :style=>"line-height:1.3;"
+
+            %li{:style => "margin-bottom:30px"}
+              = active_link_to t('footer.consultation'), consultation_index_path
+
+        .columns.xlarge-3.medium-6
+          %h3
+            %b
+              = t('footer.specialization')
+
+          %ul.links
+
+
+            %li
+              = active_link_to t('footer.accounting'), specialization_accounting_path
+
+            %li
+              = active_link_to t('footer.healthcare'), specialization_healthcare_path
+
+            %li
+              = active_link_to t('footer.manufacturing'), specialization_manufacturing_path
+
+            %li{:style => "margin-bottom:30px"}
+              = active_link_to t('footer.it'), specialization_it_path
+
+
+        .columns.xlarge-3.medium-6
+          %h3
+            %b
+              = active_link_to t('footer.contact'), contact_index_path
+
+          %ul.links
+            %li{:style => " line-height:1.875rem;"}
+              contact@joynus.com
+            %li{:style => "margin: 5% 0 30px 0; line-height:1.875rem;"}
+              (888) 338-7832
+
+          %h3{:style=>"margin-top:85px;"}
+            %b
+              = t('footer.social')
+
+          %ul.links{:style=>"display:flex; margin:0"}
+            %li
+              %a{:href=> 'https://facebook.com/joynusstaffing', target:"_blank"}
+                =image_tag 'facebook-icon.png', :class=>"social-images", :alt=>"facebook"
+            %li
+              %a{:href=> 'https://www.linkedin.com/company/3499330?trk=vsrp_jobs_res_name&trkInfo=VSRPsearchId%3A2080338161420490145807%2CVSRPtargetId%3A38262556%2CVSRPcmpt%3Aprimary', target:"_blank"}
+                =image_tag 'linkedin-icon.png', :class=>"social-images", :alt=>"linkedin"
+            %li
+              %a{href: 'https://twitter.com/joynusstaffing', target:"_blank"}
+                =image_tag 'twitter-icon.png', :class=>"social-images", :alt=>"twitter"
+            %li
+              %a{href: 'https://www.instagram.com/joynus.official/', target:"_blank"}
+                =image_tag 'instagram-icon.png', :class=>"social-images", :alt=>"instagram"
+            %li
+              %a{href: 'https://www.youtube.com/channel/UCnVjLZydDtfaEsgEdI6NP3g', target:"_blank"}
+                =image_tag 'youtube-icon.png', :class=>"social-images", :alt=>"youtube"
+
+      .row.m-top4
+        .columns.xlarge-3.xlarge-push-9
+          %h3
+            %b
+              = t('footer.podcast')
+
+          %ul.links{:style=>"display:flex; margin:0; float:left;"}
+            %li
+              %a{:href => "https://open.spotify.com/show/7gUxgSCrqFBeRJSITtPeCp", target:"_blank"}
+                =image_tag 'spotify-icon.png', :class=>"social-images", :alt=>"spotify"
+            %li
+              %a{:href => "https://podcasts.apple.com/us/podcast/career-daily/id1506283238", target:"_blank"}
+                =image_tag 'apple podcast-icon.png', :class=>"social-images", :alt=>"apple podcast", :style=>"margin-left:18px"
+
+        .columns.xlarge-8.xlarge-pull-3
+          -if I18n.locale == :en
+            %h3{:style => "margin-bottom:15px;"}
+              %b
+                /= active_link_to t('footer.blog'), "https://blog.joynus.com"
+                = active_link_to t('header.blog'), posts_path
+            - @loadposts.each do |post|
+              #footer-post
+                .columns.medium-4
+
+                  = active_link_to post_path(post) do
+                    = image_tag post.preview_image.try(:data).try(:thumb, Post.preview_image_dimensions).try(:url), alt: post.preview_image&.data&.name
+                    %p.m-top2.m-bottom1
+                      = truncate(post.blog_title, :length=>80)
+
+      .row.m-top2
+        .colums.large-12
+
+      .row
+        .columns.large-3.bottom_link
+          %small
+            =active_link_to 'Privacy Policy', privacy_policy_index_path
+        .columns.large-5.text-center
+          =active_link_to root_url do
+            =image_tag  'Logo_Horizontal_White.png', alt:"Joynus", class:'footer-logo'
+
+        .columns.large-3.large-push-1
+          %small &#169; Joynus #{Time.now.year}. #{t('footer.rights-reserved')}.
+
+    .alert.text-center.cookiealert{:role => "alert"}
+      %b  We use cookies to ensure you get the best experience on our website.<br>To learn more, and to see a full list of cookies we use, check out our Policy&nbsp;
+      =active_link_to 'Privacy Policy', privacy_policy_index_path, target: '_blank'
+
+      %button.btn.secondary.acceptcookies{:type => "button"}
+        I agree
+
+    - unless Rails.env.development?
+      :javascript
+        _linkedin_partner_id = "483580"; window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []; window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+
+      :javascript
+        (function(){var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})();
+
+      %noscript
+        %img{:alt => "", :height => "1", :src => "https://dc.ads.linkedin.com/collect/?pid=483580&fmt=gif", :style => "display:none;", :width => "1"}/
+
+
+    = javascript_include_tag 'application_without_jquery'
+    = yield :js
+
+%script{:src => "https://unpkg.com/aos@next/dist/aos.js"}
+
+:javascript
+
+  AOS.init({
+    offset: 400,
+    duration: 1000
+  });
+:javascript
+  $(function(){
+
+
+    $(document).foundation();
+
+    function adjustPusher() {
+      var pusher = $("#pusher");
+      var canvasHeight = $('body').height() - pusher.height();
+      var pusherHeight = $(window).height() - canvasHeight;
+      if (pusherHeight < 0) pusherHeight = 0;
+      pusher.css({height: pusherHeight + "px"});
+    };
+
+    adjustPusher();
+    $(window).resize(adjustPusher);
+  });
+
+  $(document).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+    $('nav').addClass('shrink');
+  } else {
+    $('nav').removeClass('shrink');
+  }
+  });
+
+  $(document).ready(function(){
+    $('#droptoggle').mouseenter(function(event){
+      $("#myDropdown").slideToggle("1000");
+    });
+    $("#myDropdown").mouseleave(function(event) {
+      $("#myDropdown").hide();
+    });
+
+
+  });
+  //close when click out of window
+  $(document).on("click", function () {
+      $("#myDropdown").hide();
+  });
+
+
+
+  $(document).ready(function(){
+      $('#droptoggle2').click(function(event){
+          event.stopPropagation();
+           $("#myDropdown2").slideToggle("1000");
+      });
+      $("#myDropdown2").on("click", function (event) {
+          event.stopPropagation();
+      });
+  });
+
+  $(document).on("click", function () {
+      $("#myDropdown2").hide();
+  });
+
+  $(document).ready(function () {
+
+    $("#droptoggleS").mouseenter(function(){
+      $("#myDropdownS").slideToggle("1000");
+    });
+
+    $("#myDropdownS").mouseleave(function(){
+      $("#myDropdownS").hide();
+    });
+  });
+
+  $(document).on("click", function () {
+      $("#myDropdownS").hide();
+  });
+
+  $(document).ready(function(){
+      $('#droptoggleS').click(function(event){
+          event.stopPropagation();
+           $("#myDropdownSS").slideToggle("1000");
+      });
+      $("#myDropdownS").on("click", function (event) {
+          event.stopPropagation();
+      });
+  });
+
+
