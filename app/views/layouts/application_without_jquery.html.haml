@@ -39,7 +39,7 @@
     = yield :js_head
     = csrf_meta_tags
 
-  %body{ class: "#{'logged-in' if current_user} #{params[:controller]} #{params[:action]}" }
+  %body{ class: "about-us-body #{'logged-in' if current_user} #{params[:controller]} #{params[:action]}" }
     - unless Rails.env.development?
       / Google Tag Manager (noscript)
       %noscript
