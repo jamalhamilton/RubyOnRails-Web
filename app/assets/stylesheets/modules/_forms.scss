@@ -1,0 +1,157 @@
+@media only screen {
+  fieldset {
+    border-radius: $global-radius;
+    //background: $primary-color;
+    background: #F4F7F9;
+    margin-top: rem-calc(60);
+    margin-bottom: rem-calc(60);
+    padding: rem-calc(20);
+
+    form {
+      input.submit {
+        background: $black;
+
+        &[disabled] { opacity: 0.6; }
+
+        &[disabled], &:hover, &[disabled]:hover { background: $black; }
+      }
+    }
+
+    #selectAll {
+      position: relative;
+      top: rem-calc(5);
+    }
+
+    input[type='text'], textarea, select, input[type='password'],  input[type='email'], input[type='date'] {
+      //border: 3px solid $white;
+      border: 2px solid #cbcbcd;
+      //background:rgba(216, 216, 218,0.3);
+      border-radius: $global-radius;
+      min-height: rem-calc(50);
+      margin-bottom: rem-calc(18);
+      display: block;
+      padding-left: rem-calc(15);
+      transition: all .5s ease;
+
+      &:focus { border: 3px solid #23748a; }
+
+      &[data-invalid] {
+        border: 3px solid #eb2d2d;
+
+        &::-webkit-input-placeholder {
+          color: #eb2d2d;
+          opacity: 0.4;
+        }
+
+        &:-moz-placeholder {
+          color: #eb2d2d;
+          opacity: 0.4;
+        }
+
+        &::-moz-placeholder {
+          color: #eb2d2d;
+          opacity: 0.4;
+        }
+
+        &:-ms-input-placeholder {
+          color: #eb2d2d;
+          opacity: 0.4;
+        }
+      }
+    }
+
+    textarea { resize: none; }
+    select,
+    select option {
+      color: #000000;
+    }
+    
+    select:invalid,
+    select option[value=""] {
+      color: #4C4C4D;
+    }
+    
+    label {
+      display: block;
+      margin: 16px 0;
+    }
+    
+    /*Added for browser compatibility*/
+    [hidden] {
+      display: none;
+    }
+    
+    .input-prepend {
+      position: relative;
+
+      .fa {
+        color: #36abca;
+        position: absolute;
+        top: rem-calc(16);
+        left: rem-calc(14);
+      }
+
+      input { padding-left: rem-calc(40); }
+    }
+
+    p { color: $white; }
+
+    .switch {
+      span {
+        position: relative;
+        top: -11px;
+        right: -11px;
+        color: rgba(255,255,255, 0.85);
+      }
+    }
+  }
+
+  ::-webkit-input-placeholder {
+     color:#656567;
+     
+     //color: $primary-color;
+     font-size: $small-font-size;
+     opacity: 0.8;
+  }
+
+  :-moz-placeholder {
+    color:#656567;
+     //color: $primary-color;
+     font-size: $small-font-size;
+     opacity: 0.8;
+  }
+
+  ::-moz-placeholder {
+     color:#656567;
+     //color: $primary-color;
+     font-size: $small-font-size;
+     opacity: 0.8;
+  }
+
+  :-ms-input-placeholder {
+     color:#656567;
+     //color: $primary-color;
+     font-size: $small-font-size;
+     opacity: 0.8;
+  }
+  
+ 
+  
+  
+}
+
+@media only screen and (min-width:320px) {}
+
+@media only screen and (min-width:480px) {
+  fieldset { padding: rem-calc(40); }
+}
+
+@media only screen and (min-width:768px) {}
+
+@media only screen and (min-width:1024px) {}
+
+@media only screen and (min-width:1140px) {}
+
+@media only screen and (min-width:1280px) {}
+
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {}

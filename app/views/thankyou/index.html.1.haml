@@ -1,0 +1,50 @@
+%head
+  %title Thank you | Joynus Staffing
+  
+%body
+  .spec-cover
+    %h1.text-center
+      %b
+        THANK YOU!
+          
+  
+   
+%section
+  .row
+    .columns.large-12.text-center
+      %h3
+        %b YOUR APPLICATION IS COMPLETE
+
+  .row#consultation.m-top4
+    .columns.xlarge-7.vr{:style => "margin-bottom:25px"}
+      
+     
+          
+          
+      %p{:style =>"padding-top:7%"}
+        = t('consultation.consultation-p')
+      
+    
+    .columns.xlarge-4
+      
+      
+      %ul.checklist
+        %li
+          Update my
+          %a{:href=> "https://app.employstream.com/profile/#/joynus/login?signup=true"} Availability 
+          status
+          
+        %li
+          Give us a review - if your experience was positive with us, please give us a positive review.
+          %a{:href=> "https://app.employstream.com/profile/#/joynus/login?signup=true"}Joynus Staffing 
+        %li
+          = active_link_to "Contact Us", contact_index_path 
+          
+        %li
+          You can follow us on 
+          = link_to "Twitter", "https://twitter.com/joynusstaffing", target:'_blank'
+          on latest update 
+
+              
+  
+  

@@ -1,0 +1,68 @@
+$size: 35px;
+
+.social-share-button {
+  .ssb-icon {
+    background-size: $size !important;
+    height: $size !important;
+    width: $size !important;
+    margin-right: 15px;
+  }
+  
+  .ssb-icon:hover{
+    transform:scale(1.1);
+  }
+  
+  a{
+    font-size:0;
+  }
+}
+
+.row .row.shareable{
+  margin-bottom: 10px;
+}
+.shareable .stButton .stButton_gradient {
+    height: 22px;
+}
+
+.shareable .stButton  .stMainServices{
+  height: 21px;
+}
+
+@media only screen and (min-width:768px) {
+  .hide-desktop{
+    display: none;
+  }
+  .hide-mobile{
+    display: block;
+
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .hide-mobile{
+    display: none;
+  }
+  .hide-desktop{
+    display: block;
+    .large-2{
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.hidden{
+  display: none;
+}
+
+.btn-share{
+  background: none !important;
+  border: 1px solid rgb(219, 201, 201) !important;
+  color: #ccc !important;
+  &:hover{
+    color: #0d2325 !important;
+  }
+}
+
+.post img {
+  display: none;
+}

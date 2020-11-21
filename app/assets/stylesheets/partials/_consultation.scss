@@ -1,0 +1,48 @@
+@media only screen  {
+  
+    
+   
+   
+   
+    
+  
+   
+}
+
+@media only screen and (min-width:320px){
+      ul.checklist {
+    list-style-type: none;
+    //list-style-image: asset-url('Checkbox_Blue.jpg');
+    list-style-image: asset-url('checkmark.png');
+        li{
+            font-size:17px;
+            position: relative;
+            margin-bottom: 13px;
+            
+            
+            
+        }
+    }
+     
+ .vr {
+ 
+    
+    min-height:30px;
+}
+       
+}
+
+@media only screen and (min-width:720px){
+    ul.checklist {
+    
+        li{
+            font-size:20px;
+        }
+    }
+     
+ .vr {
+    border-right: solid 2px #cccccc;
+    
+    min-height:300px;
+}
+}

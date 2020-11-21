@@ -1,0 +1,41 @@
+!!!
+%html
+  %head
+    %meta{ content: "width=device-width, initial-scale=1.0", name: "viewport"}
+  %body
+    
+  - if @branch
+    %p
+      = "From: #{@first_name} #{@last_name}"
+    %p
+      = "Company: #{@company}"
+    
+      
+    %p
+      = simple_format @message
+    %p
+      = "#{@email} or by #{@phone}"
+  - if @companysize
+    %p
+      = "From: #{@first_name} #{@last_name}"
+    %p
+      = "Company: #{@company}"
+    %p
+      = "Website: #{@website}"
+    %p
+      = "# of Employees: #{@companysize}"
+    %p
+      = "Job Title: #{@jobtitle}"
+    %p
+      = "Job Description: #{@jobdescription}"
+    %p
+      = "Skills Needed: #{@skillsneeded}"
+    %p
+      = "Type Of Service: #{@typeofservice}"
+    %p
+      = "Payrate: #{@payrate}"
+    %p
+      = "Hours Per Week: #{@hoursperweek}"
+      
+    %p
+      = "#{@email} or by #{@phone}"

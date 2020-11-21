@@ -1,0 +1,19 @@
+- if flash[:alert]
+  = render 'shared/success_notice'
+
+
+
+- if current_user.admin?
+  .row
+    .columns.large-10.large-offset-1
+      .breadcrumb
+        = link_to users_path do
+          %i.icon-left-open
+          Users
+
+.row
+  .columns.large-10.large-offset-1
+    %fieldset.mb--
+      = form_for @user, html: { 'data-abide' => '' } do |form|
+        = render form
+        = form.submit "Submit", class: 'button small no-margin right submit radius'

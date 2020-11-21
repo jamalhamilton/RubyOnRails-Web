@@ -1,0 +1,67 @@
+= form_tag(send_mail_path) do |f|
+  = invisible_captcha
+  
+  
+  .row
+    .columns.large-6
+      = text_field_tag 'first_name', nil, 'required' => '', placeholder: t('contact-form.first-name')
+  
+    .columns.large-6
+      = text_field_tag 'last_name', nil, 'required' => '', placeholder: t('contact-form.last-name')
+
+  
+    .columns.large-12
+      = email_field_tag 'email', nil, 'required' => '', placeholder: t('contact-form.email')
+  
+    .columns.large-12
+      = text_field_tag 'phone', nil, 'required' => '', placeholder: t('contact-form.phone')
+  
+  
+    .columns.large-12
+      = text_field_tag 'company', nil,  placeholder: t('contact-form.company')
+  
+  
+  
+    .columns.large-12
+      %select#subject{:name => "subject", :required => "required"}
+        %option{:disabled => "disabled", :hidden => "", :selected => "selected", :value => ""} 
+          =t("contact-form.subject")
+        %option{:value => "I'm looking for a job"} 
+          =t("contact.looking-for-job")
+        %option{:value => "I'm an employer"}
+          =t("contact.an-employer")
+        %option{:value => "General inquiry"}
+          =t("contact.general-inquiry")
+        
+    .columns.large-12
+      %select#branch{:name => "branch"}
+        %option{:disabled => "disabled", :hidden => "", :selected => "selected", :value => ""}
+          =t("contact-form.branch")
+        %option{:value => "Dalton, GA"} 
+          =t("contact.branch-dalton")
+        %option{:value => "Lagrange, GA"} 
+          =t("contact.branch-lagrange")
+        %option{:value => "Norcross, GA"} 
+          =t("contact.branch-norcross")
+        %option{:value => "Greenville, AL"} 
+          =t("contact.branch-greenville")
+        %option{:value => "Opelika, AL"} 
+          =t("contact.branch-opelika")
+        %option{:value => "Manteca, CA"} 
+          =t("contact.branch-manteca") 
+        %option{:value => "Others"} 
+          =t("contact.branch-others")
+
+    .columns.large-12
+      = text_area_tag 'message', nil, placeholder: t('contact-form.message'), rows: 8
+  
+    .columns.large-12
+      = submit_tag t('contact-form.button'), class: 'button secondary submit small radius no-margin right', 'disabled' => ''
+
+
+/
+  .columns.large-12
+    - if I18n.locale == :en
+      = select_tag 'resource', options_for_select(Contact::RESOURCES_E, ''),  include_blank: t('contact-form.resource')
+    - if I18n.locale == :kr
+      = select_tag 'resource', options_for_select(Contact::RESOURCES_K, ''), include_blank: t('contact-form.resource')

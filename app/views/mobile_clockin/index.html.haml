@@ -1,0 +1,69 @@
+- if flash[:notice]
+  = render 'shared/success_notice'
+
+-content_for :title do
+  %link{:href => "https://www.joynus.com/mobile_clockin", :rel => "canonical"}
+  %title  Mobile Clockin | Joynus Staffing
+  %meta{:content => "Staffing Accounting, Contract accounting, Hire Accounting, Accounting position", :name => "keywords"}
+  %meta{:content => "Joynus chooses Accounting and Finance candidates through personality and competency test on their attention to detail and precision.", :name => "Description"}
+  
+  
+%body
+
+  %section
+    
+    .row.spec-font#spec-banner
+      .columns.large-12.text-center
+        %h1
+          %b
+            Mobile Clock-in Instruction 
+      
+      
+          
+    
+    
+  %section        
+    .row
+      .columns.large-12
+        %ol.uattend
+          %li
+            %span
+              Please download an app called uAttend.
+              
+              <br> 
+              .m-uattend2
+              %a{:href=>"https://play.google.com/store/apps/details?id=com.uattend", :target=>"_blank"}
+                =image_tag 'uattend_mobile/android.jpg', :alt=>"android", :class=>"uattend-mobile-image-icon"
+          
+            %a{:href=>"https://apps.apple.com/us/app/uattend/id428876448", :target=>"_blank"}
+              =image_tag 'uattend_mobile/ios.jpg', :alt=>"ios", :class=>"uattend-mobile-image-icon"  
+          %li.m-uattend
+            %span
+              The clock-in system requires your device to enable location (GPS).
+              .m-uattend2
+              =image_tag 'uattend_mobile/GPS.jpg', :alt=>"gps"
+          
+          %li.m-uattend
+            %span
+              Joynus Company ID is 
+            %span{:style=>"text-decoration:underline;"}  
+              96095.
+            .m-uattend2  
+            =image_tag 'uattend_mobile/uattend company id.jpg', :alt=>"company id", :class=>"uattend-mobile-image"
+            
+          %li.m-uattend
+            %span
+              Login with your credential. &nbsp;A representative will provide your credential via email or text.
+            
+            .m-uattend2
+            =image_tag 'uattend_mobile/uattend login.jpg', :alt=>"uattend login", :class=>"uattend-mobile-image"
+          
+          %li.m-uattend
+            %span
+              Punch In/Out:   Since clock in is GPS location based. &nbsp;Please clock in and out from your work. <br>Please hold Punch In button for 3 seconds to punch In / out.
+            
+            .m-uattend2              
+            =image_tag 'uattend_mobile/punch-in-out.jpg', :alt=>"punch in/out", :class=>"uattend-mobile-image2"
+          %li.m-uattend
+            %span
+              Lunch hour: You don't need to punch for Lunch.&nbsp; It will automatically deduct the lunch hour. 

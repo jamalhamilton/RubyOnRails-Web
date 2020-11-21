@@ -1,0 +1,32 @@
+@media only screen {
+  .button-container { text-align: center; }
+
+  .door-img {
+    width: 100%;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  
+}
+
+@media only screen and (min-width:320px) {}
+
+@media only screen and (min-width:480px) {
+  .button-container { text-align: left; }
+}
+
+@media only screen and (min-width:768px) {
+  .door-img { width: auto; }
+  
+}
+
+@media only screen and (min-width:1024px) {}
+
+@media only screen and (min-width:1140px) {}
+
+@media only screen and (min-width:1280px) {}
+
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {}

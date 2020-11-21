@@ -1,0 +1,151 @@
+- content_for :title do
+
+  %link{:href => "https://www.joynus.com/about", :rel => "canonical"}
+  %title Career | Joynus Staffing
+  %meta{:content => "Our core characteristics include goal crushing attitude, competence, real-time communication, steadfast commitment, a no excuses attitude, open and transparent policies.", :name => "Description"}
+  %meta{:content => "Staffing agency, Recruiting agency, Temp agency, Looking for job, Looking for Employee, Hire temp, hiring, recruiting, directhire", :name => "keywords"}
+  %meta{:content => "/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :property => "og:image"}
+  %meta{:content => "Website", :property => "og:type"}
+  %meta{:content => "summary_large_image", :name => "twitter:card"}
+  %meta{:content => "https://www.joynus.com/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :name => "twitter:image"}
+
+
+%section
+
+  %div#vantaBirds
+  %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js"}
+  %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.19/vanta.birds.min.js"}
+  :javascript
+    VANTA.BIRDS({
+      el: "#vantaBirds",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+
+      scale: 1.00,
+      scaleMobile: 1.00,
+      backgroundColor: 0xfcfcfc,
+      color1: 0xf57300,
+      colorMode: "lerp",
+      birdSize: 1.10,
+      wingSpan: 31.00,
+      separation: 30.00,
+      alignment: 53.00,
+      cohesion: 13.00
+    })
+
+  .row.m-top1.text-center
+    .columns.large-12
+      %h1
+        Team that You Will Be Proud of
+
+      %a{:href => "#vacancies"}
+        .button.secondary.radius.iprocess.m-top3
+          SEE VACANCIES
+
+  .row.m-top3
+    .columns.large-12.v-center
+      .columns.medium-3.small-6{"data-aos" => "flip-left", "data-aos-duration" => "1000", "data-aos-easing" => "ease-out-cubic"}
+  
+        =image_tag "career/career1-1.jpg", :alt=>"career-1", :class=>"career-image"
+      .columns.medium-3.small-6{"data-aos" => "flip-left", "data-aos-duration" => "1500", "data-aos-easing" => "ease-out-cubic"}
+        =image_tag "career/career1-2.jpg", :alt=>"career-2", :class=>"career-image"
+        .m-top3{"data-aos" => "flip-left", "data-aos-duration" => "1500", "data-aos-easing" => "ease-out-cubic"}
+        =image_tag "career/career1-3.jpg", :alt=>"career-4", :class=>"career-image"
+  
+      .columns.medium-3.small-6{"data-aos" => "flip-left", "data-aos-duration" => "2000", "data-aos-easing" => "ease-out-cubic"}
+        =image_tag "career/career1-4.jpg", :alt=>"career-3", :class=>"career-image"
+  
+      .columns.medium-3.small-6.m-mobile-only{"data-aos" => "flip-left", "data-aos-duration" => "2000", "data-aos-easing" => "ease-out-cubic"}
+        =image_tag "career/career1-5.jpg", :alt=>"career-5", :class=>"career-image"
+        .m-top3{"data-aos" => "flip-left", "data-aos-duration" => "2500", "data-aos-easing" => "ease-out-cubic"}
+        =image_tag "career/career1-6.jpg", :alt=>"career-6", :class=>"career-image"
+
+%section
+  .row
+    .columns.large-12
+      %h3.career
+        %b
+          Bold. <br>
+          Honest. <br>
+          Teamwork. <br>
+
+      %p.m-top3
+        None of us is as smart as all of us. We are people truly believe in a teamwork. The value of achievement lies in the process of achiveing, and of success lies in moving forward together. Joynus is united by a passion for value-driven strategies and partnership based on trust and honesty.
+
+  .row
+    .columns.large-12.text-center
+      %a{:href => "#vacancies"}
+        .button.landing-blue.radius.iprocess.m-top3
+          SEE VACANCIES
+
+%section.m-top3
+  .row
+    .columns.large-12.text-center
+      =image_tag "career/Title.png", :alt=>"Title"
+
+    .columns.large-12.m-top3
+      %p{:style=>"line-height: 2.0;"}
+        Joynus is the best for smart creatives who enjoys finding long-lasting solution with design in mind — not about the visual aesthetics, but more about its implementation.  It’s for those who enjoy solving challenging problems by critical thinking, strategizing through trial errors, analyzing data in order to create systems and processes that permanently solves the problem.
+
+    .columns.large-12.text-center
+      %p{:style=>"transform: scale(0.8); color:black;"}
+        %b
+          &#8211; &nbsp;Aiden Lee, Head of Marketing
+
+
+%section.m-top3
+  .row
+    .columns.large-12
+      .box
+        .columns.large-5{"data-aos" => "fade-down-right"}
+          =image_tag "career/career2-1.png", :alt=>"Career2-1"
+
+        .columns.large-5
+          %h3.career
+            %b
+              Joynus Culture
+          %p.m-top4
+            We focus on being productive instead of busy. We work towards the winning service through strong work ethics, goal-crushing attitude, and collective intelligence.
+
+
+
+          %p.readmore
+            = active_link_to about_index_path do
+              %i.icon-right
+              read more about us
+
+
+  .row.m-top2
+    .columns.large-12
+      .box
+        .columns.large-5.large-push-5{"data-aos" => "fade-down-right"}
+          =image_tag "career/career2-2.png", :alt=>"Career2-2"
+
+        .columns.large-5.large-pull-5
+          %h3.career
+            %b
+              Committed to Excellence
+          %p.m-top4
+            It takes months to find a partner, yet seconds to lose one. With this in mind, we have excelled in committed and no-excuse attitude to deliver satisfaction in our service.
+
+
+  .row.m-top2
+    .columns.large-6.large-push-3
+      %h3.career.text
+        %b
+          A few Perks of Working at Joynus
+    .columns.large-12.m-top3
+      .video-responsive
+        %iframe{:allow => "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/KO_nsfbJE3M", :width => "100%"}
+ 
+  .row.m-top2
+    .columns.large-12
+      %h3.career.text
+        %b
+          Our<br>
+          Current<br>
+          Job Vacancies
+          

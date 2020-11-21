@@ -1,0 +1,363 @@
+- if flash[:notice]
+  = render 'shared/success_notice'
+
+- content_for :title do
+  %title Manufacturing | Joynus Staffing
+  %meta{:content => "Manufacturing is Joynus’ largest portfolio, whether it is automotive, warehousing/logistics, textiles, OR any light industrial sector, this is what we do well.", :name => "Description"}
+  %meta{:content => "Staffing Manufacturing, General Labor, Warehouse, Forklift", :name => "keywords"}
+  %link{:href => "https://www.joynus.com/manufacturing", :rel => "canonical"}
+  %meta{:content => "/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :property => "og:image"}
+  %meta{:content => "Website", :property => "og:type"}
+  %meta{:content => "summary_large_image", :name => "twitter:card"}
+  %meta{:content => "https://www.joynus.com/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :name => "twitter:image"}
+  
+%body
+  
+  
+  %section
+    .row.spec-font#spec-banner
+      .columns.large-12.text-center
+        %h1
+          %b MANUFACTURING
+      
+  .columns.large-12
+    .path.m-top4
+
+      = active_link_to root_url do
+        .srvIco1
+          %i.icon-home
+      %h5
+        = active_link_to t('header.home'), root_url
+      .srvIco11
+        %i.icon-right  
+      %h5
+        = active_link_to t('header.services'), services_path
+      .srvIco11
+        %i.icon-right
+      %h5 
+        = t('footer.manufacturing')
+    
+  %svg.spec.m-top-n1#clouds{:height => "50", :preserveaspectratio => "none", :version => "1.1", :viewbox => "0 0 50 50", :width => "100%", :xmlns => "http://www.w3.org/2000/svg"}
+    %path{:d => "M-5 50 Q 0 20 5 50 Z\n         M0 50 Q 5 0 10 50\n         M5 50 Q 10 30 15 50\n         M10 50 Q 15 10 20 50\n         M15 50 Q 20 30 25 50\n         M20 50 Q 25 -10 30 50\n         M25 50 Q 30 10 35 50\n         M30 50 Q 35 30 40 50\n         M35 50 Q 40 10 45 50\n         M40 50 Q 45 50 50 50\n         M45 50 Q 50 20 55 50\n         M50 50 Q 55 40 60 50\n         M55 50 Q 60 60 65 50\n         M60 50 Q 65 50 70 50\n         M65 50 Q 70 20 75 50\n         M70 50 Q 75 45 80 50\n         M75 50 Q 80 30 85 50\n         M80 50 Q 85 20 90 50\n         M85 50 Q 90 50 95 50\n         M90 50 Q 95 25 50 50\n         M95 50 Q 50 15 105 50 Z"}
+  %section.m-top-n{:style=>"background:linear-gradient(#f9f9f9, #ffffff);"}
+    .row
+      .columns.large-12.text-center
+        %h3
+          %b We don’t have great people.<br> We have the right people.
+        
+          
+
+  
+      
+      .columns.large-12.m-top4
+        %p.text-center
+          Meeting the production goal starts with having a sufficient workforce.<br>
+          To acquire, you must choose the right staffing agency.<br>
+          This is how you achieve your production goal with us.
+   
+
+    
+    
+    .row.text-center.m-top3
+      .columns.small-3
+        = image_tag 'Mobis.png', :alt => 'Mobis', :class => 'img-spec'
+        %p.m-top3
+          
+      .columns.small-3
+        = image_tag 'Kia.png', :alt => 'Kia', :class => 'img-spec'
+        %p.m-top3
+          
+      .columns.small-3
+        = image_tag 'Kumho.png', :alt => 'Kumho Tire', :class => 'img-spec'
+        %p.m-top3
+          
+      .columns.small-3
+        = image_tag 'Tesla-c.png', :alt => 'Tesla', :class => 'img-spec'
+        
+         
+          
+    .row
+      .box-specialization
+        .columns.large-5.large-push-6.text-center
+          =image_tag 'manufacturing_retention.png', :class=>"img-story", :alt=>"manufacturing_retention"
+        .columns.large-7.large-pull-4.spec-font
+          %h3
+            %b
+              Retention
+          
+          %p.m-top3
+            We are a group of teams with
+          %ul
+            %li Organized systems and processes 
+            %li Clear communication methods 
+            %li Great online reviews 
+            %li Highly responsive staff members
+            %li Workforce with a direct point of contact
+            %li Free condiments
+    %section
+      .row
+        .box-specialization
+          .columns.large-5.text-center
+            =image_tag 'manufacturing_clear communication and respect.png', :class=>"img-story", :alt=>"manufacturing_clear-communication-and-respect"
+          .columns.large-7.spec-font
+            %h3
+              %b
+                Clear Communication and Respect
+            %p
+              Promoting retention starts with clear communication within the workforce and equal treatment.
+
+            %ul
+              %li Onsite management accountability
+              %li Employee of the month
+              %li Employee appreciation day
+              %li Perfect attendance bonus
+              %li Performance prizes
+              %li Health insurance
+              %li Help with computer, payroll, and tax
+
+    
+   
+    %section        
+      .row
+        .columns.large-12.text-center
+          %h3
+            %b  Safety
+          %p
+            Frequently Asked Questions
+      
+      .row
+        .columns.large-10.large-offset-1
+          .columns.large-4
+            
+            .toggle#toggle1
+              %i.icon-angle-double-down
+              %p Are you ready for an OSHA Inspection?
+              
+            .target#target1
+              %p OSHA inspection may result in tens of thousands dollars in fines and damaged reputation. 
+          .columns.large-4
+            
+            .toggle#toggle2
+              %i.icon-angle-double-down
+              %p Are you fully compliant with state-specific workplace requirements?
+              
+            .target#target2
+              %p Many states have specific requirements for policies and programs related to Safety.
+          .columns.large-4
+            
+            .toggle#toggle3
+              %i.icon-angle-double-down
+              %p Do you have an effective return to work program for accidents?
+              
+            .target#target3
+              %p Having an appropriate return to work programs can improve employee morale, reduce claim costs and prevent litigation.
+            
+    %section
+      .row
+        .box-specialization
+          .columns.large-5.large-push-6.text-center
+            =image_tag 'manufacturing_safety is a concern.png', :class=>"img-story", :alt=>"manufacturing_safety-is-a-concern"
+          .columns.large-7.large-pull-4.spec-font
+            %h3.m-top3
+              %b Safety is a serious concern. 
+ 
+            %p
+              It is not only inefficient but morally wrong when it could have been prevented. 
+            %p
+              Having a knowledgeable office staff is good, but having a knowledgeable workforce on the floor is greater. 
+             
+            
+
+    %section
+      
+      .row.spec-font.text-center
+        .columns.large-12
+          %h3
+            %b
+              HOW JOYNUS DO 
+                  
+      .row.m-top4
+        .columns.medium-5.medium-push-1
+          .row.m-top4
+            .columns.large-5.text-center
+              /=image_tag 'safety.jpg'
+              =image_tag 'way1.png' ,:class => "img-spec-solution", :alt=>"safetyway"
+            .columns.large-10{:style=>"float:left;"}
+              
+              
+              %ul#spec-padding
+                %li Safe work environment
+                %li Onsite floor management 
+                %li Onboarding safety training
+                %li Safety knowledge test 
+                %li Periodic incident prevention education
+                %li Incident procedure and paper trail
+
+        .columns.medium-5
+          .row.m-top4
+            .columns.large-5.text-center
+              =image_tag 'way1.png' ,:class => "img-spec-solution", :alt=>"safetyway"
+            .columns.large-10{:style=>"float:left;"}
+              
+              %ul#spec-padding
+                %li Lockout / Tagout program
+                %li Hot work certification 
+                %li OSHA standard and procedure
+                %li Hazard analysis and checklist
+                %li Ample personal protective equipment (PPE)
+    
+    %section
+      .row
+        .box-specialization
+          .columns.large-5.text-center
+            =image_tag 'manufacturing_selective screening.png', :class=>"img-story", :alt=>"manufacturing_selective-screening"
+          .columns.large-7.spec-font
+            %h3
+              %b
+                Selective Screening 
+
+            %p.m-top3
+              Not all applicants get to go to work. We ensure our applicants go through:  
+            
+            
+            %ul
+              
+              %li Criminal background screening
+              %li Oral, Urine and hair drug screen
+              %li Insight WW Behavior Test - Work Comp Fraud, Drug, Theft and Violence
+              %li Understanding of local culture
+              %li Localized labor market analysis
+    
+    .row.m-top4
+      
+
+      .columns.large-4.medium-12
+        .specialization-post-wrap
+          .specialization-post
+            .spec-post-thumbnail
+              = image_tag "manufacturing_Communication-(final).jpg", :alt=>"manufacturing_Communication"
+            
+          .spec-text-wrap#spec-padding
+            %h4.text-center
+              %b  Communication
+            
+            %p.m-top3
+              Joynus staff is responsive, communicates effectively and treats temporary associates better than competitors.
+            %p
+              As a result, we have above four-star rating on Google Business reviews and other social media.
+      .columns.large-4.medium-12
+        .specialization-post-wrap
+          .specialization-post
+            .spec-post-thumbnail
+              = image_tag "manufacturin_Safety-(final)-.jpg" , :alt=>"manufacturin_Safety"
+            
+          .spec-text-wrap#spec-padding
+            %h4.text-center
+              %b Safety  
+            %p.m-top3
+              Our clients choose us for our organization of compliance, structured systems, and processes. Clients have confidence in Joynus because we are prepared for unforeseen circumstances.
+      
+      .columns.large-4.medium-12
+        .specialization-post-wrap
+          .specialization-post
+            .spec-post-thumbnail
+              = image_tag "manufacturing_Expertise-(final).jpg", :alt=>"manufacturing_Expertise"
+            
+          .spec-text-wrap#spec-padding
+            %h4.text-center
+              %b Expertise
+            %p.m-top3
+              Our rigorous selective screening process and understanding of the local labor market are critical in placing the right candidates in the right place.
+      
+      
+    %section#fivefocus
+      .row.m-top3
+        .columns.large-12.text-center.spec-font
+          %h3.text-center
+            %b OUR TOP FIVE FOCUS
+            
+    
+      .row.m-top4.text-center
+        .columns.medium-2.medium-offset-1.small-4
+          = image_tag 'attendance-icon.png', :alt => 'Attendance', :class => 'img-focus'
+          %p.m-top3
+            %b
+              Attendance
+        .columns.medium-2.small-4
+          = image_tag 'product-demand-icon.png', :alt => 'Product Demand', :class => 'img-focus'
+          %p.m-top3
+            %b
+              Production Goal
+        .columns.medium-2.small-4
+          = image_tag 'Quality-icon.png', :alt => 'Quality', :class => 'img-focus'
+          %p.m-top3
+            %b
+              Quality Control
+        .columns.medium-2.small-6
+          = image_tag 'retention-icon.png', :alt => 'Retention', :class => 'img-focus'
+          %p.m-top3
+            %b
+              Retention & <br> Turnover
+        .columns.medium-2.medium-pull-1.small-6
+          = image_tag 'safety-icon.png', :alt => 'Safety', :class => 'img-focus'
+          %p.m-top3
+            %b
+              Safety &<br>Incident      
+    
+    %section          
+      .row.text-center
+        .colunms.large-10.large-offset-1.text-center.spec-font
+          %h3
+            %b WHAT JOYNUS DO
+    
+      .row.row-wrap
+        .colunms.large-12.m-top4.text-center
+          %p
+            Job satisfaction leads to happiness and growth.<br> Therefore, we feel responsible for
+            connecting people to find jobs that they will enjoy.<br>  We utilize an array of data-driven
+            tests and analyses to find successful matches for our clients.  
+
+    %section
+      
+      .row
+        .columns.small-12.medium-6.spec-vr-r
+          .spec-split.spec-font
+            
+            
+            %h4
+              %b  Roles That We Staff
+            %ul
+              %li Assembly Line Labor
+              %li CNC Programmer
+              %li Die Technician
+              %li Fabricator
+              %li Forklift Operators
+              %li Machine Operators
+              %li Machinist
+              %li Maintenance Technician
+              %li Management / Supervisor Technicians
+              %li Material Handler
+              %li Press Operator
+              %li Production Manager
+              %li Production Control Specialist
+              %li Program Logic Controller
+              %li Quality Control/ Quality Assurance
+              %li Value Engineer
+              %li Welders
+        
+     
+        .columns.small-12.medium-6
+          .spec-split.spec-font
+           
+            
+            %h4
+              %b  Geographical Focus
+            %p
+              We are headquartered in Norcross, Georgia and located throughout the United States. Our main areas include the west and the southeast.
+            
+            =image_tag "geo map_manufacturing.png", :alt=>"Manufacturing distribution"
+      
+    
+            
+        
+    %section 

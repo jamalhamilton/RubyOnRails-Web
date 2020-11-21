@@ -1,0 +1,68 @@
+
+.row.m-top3{:style=>"max-width: 95rem;"}
+  .columns.large-12.text-center
+    %h2
+      %b
+        Explore All Episodes
+
+
+.row.m-top4.explore-otherepisode
+  .columns.large-12#tag_cloud
+    %h3
+      %b
+             
+        #show_ten_tags
+          %a{:onclick => "callTags()"} Show all  
+          <br>
+          = link_to "All", podcasts_path, remote:true  
+          = raw Podcast.tag_counts.sort{ |x, y| x.name.upcase <=> y.name.upcase }.map{  |p| link_to p.name, podcasts_path(tag: p.name), remote: true}.first(10).join(' ')
+        #show_all_tags{:style=>"display:none;"}
+          %a{:onclick => "callTags()"} Show all  
+          <br>
+          = link_to "All", podcasts_path, remote:true  
+          = raw Podcast.tag_counts.sort{ |x, y| x.name.upcase <=> y.name.upcase }.map{  |p| link_to p.name, podcasts_path(tag: p.name), remote: true}.join(' ')
+
+    
+  - @podcasts.each do |podcast|  
+    .columns.large-6.m-top3
+      = active_link_to podcast_path(podcast) do
+        %h4{:style=>"margin-top:55px;  height:60px;"}
+          %b
+            =t('podcast.banner-episode')
+            =podcast.id
+            &nbsp;
+            = truncate(podcast.episode_title, :length=>60)
+      %p.m-mobile-podcast{:style=>"text-transform:capitalize;"}
+        %b
+          |
+          = podcast.tag_list.sort_by(&:downcase).join(' | ')
+          
+      = podcast.impressionist_count
+      Views
+      |
+      %a{:href => "#{podcast_path(podcast)}#disqus_thread"} Comments
+      %p.m-mobile-podcast2
+        = truncate(podcast.episode_summary, :length=>140)
+      %a
+        %b
+          =link_to 'Click to Listen', podcast, :class=>"explore-button"
+.row
+  .columns.large-12.m-top3.text-center
+    = paginate @podcasts, previous_label: "Previous", next_label: "Next", :class=>"digg_pagination"
+    
+
+:javascript
+  function callTags() {
+    var x = document.getElementById("show_ten_tags");
+    var y = document.getElementById("show_all_tags")
+    
+  if (y.style.display === "none") {
+    x.style.display = "none";
+    y.style.display = "block";
+  } else {
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+    
+  }
+    

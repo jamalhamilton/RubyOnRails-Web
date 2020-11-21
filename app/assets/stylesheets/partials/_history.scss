@@ -1,0 +1,306 @@
+// Place all the styles related to the faq controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@media only screen {
+  
+
+
+
+h2.history{
+  font-size:6rem;
+ background: linear-gradient(to right, #F26741 0%,  #18A0FB 100%);
+    	-webkit-background-clip: text;
+    	-webkit-text-fill-color: transparent;
+    	width:fit-content;
+    	margin:auto;
+}
+
+.history-year{
+  color:#d70000;
+  font-family: 'Lato';
+}
+
+
+
+.history-title{
+  color:#fff;
+}
+
+.history-title-main{
+  color:black;
+}
+
+.history-break{
+  margin: 10% 0%;
+  width: 1.9em;
+  height: 1px;
+  background-color: #d70000;
+}
+.history-break-main{
+  margin: 10% 0%;
+  width: 4em;
+  height: 2px;
+  background-color: #d70000;
+}
+
+
+.history-description{
+  color:#999;
+}
+
+.history-description-main{
+  color:#666666;
+}
+
+.history-image{
+  cursor:pointer;
+  
+  .clip{
+  font-size: 1rem;
+    color: #fff;
+    height: 2.6rem;
+    line-height: 2.6rem;
+    background-color: #000;
+    padding: 0 0.8rem;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    display:flex;
+    
+  }
+  
+  i{
+   
+    display: block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  margin:auto;
+  margin-left:25px;
+  }
+  
+  i:hover{
+    -webkit-transform: skew(-10deg);
+  transform: skew(-20deg);
+  }
+  
+}
+
+.history-image:before {
+transition: all .5s ease;
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: #000;
+transform: scale(0);
+}
+.history-image:hover:before {
+opacity: .4;
+transform: scale(1);
+
+}
+.history-image:after {
+transition: all .6s ease .2s;
+content: "";
+position: absolute;
+top: 8px;
+left: 8px;
+right: 8px;
+bottom: 8px;
+border: 2px solid #aaa;
+background: #000;
+opacity: 0;
+transform: scale(0);
+}
+.history-image:hover:after {
+opacity: .35;
+transform: scale(1);
+}
+
+/* The Modal (background) */
+.modal {
+  transition: .5s ease .5s;
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  
+  
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 10% 0 5% 0;
+  
+  max-width: 1200px;
+  top:10%;
+  align-items : center;
+  justify-content: center;
+  background: rgba(17, 17, 17, 0.97);
+  
+}
+
+/* The Close Button */
+.close {
+  color: #999;
+  position: absolute;
+  top: 7%;
+  right: 47%;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 50%;
+  border: 2px solid #999;
+  padding: 0px 12px 1px 12px
+}
+
+.close:hover,
+.close:focus {
+  
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.mySlides {
+  display: none;
+  padding:0 7%;
+  
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+  width: auto;
+  padding: 16px;
+  color: #999;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  
+  i{
+    font-size:30px;
+  }
+  
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  color: white;
+}
+
+
+
+
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+}
+
+@media only screen and (min-width:320px) {
+
+.m-mobile-history{ margin-top:80px; }
+.close {  right: 45%; top: 6.5%}
+
+.modal-content {  height:80%;}
+
+
+}
+
+@media only screen and (min-width:501px) {
+.close {  top: 7%; right: 47%;}
+.modal-content{height:auto;}
+}
+
+@media only screen and (min-width:768px) {
+.m-mobile-history{ margin-top:50px; }
+
+}
+
+@media only screen and (min-width:1024px) {
+.m-mobile-history{ margin-top:30px; }
+}
+
+@media only screen and (min-width:1025px) {
+}
+
+@media only screen and (min-width:1140px) {}
+
+@media only screen and (min-width:1280px) {
+}
+
+@media only screen and (min-width:1440px){
+    
+   
+}
+@media only screen and (min-width:1700px){
+    
+}
+
+@media only screen and (min-width:2200px){
+    
+}
+
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {}
+
+

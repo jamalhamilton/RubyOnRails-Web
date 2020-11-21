@@ -1,0 +1,15 @@
+
+- if current_user.admin?
+  .row
+    .columns.large-12
+      .breadcrumb
+        = link_to posts_path do
+          %i.icon-left-open
+          Blog
+
+.row
+  .columns.large-12
+    %fieldset.mb--
+      = form_for @post do |form|
+        = render form
+        = form.submit "Submit", class: 'button small no-margin right submit radius'

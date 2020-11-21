@@ -1,0 +1,329 @@
+- if flash[:notice]
+  = render 'shared/success_notice'
+
+-content_for :title do
+  %link{:href => "https://www.joynus.com/specialization/accounting", :rel => "canonical"}
+  %title  Accounting & Finance | Joynus Staffing
+  %meta{:content => "Staffing Accounting, Contract accounting, Hire Accounting, Accounting position", :name => "keywords"}
+  %meta{:content => "Joynus chooses Accounting and Finance candidates through personality and competency test on their attention to detail and precision.", :name => "Description"}
+  
+  
+%body
+
+  %section
+    
+    .row.spec-font#spec-banner
+      .columns.large-12.text-center
+        %h1
+          %b
+            =t ('accounting.banner')
+      
+    
+
+  .columns.large-12.m-bottom3
+
+
+    .path
+      = active_link_to root_url do
+        .srvIco1
+          %i.icon-home
+      
+      .srvIco11
+        %i.icon-right  
+      %h5
+        = t('header.specialization')
+      .srvIco11
+        %i.icon-right
+      %h5 
+        =t('footer.accounting')
+  %svg.spec.m-top-n1#clouds{:height => "50", :preserveaspectratio => "none", :version => "1.1", :viewbox => "0 0 50 50", :width => "100%", :xmlns => "http://www.w3.org/2000/svg"}
+    %path{:d => "M-5 50 Q 0 20 5 50 Z\n         M0 50 Q 5 0 10 50\n         M5 50 Q 10 30 15 50\n         M10 50 Q 15 10 20 50\n         M15 50 Q 20 30 25 50\n         M20 50 Q 25 -10 30 50\n         M25 50 Q 30 10 35 50\n         M30 50 Q 35 30 40 50\n         M35 50 Q 40 10 45 50\n         M40 50 Q 45 50 50 50\n         M45 50 Q 50 20 55 50\n         M50 50 Q 55 40 60 50\n         M55 50 Q 60 60 65 50\n         M60 50 Q 65 50 70 50\n         M65 50 Q 70 20 75 50\n         M70 50 Q 75 45 80 50\n         M75 50 Q 80 30 85 50\n         M80 50 Q 85 20 90 50\n         M85 50 Q 90 50 95 50\n         M90 50 Q 95 25 50 50\n         M95 50 Q 50 15 105 50 Z"}
+  %section.m-top-n{:style=>"background:linear-gradient(#f9f9f9, #ffffff);"}
+    
+    .row.text-center
+      
+      .columns.small-3
+        = image_tag 'hyundai_c.png', :alt => 'Hyundai', :class => 'img-spec'
+        %p.m-top3
+          
+      .columns.small-3
+        = image_tag 'LG_c.png', :alt => 'LG', :class => 'img-spec'
+        %p.m-top3
+          
+      .columns.small-3
+        = image_tag 'Posco_c.png', :alt => 'Posco', :class => 'img-spec'
+        %p.m-top3
+      .columns.small-3
+        = image_tag 'Mando.png', :alt => 'Mando', :class => 'img-spec'
+        %p.m-top3
+        
+    .row.m-top3
+      .columns.large-12
+        %h3.text-center
+          %b
+            = t('accounting.smart-decision')  
+          
+    .row
+      .box-specialization2
+        .columns.large-5.large-push-7.text-center
+          =image_tag 'accounting_smart decision.png', :class=>"img-story", :alt=>"Smart-Decision"
+        .columns.large-7.large-pull-4.spec-font
+          
+          %p.m-top3
+            = t('accounting.smart-decision-p1')  
+          %p
+            = t('accounting.smart-decision-p2') 
+          %p
+            = t('accounting.smart-decision-p3') 
+
+    %section
+      .row.m-top3
+        .columns.large-12
+          %h3.text-center
+            %b
+              = t('accounting.accuracy-confidentiality-ethics') 
+      .row
+        .box-specialization2
+          .columns.large-5.text-center
+            =image_tag 'accounting_accuracy, confidentiality, and ethics.png', :class=>"img-story", :alt=>"Accuracy, Confidentiality, and Ethics"
+          .columns.large-7
+            %p
+              = t('accounting.accuracy-confidentiality-ethics-p1') 
+            %p
+              = t('accounting.accuracy-confidentiality-ethics-p2') 
+            
+            %p.m-top3{:style=>"line-height:0;"}
+              = t('accounting.accuracy-confidentiality-ethics-p3') 
+            
+            
+            %ul
+              
+              %li 
+                = t('accounting.accuracy-confidentiality-ethics-position1') 
+              %li
+                = t('accounting.accuracy-confidentiality-ethics-position2') 
+              %li
+                = t('accounting.accuracy-confidentiality-ethics-position3') 
+              %li
+                = t('accounting.accuracy-confidentiality-ethics-position4')    
+    
+    %section.no-spacing
+      .wwd-spec-accuracy
+        .row
+          .columns.large-12
+            %h3
+              %b
+                = t('accounting.accuracy') 
+        .row
+          .columns.large-9
+            %p
+              = t('accounting.accuracy-p1') 
+            %p
+              = t('accounting.accuracy-p2') 
+
+    %section.no-spacing
+      .wwd-spec-confidentiality
+        .row
+          .columns.large-12.text-right
+          
+            %h3
+              %b
+                = t('accounting.confidentiality') 
+        .row
+          .columns.large-9.text-right
+          
+            %p
+              = t('accounting.confidentiality-p1') 
+            %p
+              = t('accounting.confidentiality-p2') 
+            %p
+              = t('accounting.confidentiality-p3') 
+            %p
+              = t('accounting.confidentiality-p4') 
+
+    %section.no-spacing
+      .wwd-spec-ethics
+        .row
+          .columns.large-12
+            %h3
+              %b
+                = t('accounting.ethics') 
+        .row
+          .columns.large-9
+            %p
+              = t('accounting.ethics-p1') 
+            %p
+              = t('accounting.ethics-p2') 
+            %p
+              = t('accounting.ethics-p3') 
+
+    %section#fivefocus
+      .row
+        .columns.large-12.text-center.spec-font
+          %h3.text-center
+            %b 
+              = t('accounting.topfocus') 
+    
+      .row.m-top4.text-center
+        .columns.small-6.medium-3
+          = image_tag 'attention to detail.png', :alt => 'attentiontodetail', :class => 'img-focus'
+          %p.m-top3
+            %b
+              = t('accounting.focus1')
+        
+        .columns.small-6.medium-3
+          = image_tag 'integrity.png', :alt => 'integrity', :class => 'img-focus'
+          %p.m-top3
+            %b
+              = t('accounting.focus2')
+        .columns.small-6.medium-3
+          = image_tag 'senseofethics.png', :alt => 'senseofethics', :class => 'img-focus'
+          %p.m-top3
+            %b
+              = t('accounting.focus3')
+        .columns.small-6.medium-3
+          = image_tag 'processimprovement.png', :alt => 'processimprovement', :class => 'img-focus'
+          %p.m-top3
+            %b
+              = t('accounting.focus4')
+    
+    
+    %section.m-top4          
+      .row.text-center
+        .colunms.large-10.large-offset-1.text-center.spec-font
+          %h3
+            %b
+              = t('accounting.roles')
+    
+      .row.m-top3
+        .columns.small-6
+          .spec-font.title-border.text-center
+            .vl-accounting
+            %h5
+              %b
+                = t('accounting.accounting')
+        .columns.small-6
+          .spec-padding
+            %ul.spec-role
+              %li 
+                = t('accounting.accounting-list1')
+              %li 
+                = t('accounting.accounting-list2')
+              %li 
+                = t('accounting.accounting-list3')
+              %li 
+                = t('accounting.accounting-list4')
+              %li 
+                = t('accounting.accounting-list5')
+              
+      
+      .row.m-top4
+        .columns.small-6
+          .spec-font.title-border.text-center
+            %h5
+              %b
+                = t('accounting.finance')
+        .columns.small-6
+          .spec-padding
+            %ul.spec-role
+              %li 
+                = t('accounting.finance-list1')
+              %li 
+                = t('accounting.finance-list2')
+              %li 
+                = t('accounting.finance-list3')
+              %li 
+                = t('accounting.finance-list4')
+              %li
+                = t('accounting.finance-list5')
+              %li
+                = t('accounting.finance-list6')
+              %li
+                = t('accounting.finance-list7')
+              
+      .row.m-top4
+        .columns.small-6
+          .spec-font.title-border.text-center
+            %h5
+              %b
+                = t('accounting.banking')
+        .columns.small-6
+          .spec-padding
+            %ul.spec-role
+              %li
+                = t('accounting.banking-list1')
+              %li 
+                = t('accounting.banking-list2')
+              %li
+                = t('accounting.banking-list3')
+              %li
+                = t('accounting.banking-list4')
+              %li
+                = t('accounting.banking-list5')
+              %li
+                = t('accounting.banking-list6')
+              
+              
+      
+      .row.m-top4  
+        .columns.small-6
+          .spec-font.title-border.text-center
+            %h5
+              %b
+                = t('accounting.mortgage')
+        .columns.small-6
+          .spec-padding
+            %ul.spec-role
+              %li
+                = t('accounting.mortgage-list1')
+              %li
+                = t('accounting.mortgage-list2')
+              %li
+                = t('accounting.mortgage-list3')
+              %li
+                = t('accounting.mortgage-list4')
+              %li
+                = t('accounting.mortgage-list5')
+              %li
+                = t('accounting.mortgage-list6')
+              %li
+                = t('accounting.mortgage-list7')
+            
+      
+      .row.m-top4  
+        .columns.small-6
+          .spec-font.title-border.text-center
+            %h5
+              %b
+                = t('accounting.insurance')
+        .columns.small-6
+          .spec-padding
+            %ul.spec-role
+              
+              %li
+                = t('accounting.insurance-list1')
+              %li
+                = t('accounting.insurance-list2')
+              %li
+                = t('accounting.insurance-list3')
+              %li
+                = t('accounting.insurance-list4')
+      
+    %section
+      .row
+        .columns.small-12
+          .spec-split.spec-font
+            %h3.text-center
+              %b
+                = t('accounting.geo-focus')
+            %p.m-top4
+              = t('accounting.geo-focus-p')
+
+
+      .row.m-top3
+        .columns.small-12.large-9.large-offset-1
+          =image_tag 'geo map_accounting & finance.png'
+  
+
+
+

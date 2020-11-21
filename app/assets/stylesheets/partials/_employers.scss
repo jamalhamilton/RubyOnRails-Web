@@ -1,0 +1,308 @@
+
+
+@media only screen {
+  #employers {
+    #myVideo {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  width: 100%; 
+  height: 700ox;
+}
+
+.content_on_BG {
+  position: absolute;
+  top:1%;
+  margin:auto;
+  background: rgba(64, 64, 64, 0.2);
+  
+  color: #f1f1f1;
+  width: 100%;
+  height: 700px;
+}
+
+.content_on_BG >h1 {
+  
+  padding:20% 0 20% 0;
+  margin:auto;
+  text-shadow: 2px 2px 1px #000000;
+  
+  color: #f1f1f1;
+  
+}
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:500px;
+}
+.video-responsive{
+  
+ .iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+ }  
+}
+    
+    .employer-section-img {
+      width: calc(100% + 30px);
+      position: relative !important;
+      left: -15px;
+    }
+
+    .content-section {
+      h2 { margin-top: rem-calc(30); }
+      p, .button { margin-bottom: rem-calc(30); }
+      //industry
+  li{
+  margin-top:30px;
+  
+}
+    }
+
+    .companies {
+      position: relative;
+      top: -1px;
+      padding-top: rem-calc(24);
+      padding-right: rem-calc(64);
+      padding-bottom: rem-calc(24);
+      padding-left: rem-calc(64);
+
+      h3 {
+        color: $white;
+        margin-bottom: rem-calc(24);
+      }
+
+      ul {
+        max-width: rem-calc(900);
+        margin: 0 auto;
+
+        li {
+          width: 50%;
+          float: right;
+          list-style-type: none;
+          text-align: center;
+
+          span {
+            color: #fff;
+            font-size: rem-calc(50);
+            opacity: 0.6;
+            width: 100%;
+            text-align: center;
+
+            &.icon-posco-logo {
+              position: relative;
+              top: 14px;
+              font-size: rem-calc(30);
+            }
+          }
+        }
+      }
+    }
+
+    #why {
+      position: relative;
+      top: -1px;
+    }
+  }
+}
+
+@media only screen and (min-width: rem-calc(360)) {
+   #employers{
+     .feature-section{
+       height:230px;
+     }
+     
+     p{
+     font-size:17px;
+   }
+   
+   h2{
+      font-size:30px;
+    }
+  
+    
+}
+  
+   
+     
+   
+}
+// Small screens
+@media only screen and (min-width: rem-calc(480)) {
+  #employers {
+    .companies ul li { width: 33%; }
+
+    section.content-section {
+
+      &.x-small, &.small {
+        padding-top: rem-calc(0);
+        padding-bottom: rem-calc(50);
+      }
+
+      &#why { padding-bottom: 0 !important; }
+      &#industry { padding-top: 0 !important; }
+    }
+    .feature-text{
+      h2 {font-size:40px;
+      }
+    }
+    
+    
+    
+  }
+}
+
+// Medium screens
+@media only screen and (min-width: rem-calc(768)) {
+  #employers {
+    .companies ul li { width: 20%; }
+    .employer-section-img img { width: 100%; }
+    p {
+      font-size: 20px;
+    }
+    
+    h2{
+      font-size: $h2-font-size;
+    }
+  
+   
+   
+    
+  }
+
+}
+@media only screen and (min-width: rem-calc(1024)) {
+  #employers {
+    .employer-section-img { display: none; }
+
+    section.feature-section{
+      h1 { margin-top:10px;}
+      height:1100px;
+    }
+    
+    section.content-section {
+      padding-top: rem-calc(150);
+      padding-bottom: rem-calc(150);
+
+      h2 { margin-top: 0; }
+      p, .button { margin-bottom: 0; }
+      .button { margin-top: rem-calc(30); }
+
+      &.small {
+        padding-top: rem-calc(100);
+        padding-bottom: rem-calc(100);
+      }
+
+      &.x-small {
+        padding-top: rem-calc(50);
+        padding-bottom: rem-calc(50);
+      }
+
+//industry
+      &#why {
+        background: asset-url('industry2.png') no-repeat  right;
+        
+        padding-top: rem-calc(150) !important;
+        padding-bottom: rem-calc(150) !important;
+        display:inline-block;
+        
+        width:100%;
+        
+        
+      }
+
+      &#service {
+        background: asset-url('service.png') no-repeat top right;
+        background-size: auto 100%;
+       
+      }
+
+      &#employers { background: asset-url('employer_homepage.jpg') no-repeat top left; }
+
+//service
+      &#industry {
+        padding-top: rem-calc(150) !important;
+        padding-bottom: rem-calc(150) !important;
+
+        .industry-img {
+          position: absolute;
+          top: -70px;
+
+          img {
+            max-height: 400px;
+          }
+        }
+      }
+    }
+    
+   
+    
+  }
+  
+}
+
+// Large screens
+@media only screen and (min-width: 64.063em) {}
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {}
+
+
+// XLarge screens
+@media only screen and (min-width: 90.063em) {}
+
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {}
+
+// XXLarge screens
+@media only screen and (min-width: 120.063em) {}
+
+
+
+
+
+@media all and (max-width:480px) {
+  
+ 
+ h1{
+   font-size: rem-calc(52);
+ }
+ 
+ h2{
+   font-size: rem-calc(38);
+ }   
+ h3{
+   font-size: rem-calc(22);
+ }   
+ h4{
+   font-size: rem-calc(20);
+ }   
+ h5{
+   font-size: rem-calc(17);
+ }   
+
+
+.srvIco3 i{
+    font-size:35px;
+    display: inline-block;
+    
+  }
+  
+
+.wwdContent5 {
+  margin-top:10%;
+  display:inline-block;
+  
+  .row{
+    display:inline-flex;
+    
+  }
+  .srvDet {
+    h3{    font-size:15px;  }    
+  }
+  .m-bottom4{margin-top:20%;}
+}
+
+}

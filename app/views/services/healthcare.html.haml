@@ -1,0 +1,202 @@
+- if flash[:notice]
+  = render 'shared/success_notice'
+
+- content_for :title do
+  %title Healthcare | Joynus Staffing
+  %meta{:content => "Joynus chooses Healthcare candidates through credential, experience and attitude toward excellence.", :name => "Description"}/
+  %meta{:content => "Staffing Healthcare, Healthcare Service, Looking for nurse, Looking for caregiver", :name => "keywords"}
+  %link{:href => "https://www.joynus.com/healthcare", :rel => "canonical"}
+  %meta{:content => "/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :property => "og:image"}
+  %meta{:content => "Website", :property => "og:type"}
+  %meta{:content => "summary_large_image", :name => "twitter:card"}
+  %meta{:content => "https://www.joynus.com/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :name => "twitter:image"}
+  
+%body
+
+  %section
+    
+    .row.spec-font#spec-banner
+      .columns.large-12.text-center
+        %h1
+          %b HEALTHCARE
+      
+    
+
+  .columns.large-12
+
+
+    .path
+      = active_link_to root_url do
+        .srvIco1
+          %i.icon-home
+      %h5
+        = active_link_to t('header.home'), root_url
+      .srvIco11
+        %i.icon-right  
+      %h5
+        = active_link_to t('header.services'), services_path
+      .srvIco11
+        %i.icon-right
+      %h5 
+        =t('footer.healthcare')
+  %svg.spec.m-top-n1#clouds{:height => "50", :preserveaspectratio => "none", :version => "1.1", :viewbox => "0 0 50 50", :width => "100%", :xmlns => "http://www.w3.org/2000/svg"}
+    %path{:d => "M-5 50 Q 0 20 5 50 Z\n         M0 50 Q 5 0 10 50\n         M5 50 Q 10 30 15 50\n         M10 50 Q 15 10 20 50\n         M15 50 Q 20 30 25 50\n         M20 50 Q 25 -10 30 50\n         M25 50 Q 30 10 35 50\n         M30 50 Q 35 30 40 50\n         M35 50 Q 40 10 45 50\n         M40 50 Q 45 50 50 50\n         M45 50 Q 50 20 55 50\n         M50 50 Q 55 40 60 50\n         M55 50 Q 60 60 65 50\n         M60 50 Q 65 50 70 50\n         M65 50 Q 70 20 75 50\n         M70 50 Q 75 45 80 50\n         M75 50 Q 80 30 85 50\n         M80 50 Q 85 20 90 50\n         M85 50 Q 90 50 95 50\n         M90 50 Q 95 25 50 50\n         M95 50 Q 50 15 105 50 Z"}
+  %section.m-top-n{:style=>"background:linear-gradient(#f9f9f9, #ffffff);"}
+    .row
+      .columns.large-12
+        %h3.text-center
+          %b
+            Patient-centered Care Experience
+      .columns.large-10.large-pull-1.text-center
+        %p.m-top3
+          Our acuity-driven strategy is unique to optimize and improve patient outcomes.
+    .row
+      .columns.large-2.large-offset-2.small-6.text-center
+        =image_tag "healthcare_patient-cared_1.png", class:"img-healthcare", alt:"healthcare_patient-cared_1"
+      .columns.large-2.small-6.text-center
+        =image_tag "healthcare_patient-cared_2.png", class:"img-healthcare", alt:"healthcare_patient-cared_2"
+      .columns.large-2.small-6.text-center
+        =image_tag "healthcare_patient-cared_3.png", class:"img-healthcare", alt:"healthcare_patient-cared_3"
+      .columns.large-2.large-pull-2.small-6.text-center
+        =image_tag "healthcare_patient-cared_4.png", class:"img-healthcare", alt:"healthcare_patient-cared_4"
+  
+  %section    
+    .row
+      .columns.large-12.text-center
+        %h3.text-center
+          %strong WHY JOYNUS
+    
+    
+    .row
+      .box-specialization
+        .columns.xlarge-5.text-center
+          =image_tag 'healthcare_acuity-based staffing.png', :class=>"img-story", :alt=>"healthcare_acuity-based-staffing"
+        .columns.xlarge-7.spec-font
+          %h3
+            %b
+              Acuity-based staffing
+          
+          %p.m-top3
+            Acuity-based staffing is ensuring the right staff in the right place. We allocate clinical expertise based on patients’ medical complexity, behavior challenges, and cultural differences. It is far more than keeping detailed candidate profiles, compliance documents, and in-service training.
+          
+    .row
+      
+      .box-specialization
+        .columns.xlarge-5.xlarge-push-7.text-center
+          =image_tag 'healthcare_hospital and institution.png', :class=>"img-story", :alt=>"healthcare_hospital-and-institution"
+        .columns.xlarge-7.xlarge-pull-4.spec-font
+          %h3
+            %b
+              Hospital and Institution
+          
+          %p.m-top3
+            Joynus is a data-driven healthcare staffing agency.
+            We fully utilize recruitment softwares, search
+            algorithm, data analysis, integrity test, and the DISC 
+            Assessment. We spend more time on understanding 
+            you and your business and less on manual labor search. 
+    
+    .row
+      .box-specialization2
+        .columns.xlarge-5.text-center
+          =image_tag 'healthcare_geriatic care.png', :class=>"img-story", :alt=>"healthcare_geriatic-care"
+        .columns.xlarge-7.spec-font
+          %h3
+            %b
+              Geriatric Care
+
+          
+          %p.m-top3
+            Geriatric care has a special place in the heart of 
+            Joynus. We are closely involved with 
+            
+          %ul
+            %li ADL
+            %li In-Service training
+            %li OIG and SAM exclusion
+            %li HCBS programs
+            %li Medicare & Medicaid
+            %li Insurance billing
+            %li LOCs
+          %p  
+            We keep all licenses and certifications up-to-date. We enhance our services based on individual performances of each patient and feedback from patients and their families. 
+          
+    
+    
+    %section
+      .row
+        .columns.large-12.text-center
+          %h3.text-center
+            %strong OUR THREE FOCUS
+      
+      .row.spec-font
+        .columns.small-4.text-center
+          =image_tag "data driven icon.png", class: "img-healthcare2"
+          %p.m-top4
+            %b  Data-Driven Mindset
+          
+        .columns.small-4.text-center
+          =image_tag "integrity assessment icon.png", class: "img-healthcare2"
+          %p.m-top4
+            %b  Integrity Assessment
+        .columns.small-4.text-center
+          =image_tag "geriatic care icon.png", class: "img-healthcare2"  
+          %p.m-top4
+            %b  Geriatric Care
+    
+    %section
+      .wwd-spec-healthcare
+        .row
+          .columns.large-12.text-center.m-top3
+            %h2
+              %b
+                Healthcare
+            
+            %p
+              
+              It is not all caring and treatment driven.<br>The best experience is when it is 
+              %b{:style=>"font-size:120%;"} relationship-based.
+              
+    
+    %section      
+      .row.text-center
+        .colunms.large-10.large-offset-1.text-center.spec-font
+          %h3
+            %strong WHAT JOYNUS DO
+          %h4.m-top3{:style=>"font-size:150%;"}
+            %strong Roles That We Staff
+      .row
+
+        .columns.large-12.boxx
+          .columns.large-4.small-12.text-center
+            = image_tag 'roles we staff icon.png', :alt => 'Healthcare Roles', :class => "img-healthcare-role"     
+          
+          .columns.large-4.small-6
+            .spec-padding
+              %ul.spec-role
+                %li Biller
+                %li Per-diem Nurse 
+                %li Personal Care Assistant 
+                %li Physical Therapist  
+                %li Travel Nurse
+                %li Case Manager
+                %li Claim Processor
+                
+                  
+          .columns.large-4.small-6
+            .spec-padding
+              %ul.spec-role
+                %li Certified Nurse Aide 
+                %li Locum Tenens Nurse 
+                %li Social Worker 
+                %li Occupational Therapist 
+                %li Speech-Language Pathologist
+                %li Hospital Admin
+                %li HEDIS Nurse
+
+
+
+      
+
+
+

@@ -1,0 +1,23 @@
+.row
+  .columns.large-6
+    = form.text_field :first_name, 'required' => '', placeholder: 'First Name *'
+  .columns.large-6
+    = form.text_field :last_name, 'required' => '', placeholder: 'Last Name *'
+
+.row
+  .columns.large-12
+    = form.email_field :email, 'required' => '', placeholder: 'Email *'
+
+.row
+  .columns.large-6
+    = form.password_field :password, placeholder: "#{params[:action] == 'new' ? 'Password *' : 'Password'}"
+  .columns.large-6
+    = form.password_field :password_confirmation, placeholder: "#{params[:action] == 'new' ? 'Password Confirmation *' : 'Password Confirmation'}"
+
+- if current_user.admin?
+  .row
+    .columns.large-12
+      .switch.round
+        = form.check_box :admin
+        %label{ for: 'user_admin' }
+        %span Admin

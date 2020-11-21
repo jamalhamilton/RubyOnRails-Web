@@ -1,0 +1,33 @@
+<h1>Listing podcasts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Episode url</th>
+      <th>Episode title</th>
+      <th>Episode description</th>
+      <th>Episode audio url</th>
+      <th>Episode number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @podcasts.each do |podcast| %>
+      <tr>
+        <td><%= podcast.episode_url %></td>
+        <td><%= podcast.episode_title %></td>
+        <td><%= podcast.episode_description %></td>
+        <td><%= podcast.episode_audio_url %></td>
+        <td><%= podcast.episode_number %></td>
+        <td><%= link_to 'Show', podcast %></td>
+        <td><%= link_to 'Edit', edit_podcast_path(podcast) %></td>
+        <td><%= link_to 'Destroy', podcast, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Podcast', new_podcast_path %>

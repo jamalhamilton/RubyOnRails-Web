@@ -1,0 +1,71 @@
+- content_for :title do
+  
+  %link{:href => "https://www.joynus.com/staffing", :rel => "canonical"}
+  %title Specialization | Joynus Staffing
+  %meta{:content => "Experience Joynus. A flexible, fast and convenient way to add workforce per your immediate need.", :name => "Description"}
+  %meta{:content => "Staffing Services, temp service, staffing agencies, temp agencies", :name => "keywords"} 
+  %meta{:content => "/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :property => "og:image"}
+  %meta{:content => "Website", :property => "og:type"}
+  %meta{:content => "Specialization | Joynus Staffing", :name => "twitter:title"}/
+  %meta{:content => "summary_large_image", :name => "twitter:card"}
+  %meta{:content => "https://joynus-test.herokuapp.com/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :name => "twitter:image"}
+    
+%body
+  %section.feature-section.no-spacing
+    .feature.animated.fadeIn
+      .feature-container
+        %img{ data: { interchange:"[#{asset_path('Staffing_M.jpg')}, (small)], [#{asset_path('Staffing_M.jpg')}, (medium)], [#{asset_path('Staffing.jpg')}, (large)]" } }
+        .feature-text
+          %h1.text-center.animated.fadeInDown{:style => "color:black; padding:0;"}
+            %b
+              = t('footer.specialization')
+          
+  
+
+
+  .extra-navigation#spec-landing
+    = active_link_to specialization_accounting_path do
+      .item
+        = image_tag 'Analysis.png', :alt => 'Accounting & Finance',  :class => 'img56' 
+        %h2
+          %b
+            = t('accounting.banner')
+        
+        %p  
+          %b
+            = active_link_to t('learnmore'), specialization_accounting_path
+    = active_link_to specialization_healthcare_path do
+      .item
+        = image_tag 'Healthcare.png', :alt => 'Healthcare', :class => 'img56' 
+        %h2
+          %b
+            =t('healthcare.banner')
+        
+        %p
+          %b
+            = active_link_to t('learnmore'), specialization_healthcare_path
+    
+    
+    
+  .extra-navigation#spec-landing
+    = active_link_to specialization_manufacturing_path do
+      .item
+        = image_tag 'Manufacturing.png', :alt => 'Manufacturing', :class => 'img56' 
+        %h2
+          %b
+            = t('manufacturing.banner')
+        
+        %p
+          %b
+            = active_link_to t('learnmore'), specialization_manufacturing_path
+    = active_link_to specialization_it_path do
+      .item
+        = image_tag 'IT.png', :alt => 'IT', :class => 'img56' 
+        %h2
+          %b
+            = t('informationtechnology.banner')
+        
+        %p  
+          %b
+            = active_link_to t('learnmore'), specialization_it_path      
+            

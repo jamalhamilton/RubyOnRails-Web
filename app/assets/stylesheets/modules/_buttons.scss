@@ -1,0 +1,19 @@
+.button {
+  &.submit {
+    background: $black;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  &.no-hover:hover {
+    background: transparent;
+  }
+
+  &.tiny {
+    height: rem-calc(32);
+  }
+}

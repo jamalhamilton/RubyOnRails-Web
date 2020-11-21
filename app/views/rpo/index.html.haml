@@ -1,0 +1,418 @@
+- content_for :title do
+  %link{:href => "https://www.joynus.com/rpo", :rel => "canonical"}
+  %title Recruitment Process Outsource | Joynus Staffing 
+  %meta{:content => "Discover our Recruitment Process Outsourcing, your one stop HR solution.", :name => "Description"}/
+  %meta{:content => "Outsource Recruitment", :name => "keywords"}  
+  %meta{:content => "/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :property => "og:image"}
+  %meta{:content => "Website", :property => "og:type"}
+  %meta{:content => "summary_large_image", :name => "twitter:card"}
+  %meta{:content => "https://www.joynus.com/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :name => "twitter:image"}
+  
+%body
+  %section.feature-section.no-spacing
+    .feature.animated.fadeIn
+      .feature-container
+        %img{ data: { interchange:"[#{asset_path('RPO_mobile.jpg')}, (small)], [#{asset_path('RPO_final.jpg')}, (medium)], [#{asset_path('RPO_final.jpg')}, (large)]" } }
+        .feature-text
+          %h1.text-center.animated.fadeInDown
+            %b
+              = t('rpo.rpo')
+
+    .row.m-bottom3
+      .columns.large-12
+        .path
+          = active_link_to root_url do
+            .srvIco1
+              %i.icon-home
+          %h5
+            = active_link_to t('header.home'), root_url
+          .srvIco11
+            %i.icon-right  
+          %h5
+            = active_link_to t('header.services'), services_path
+          .srvIco11
+            %i.icon-right    
+          %h5 
+            = t('extranav.rpo')
+  
+  
+  .row#bpo
+    .columns.large-12
+      
+      %h3 
+        %b 
+          = t('rpo.what')
+      %p
+        = t('rpo.what-p1')
+        
+      %p
+        = t('rpo.what-p2')
+  .row.m-top4
+    
+    .columns.large-12
+      %h3
+        %b 
+          = t('rpo.why')
+      %ul.checklist
+        %li
+          = t('rpo.why-p1')
+        %li
+          = t('rpo.why-p2')
+        %li
+          = t('rpo.why-p3')
+        %li
+          = t('rpo.why-p4')
+        %li
+          = t('rpo.why-p5')
+        %li
+          = t('rpo.why-p6')
+        %li
+          = t('rpo.why-p7')
+        %li
+          = t('rpo.why-p8')
+  
+      
+      
+          
+%hr
+  
+  %section
+    .row
+      .columns.large-12
+        %h2.text-center
+          %b
+            = t('rpo.how')
+    
+    .row
+      .box
+        .columns.xlarge-4.text-center
+          = image_tag 'Discovery.png', :alt => "Discovery", :class => 'img55' 
+        .columns.xlarge-8
+          %h3
+            %b
+              = t('rpo.discovery')
+          %p
+            = t('rpo.discovery-p')
+    .row
+      .box
+        .columns.xlarge-4.text-center
+          = image_tag 'Assessment.png', :alt => "Assessment", :class => 'img55' 
+        .columns.xlarge-8
+          %h3
+            %b
+              = t('rpo.assessment')
+          %p
+            = t('rpo.assessment-p')
+
+    
+    .row
+      .box
+        .columns.xlarge-4.text-center
+          = image_tag 'Structure.png', :alt => "Structure", :class => 'img55' 
+        .columns.xlarge-8
+          %h3
+            %b
+              = t('rpo.structure')
+          %p
+            = t('rpo.structure-p')
+            
+    .row
+      .box
+        .columns.xlarge-4.text-center
+          = image_tag 'Placement.png', :alt => "Placement", :class => 'img55' 
+        .columns.xlarge-8
+          %h3
+            %b
+              = t('rpo.placement')
+          %p
+            = t('rpo.placement-p')
+        
+    .row
+      .box
+        .columns.xlarge-4.text-center
+          = image_tag 'Analysis.png', :alt => "Analysis", :class => 'img55' 
+        .columns.xlarge-8
+          %h3
+            %b
+              = t('rpo.analysis')
+          %p
+            = t('rpo.analysis-p')
+  
+%hr
+  %section  
+    .row
+      .columns.large-12
+        %h3
+          %b
+            = t('rpo.who')
+        %ul.checklist
+          %li
+            = t('rpo.who-p1')
+          %li
+            = t('rpo.who-p2')
+          %li
+            = t('rpo.who-p3')
+          %li
+            = t('rpo.who-p4')
+          %li
+            = t('rpo.who-p5')
+          %li
+            = t('rpo.who-p6')
+      
+    .row.m-top4
+      .columns.large-12
+        %h3
+          %b
+            = t('rpo.right')
+        %ul.checklist
+          %li
+            = t('rpo.right-p1')
+          %li
+            = t('rpo.right-p2')
+          %li
+            = t('rpo.right-p3')
+          %li
+            = t('rpo.right-p4')
+          %li 
+            = t('rpo.right-p5')
+  %hr  
+    %section
+      .row        
+        .columns.large-12
+          %h3
+            %b
+              = t('rpo.expect')
+          %p
+            = t('rpo.expect-p')
+
+
+  
+      .row
+        .columns.small-12
+          %table
+            %tr
+              %th{:style =>"width:49%;"}
+              %th Lite
+              %th Gold
+              %th.plat Platinum
+            %tr
+              %td#t01 Job Intake
+              %td{:colspan => "3"}
+            %tr
+              %td Sourcing
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td Screening
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td Interview
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td Drug Screen
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td Background Check
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td Job Description
+              %td 
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td#t01 Compliance
+              %td{:colspan => "3"}
+            %tr
+              %td OSHA documentation
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td Unemployment claims
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td Policies and Procedure
+              %td 
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td Handbook
+              %td 
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td Safety Management
+              %td 
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td OSHA investigation management
+              %td 
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td OSHA resolution/negotiation
+              %td 
+              %td 
+              %td 
+                %i.icon-ok
+            %tr
+              %td#t01 Technology
+              %td{:colspan => "3"}
+            %tr
+              %td Data Management
+              %td 
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td ATS setup
+              %td 
+              %td 
+              %td 
+                %i.icon-ok
+            %tr
+              %td Data Migration
+              %td 
+              %td 
+              %td 
+                %i.icon-ok
+            %tr
+              %td#t01 Compensation
+              %td{:colspan => "3"}
+            %tr
+              %td Worker’s compensation
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td Salary determination
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td Benefits
+              %td 
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td#t01 Evaluation
+              %td{:colspan => "3"}
+            %tr
+              %td Attendance/Time punch management
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td On-Site Coordinator
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td#t01 Marketing
+              %td{:colspan => "3"}
+            %tr
+              %td Poster
+              %td 
+              %td 
+                %i.icon-ok
+              %td 
+                %i.icon-ok
+            %tr
+              %td Video
+              %td 
+              %td 
+              %td
+                %i.icon-ok
+
+
+
+
+
+  .extra-navigation.m-top3    
+    = active_link_to staffing_index_path do
+      .item
+        
+        = image_tag 'Staffing.png', :alt => "Staffing", :class => 'img56' 
+        %h2
+          %b
+            = t('extranav.staffing')
+        %p{:style => "color:black; text-align:none"}
+          = t('extranav.staffing-p')
+        %p
+          %b
+            = active_link_to t('learnmore'), staffing_index_path 
+              
+    = active_link_to directhire_index_path do
+      .item
+        = image_tag 'DirectHire.png', :alt => "Direct Hire", :class => 'img56' 
+        %h2
+          %b
+            = t('extranav.directhire')
+        %p{:style => "color:black"}
+          = t('extranav.directhire-p')
+        %p
+          %b
+            = active_link_to t('learnmore'), directhire_index_path
+              
+    
+        
+          
+  

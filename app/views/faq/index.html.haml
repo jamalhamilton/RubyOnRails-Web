@@ -1,0 +1,1077 @@
+- content_for :title do
+  
+  %link{:href => "https://www.joynus.com/faq", :rel => "canonical"}
+  %title Frequently Asked Question | Joynus Staffing
+  %meta{:content => "Experience Joynus. A flexible, fast and convenient way to add workforce per your immediate need.", :name => "Description"}
+  %meta{:content => "/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :property => "og:image"}
+  %meta{:content => "Website", :property => "og:type"}
+  %meta{:content => "Frequently Asked Question | Joynus Staffing", :name => "twitter:title"}/
+  %meta{:content => "summary_large_image", :name => "twitter:card"}
+  %meta{:content => "https://www.joynus.com/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :name => "twitter:image"}  
+%body
+  %section.no-spacing
+    .pagecover-faq
+      .row
+        .columns.large-12.text-center.m-top1
+          %h1.m-top2
+            %b 
+              =t('faq.how')
+          
+      .row.m-top5
+        .columns.large-10.large-push-1
+          
+          .searchfaq
+            %i.icon-search
+            %input#myInput{:onkeyup => "findFAQ()", :placeholder => "Search..", :title => "Type keywords", :type => "text"}
+    .row
+      .columns.large-10.large-push-1
+        %ul#faqall
+          %li
+              
+            %button.hidden.faq-toggle-list 
+              =t('faq.where-can-i-apply')
+            .highlight
+              %div.hidden
+                = t('faq.where-can-i-apply-answer-1')
+                %a{:href=>"https://www.joynus.com/apply", :target=>"_blank"}
+                  = t('faq.where-can-i-apply-answer-2')
+                <br>  
+                = t('faq.where-can-i-apply-answer-3')
+                =link_to t('faq.where-can-i-apply-answer-4'), contact_index_path(:anchor=>"branch-address")
+                = t('faq.where-can-i-apply-answer-5')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.when-can-i-expect')
+            .highlight
+              %div.hidden
+                =t('faq.when-can-i-expect-answer')
+                
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.do-you-have-any')
+            .highlight
+              %div.hidden
+                =t('faq.do-you-have-any-answer-1')
+                %a{:href=>"https://jobs.joynus.com", :target=>"_blank"}
+                  =t('faq.do-you-have-any-answer-2')
+                =t('faq.do-you-have-any-answer-3')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.do-i-signup-online')
+            .highlight
+              %div.hidden
+                =t('faq.do-i-signup-online-answer-1')
+                %a{:href=>"https://www.joynus.com/apply", :target=>"_blank"}
+                  =t('faq.do-i-signup-online-answer-2')
+                =t('faq.do-i-signup-online-answer-3')
+                =link_to t('faq.do-i-signup-online-answer-4'), contact_index_path(:anchor=>"branch-address")
+                =t('faq.do-i-signup-online-answer-5')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.i-want-to-work-in-a-specific')
+            .highlight
+              %div.hidden
+                =t('faq.i-want-to-work-in-a-specific-answer')
+                
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.do-you-guys-accept')
+            .highlight
+              %div.hidden
+                =t('faq.do-you-guys-accept-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.where-and-how-can')
+            .highlight
+              %div.hidden
+                =t('faq.where-and-how-can-answer-1')
+                %a{:href=>"https://www.joynus.com/apply", :target=>"_blank"}
+                  =t('faq.where-and-how-can-answer-2')
+                =t('faq.where-and-how-can-answer-3')  
+                
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.can-a-family-member')
+            .highlight
+              %div.hidden
+                =t('faq.can-a-family-member-answer-1')
+                =link_to t('faq.can-a-family-member-answer-2'), contact_index_path(:anchor=>"branch-address")
+                =t('faq.can-a-family-member-answer-3')
+          %li
+            %button.hidden.faq-toggle-list 
+              =t('faq.how-far-do-you-guys')
+            .highlight
+              %div.hidden
+                =t('faq.how-far-do-you-guys-answer')
+          
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.are-you-still-hiring')
+            .highlight
+              %div.hidden
+                =t('faq.are-you-still-hiring-answer')
+                %a{:href=>"https://www.joynus.com/apply", :target=>"_blank"}
+                  =t('faq.are-you-still-hiring-answer-2')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.do-you-have-any-clerical')
+            .highlight
+              %div.hidden
+                =t('faq.do-you-have-any-clerical-answer-1')
+                %a{:href=>"https://jobs.joynus.com", :target=>"_blank"}
+                  =t('faq.do-you-have-any-clerical-answer-2')
+                =t('faq.do-you-have-any-clerical-answer-3')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.do-you-have-any-2nd-shift')
+            .highlight
+              %div.hidden
+                =t('faq.do-you-have-any-2nd-shift-answer-1')
+                %a{:href=>"https://jobs.joynus.com", :target=>"_blank"}
+                  =t('faq.do-you-have-any-2nd-shift-answer-2')
+                =t('faq.do-you-have-any-2nd-shift-answer-3')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.is-there-any-job-offered')
+            .highlight
+              %div.hidden
+                =t('faq.is-there-any-job-offered-answer-1')
+                =link_to t('faq.can-a-family-member-answer-2'), contact_index_path(:anchor=>"branch-address")
+                =t('faq.is-there-any-job-offered-answer-3')
+                %a{:href=>"https://jobs.joynus.com", :target=>"_blank"}
+                  =t('faq.is-there-any-job-offered-answer-4')
+                =t('faq.is-there-any-job-offered-answer-5')
+          
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.i-started-working')
+            .highlight
+              %div.hidden
+                =t('faq.i-started-working-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.do-you-hold-a-week')
+            .highlight
+              %div.hidden
+                =t('faq.do-you-hold-a-week-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.do-you-pay-shift-differential')
+            .highlight
+              %div.hidden
+                =t('faq.do-you-pay-shift-differential-answer')
+          %li
+            %button.hidden.faq-toggle-list 
+              =t('faq.do-you-offer-direct')
+            .highlight
+              %div.hidden
+                =t('faq.do-you-offer-direct-answer')
+          %li
+            %button.hidden.faq-toggle-list 
+              =t('faq.can-i-get-an-advance')
+            .highlight
+              %div.hidden
+                =t('faq.can-i-get-an-advance-answer')
+          
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.do-you-have-an-attendance')
+            .highlight
+              %div.hidden
+                =t('faq.do-you-have-an-attendance-answer')
+          
+
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.i-get-into-an-accident')
+            .highlight
+              %div.hidden
+                =t('faq.i-get-into-an-accident-answer')
+                
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.i-do-not-know-my-direct')
+            .highlight
+              
+              %div.hidden
+                =t('faq.i-do-not-know-my-direct-answer-1')
+                =link_to t('faq.i-do-not-know-my-direct-answer-2'), contact_index_path(:anchor=>"branch-address")
+                =t('faq.i-do-not-know-my-direct-answer-3')  
+                  
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.i-feel-like-harrassed')
+            .highlight
+              %div.hidden
+                =t('faq.i-feel-like-harrassed-answer') 
+          
+          %li
+            %button.hidden.faq-toggle-list 
+              =t('faq.the-password-reset-not-work')
+            .highlight
+              %div.hidden
+                =t('faq.the-password-reset-not-work-answer-1')
+                =link_to t('faq.the-password-reset-not-work-answer-2'), contact_index_path(:anchor=>"branch-address")
+                =t('faq.the-password-reset-not-work-answer-3')
+                
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.i-lost-information')
+            .highlight
+              %div.hidden
+                =t('faq.i-lost-information-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.i-cannot-access')
+            .highlight
+              %div.hidden
+                =t('faq.i-cannot-access-answer-1')
+                =link_to t('faq.i-cannot-access-answer-2'), contact_index_path(:anchor=>"branch-address")
+                =t('faq.i-cannot-access-answer-3')
+                
+  
+          %li
+            %button.hidden.faq-toggle-list 
+              =t('faq.im-still-on-assignment')
+            .highlight
+              %div.hidden
+                =t('faq.im-still-on-assignment-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.if-i-am-no-longer')
+            .highlight
+              %div.hidden
+                =t('faq.if-i-am-no-longer-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.if-i-have-an-issue')
+            .highlight
+              %div.hidden
+                =t('faq.if-i-have-an-issue-answer')  
+          
+    
+    
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.do-you-guys-offer-health')
+            .highlight
+              %div.hidden
+                
+                =link_to t('faq.do-you-guys-offer-health-answer-1'), contact_index_path(:anchor=>"branch-address")
+                =t('faq.do-you-guys-offer-health-answer-2')
+                
+                
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.do-you-offer-holiday')
+            .highlight
+              %div.hidden
+                =t('faq.do-you-offer-holiday-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.can-i-work-in-another')
+            .highlight
+              %div.hidden
+                =t('faq.can-i-work-in-another-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.do-you-offer-steel')
+            .highlight
+              %div.hidden
+                =t('faq.do-you-offer-steel-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.is-there-an-employer-referral')
+            .highlight
+              %div.hidden
+                =t('faq.is-there-an-employer-referral-answer-1')
+                =link_to t('faq.is-there-an-employer-referral-answer-2'), contact_index_path(:anchor=>"branch-address")
+                =t('faq.is-there-an-employer-referral-answer-3')
+  
+          %li
+            %button.hidden.faq-toggle-list 
+              =t('faq.my-clock-in-id')
+            .highlight
+              %div.hidden
+                =t('faq.my-clock-in-id-answer')  
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.do-i-need-steel-toe')
+            .highlight
+              %div.hidden
+                =t('faq.do-i-need-steel-toe-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.is-there-a-dress-code')
+            .highlight
+              %div.hidden
+                =t('faq.is-there-a-dress-code-answer')
+          
+    
+    
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.how-do-i-update')
+            .highlight
+              %div.hidden
+                =t('faq.how-do-i-update-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.when-do-i-get')
+            .highlight
+              %div.hidden
+                =t('faq.when-do-i-get-answer')  
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.i-want-to-file')
+            .highlight
+              %div.hidden
+                =t('faq.i-want-to-file-answer')  
+                
+                
+
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.how-can-i-contact')
+            .highlight
+              %div.hidden
+                =t('faq.how-can-i-contact-answer')  
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.is-there-a-number')
+            .highlight
+              %div.hidden
+                =t('faq.is-there-a-number-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.can-i-hire-any')
+            .highlight
+              %div.hidden
+                =t('faq.can-i-hire-any-answer')
+          
+    
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.class-a-cdl')
+            .highlight
+              %div.hidden
+                =t('faq.class-a-cdl-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.how-many-hours')
+            .highlight
+              %div.hidden
+                =t('faq.how-many-hours-answer1')
+                =link_to t('faq.how-many-hours-answer2'), contact_index_path(:anchor=>"branch-address")
+                =t('faq.how-many-hours-answer3')
+          
+          
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.does-joynus-charge')
+            .highlight
+              %div.hidden
+                =t('faq.does-joynus-charge-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.do-you-offer-your')
+            .highlight
+              %div.hidden
+                =t('faq.do-you-offer-your-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.do-you-accommodate')
+            .highlight
+              %div.hidden
+                =t('faq.do-you-accommodate-answer')
+  
+  
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.how-does-joynus-handle')
+            .highlight
+              %div.hidden
+                =t('faq.how-does-joynus-handle-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.what-are-your-drug')
+            .highlight
+              %div.hidden
+                =t('faq.what-are-your-drug-answer')  
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.does-joynus-practice')
+            .highlight
+              %div.hidden
+                =t('faq.does-joynus-practice-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.does-joynus-have-onsite')
+            .highlight
+              %div.hidden
+                =t('faq.does-joynus-have-onsite-answer')
+    
+    
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.what-services-do')
+            .highlight
+              %div.hidden
+                =t('faq.what-services-do-answer')
+                =link_to t('header.services')  ,services_path
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.what-is-your-fee')
+            .highlight
+              %div.hidden
+                =t('faq.what-is-your-fee-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.what-are-your-markup')
+            .highlight
+              %div.hidden
+                =t('faq.what-are-your-markup-answer-1')
+                %a{:href=>"https://www.joynus.com/contact"}
+                  =t('faq.what-are-your-markup-answer-2')
+                =t('faq.what-are-your-markup-answer-3')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.does-joynus-retention')
+            .highlight
+              %div.hidden
+                =t('faq.does-joynus-retention-answer')
+          %li
+            %button.hidden.faq-toggle-list
+              =t('faq.what-differentiates')
+            .highlight
+              %div.hidden
+                =t('faq.what-differentiates-answer')
+          
+  %section       
+    .row
+      .columns.large-12.text-center
+        %h2.m-top5
+          %b
+            =t('faq.frequent')
+            
+    .row.m-top4
+      .columns.medium-10.medium-push-1.text-center{:style=>"padding:0"}
+        .columns.medium-4
+          %a{:href => "#application-section"}
+            .faq-category
+              =t('faq.applicant')
+        .columns.medium-4
+          %a{:href => "#employee-section"}
+            .faq-category
+              =t('faq.contract-1')
+              <br>
+              =t('faq.contract-2')
+        .columns.medium-4
+          %a{:href => "#client-section"}
+            .faq-category
+              =t('faq.client')
+  
+  %section.m-top3#application-section        
+    .row
+      .columns.large-12
+        %h4
+          %b
+            =t('faq.iam')
+          %b{:style=>"text-decoration: underline;"}
+            =t('faq.iamapplicant')
+      
+      .columns.large-6
+        .faq-toggle#faqtoggle1
+          %i.icon-down-dir
+          %h4
+            %b  
+              =t('faq.application')
+          
+        #faqtarget1{:style=>"display:none;"}
+          %ul#faq
+            %li
+              
+              %button.faq-toggle-list 
+                =t('faq.where-can-i-apply')
+              .highlight
+                %div.hidden
+                  = t('faq.where-can-i-apply-answer-1')
+                  %a{:href=>"https://www.joynus.com/apply", :target=>"_blank"}
+                    = t('faq.where-can-i-apply-answer-2')
+                  <br>  
+                  = t('faq.where-can-i-apply-answer-3')
+                  =link_to t('faq.where-can-i-apply-answer-4'), contact_index_path(:anchor=>"branch-address")
+                  = t('faq.where-can-i-apply-answer-5')
+            %li
+              %button.faq-toggle-list
+                =t('faq.when-can-i-expect')
+              .highlight
+                %div.hidden
+                  =t('faq.when-can-i-expect-answer')
+                  
+            %li
+              %button.faq-toggle-list
+                =t('faq.do-you-have-any')
+              .highlight
+                %div.hidden
+                  =t('faq.do-you-have-any-answer-1')
+                  %a{:href=>"https://jobs.joynus.com", :target=>"_blank"}
+                    =t('faq.do-you-have-any-answer-2')
+                  =t('faq.do-you-have-any-answer-3')
+            %li
+              %button.faq-toggle-list
+                =t('faq.do-i-signup-online')
+              .highlight
+                %div.hidden
+                  =t('faq.do-i-signup-online-answer-1')
+                  %a{:href=>"https://www.joynus.com/apply", :target=>"_blank"}
+                    =t('faq.do-i-signup-online-answer-2')
+                  =t('faq.do-i-signup-online-answer-3')
+                  =link_to t('faq.do-i-signup-online-answer-4'), contact_index_path(:anchor=>"branch-address")
+                  =t('faq.do-i-signup-online-answer-5')
+            %li
+              %button.faq-toggle-list
+                =t('faq.i-want-to-work-in-a-specific')
+              .highlight
+                %div.hidden
+                  =t('faq.i-want-to-work-in-a-specific-answer')
+                  
+            %li
+              %button.faq-toggle-list
+                =t('faq.do-you-guys-accept')
+              .highlight
+                %div.hidden
+                  =t('faq.do-you-guys-accept-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.where-and-how-can')
+              .highlight
+                %div.hidden
+                  =t('faq.where-and-how-can-answer-1')
+                  %a{:href=>"https://www.joynus.com/apply", :target=>"_blank"}
+                    =t('faq.where-and-how-can-answer-2')
+                  =t('faq.where-and-how-can-answer-3')  
+                  
+            %li
+              %button.faq-toggle-list
+                =t('faq.can-a-family-member')
+              .highlight
+                %div.hidden
+                  =t('faq.can-a-family-member-answer-1')
+                  =link_to t('faq.can-a-family-member-answer-2'), contact_index_path(:anchor=>"branch-address")
+                  =t('faq.can-a-family-member-answer-3')
+            %li
+              %button.faq-toggle-list 
+                =t('faq.how-far-do-you-guys')
+              .highlight
+                %div.hidden
+                  =t('faq.how-far-do-you-guys-answer')
+                  
+        
+      
+    
+    
+      .columns.large-6
+        .faq-toggle#faqtoggle3
+          %i.icon-down-dir
+          %h4
+            %b  
+              =t('faq.job-positions')
+          
+        #faqtarget3{:style=>"display:none;"}
+          %ul#faq
+            %li
+              %button.faq-toggle-list
+                =t('faq.are-you-still-hiring')
+              .highlight
+                %div.hidden
+                  =t('faq.are-you-still-hiring-answer')
+                  %a{:href=>"https://www.joynus.com/apply", :target=>"_blank"}
+                    =t('faq.are-you-still-hiring-answer-2')
+            %li
+              %button.faq-toggle-list
+                =t('faq.do-you-have-any-clerical')
+              .highlight
+                %div.hidden
+                  =t('faq.do-you-have-any-clerical-answer-1')
+                  %a{:href=>"https://jobs.joynus.com", :target=>"_blank"}
+                    =t('faq.do-you-have-any-clerical-answer-2')
+                  =t('faq.do-you-have-any-clerical-answer-3')
+            %li
+              %button.faq-toggle-list
+                =t('faq.do-you-have-any-2nd-shift')
+              .highlight
+                %div.hidden
+                  =t('faq.do-you-have-any-2nd-shift-answer-1')
+                  %a{:href=>"https://jobs.joynus.com", :target=>"_blank"}
+                    =t('faq.do-you-have-any-2nd-shift-answer-2')
+                  =t('faq.do-you-have-any-2nd-shift-answer-3')
+            %li
+              %button.faq-toggle-list
+                =t('faq.is-there-any-job-offered')
+              .highlight
+                %div.hidden
+                  =t('faq.is-there-any-job-offered-answer-1')
+                  =link_to t('faq.can-a-family-member-answer-2'), contact_index_path(:anchor=>"branch-address")
+                  =t('faq.is-there-any-job-offered-answer-3')
+                  %a{:href=>"https://jobs.joynus.com", :target=>"_blank"}
+                    =t('faq.is-there-any-job-offered-answer-4')
+                  =t('faq.is-there-any-job-offered-answer-5')
+    .row  
+      .columns.large-6
+        .faq-toggle#faqtoggle4
+          %i.icon-down-dir
+          %h4
+            %b  
+              =t('faq.paycheck')
+          
+        #faqtarget4{:style=>"display:none;"}
+          %ul#faq
+            %li
+              %button.faq-toggle-list
+                =t('faq.i-started-working')
+              .highlight
+                %div.hidden
+                  =t('faq.i-started-working-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.do-you-hold-a-week')
+              .highlight
+                %div.hidden
+                  =t('faq.do-you-hold-a-week-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.do-you-pay-shift-differential')
+              .highlight
+                %div.hidden
+                  =t('faq.do-you-pay-shift-differential-answer')
+            %li
+              %button.faq-toggle-list 
+                =t('faq.do-you-offer-direct')
+              .highlight
+                %div.hidden
+                  =t('faq.do-you-offer-direct-answer')
+            %li
+              %button.faq-toggle-list 
+                =t('faq.can-i-get-an-advance')
+              .highlight
+                %div.hidden
+                  =t('faq.can-i-get-an-advance-answer')
+            
+            %li
+              %button.faq-toggle-list
+                =t('faq.do-you-have-an-attendance')
+              .highlight
+                %div.hidden
+                  =t('faq.do-you-have-an-attendance-answer')
+            
+  
+  %section#employee-section        
+    .row
+      .columns.large-12
+        %h4
+          %b
+            =t('faq.iam2')
+          %b{:style=>"text-decoration: underline;"}
+            =t('faq.iam2-contract-1')
+          %b
+            =t('faq.iam2-contract-2')
+          %b{:style=>"text-decoration: underline;"}
+            =t('faq.iam2-contract-3')
+      .columns.large-6
+        .faq-toggle#faqtoggle5
+          %i.icon-down-dir
+          %h4
+            %b  
+              =t('faq.accident')
+          
+        #faqtarget5{:style=>"display:none;"}
+          %ul#faq
+            %li
+              %button.faq-toggle-list
+                =t('faq.i-get-into-an-accident')
+              .highlight
+                %div.hidden
+                  =t('faq.i-get-into-an-accident-answer')
+                  
+            %li
+              %button.faq-toggle-list
+                =t('faq.i-do-not-know-my-direct')
+              .highlight
+                
+                %div.hidden
+                  =t('faq.i-do-not-know-my-direct-answer-1')
+                  =link_to t('faq.i-do-not-know-my-direct-answer-2'), contact_index_path(:anchor=>"branch-address")
+                  =t('faq.i-do-not-know-my-direct-answer-3')  
+                    
+            %li
+              %button.faq-toggle-list
+                =t('faq.i-feel-like-harrassed')
+              .highlight
+                %div.hidden
+                  =t('faq.i-feel-like-harrassed-answer') 
+            
+      .columns.large-6
+        .faq-toggle#faqtoggle6
+          %i.icon-down-dir
+          %h4
+            %b  
+              =t('faq.account')
+          
+        #faqtarget6{:style=>"display:none;"}
+          %ul#faq
+            %li
+              %button.faq-toggle-list 
+                =t('faq.the-password-reset-not-work')
+              .highlight
+                %div.hidden
+                  =t('faq.the-password-reset-not-work-answer-1')
+                  =link_to t('faq.the-password-reset-not-work-answer-2'), contact_index_path(:anchor=>"branch-address")
+                  =t('faq.the-password-reset-not-work-answer-3')
+                  
+            %li
+              %button.faq-toggle-list
+                =t('faq.i-lost-information')
+              .highlight
+                %div.hidden
+                  =t('faq.i-lost-information-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.i-cannot-access')
+              .highlight
+                %div.hidden
+                  =t('faq.i-cannot-access-answer-1')
+                  =link_to t('faq.i-cannot-access-answer-2'), contact_index_path(:anchor=>"branch-address")
+                  =t('faq.i-cannot-access-answer-3')
+                  
+    .row
+      .columns.large-6
+        .faq-toggle#faqtoggle7
+          %i.icon-down-dir
+          %h4
+            %b  
+              =t('faq.paycheck')
+          
+        #faqtarget7{:style=>"display:none;"}
+          %ul#faq
+            %li
+              %button.faq-toggle-list 
+                =t('faq.im-still-on-assignment')
+              .highlight
+                %div.hidden
+                  =t('faq.im-still-on-assignment-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.if-i-am-no-longer')
+              .highlight
+                %div.hidden
+                  =t('faq.if-i-am-no-longer-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.if-i-have-an-issue')
+              .highlight
+                %div.hidden
+                  =t('faq.if-i-have-an-issue-answer')  
+            
+      
+      .columns.large-6
+        .faq-toggle#faqtoggle8
+          %i.icon-down-dir
+          %h4
+            %b  
+              =t('faq.policy')
+          
+        #faqtarget8{:style=>"display:none;"}
+          %ul#faq
+            %li
+              %button.faq-toggle-list
+                =t('faq.do-you-guys-offer-health')
+              .highlight
+                %div.hidden
+                  
+                  =link_to t('faq.do-you-guys-offer-health-answer-1'), contact_index_path(:anchor=>"branch-address")
+                  =t('faq.do-you-guys-offer-health-answer-2')
+                  
+                  
+            %li
+              %button.faq-toggle-list
+                =t('faq.do-you-offer-holiday')
+              .highlight
+                %div.hidden
+                  =t('faq.do-you-offer-holiday-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.can-i-work-in-another')
+              .highlight
+                %div.hidden
+                  =t('faq.can-i-work-in-another-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.do-you-offer-steel')
+              .highlight
+                %div.hidden
+                  =t('faq.do-you-offer-steel-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.is-there-an-employer-referral')
+              .highlight
+                %div.hidden
+                  =t('faq.is-there-an-employer-referral-answer-1')
+                  =link_to t('faq.is-there-an-employer-referral-answer-2'), contact_index_path(:anchor=>"branch-address")
+                  =t('faq.is-there-an-employer-referral-answer-3')
+    .row
+      .columns.large-6
+        .faq-toggle#faqtoggle9
+          %i.icon-down-dir
+          %h4
+            %b  
+              =t('faq.onsite')
+          
+        #faqtarget9{:style=>"display:none;"}
+          %ul#faq
+            %li
+              %button.faq-toggle-list 
+                =t('faq.my-clock-in-id')
+              .highlight
+                %div.hidden
+                  =t('faq.my-clock-in-id-answer')  
+            %li
+              %button.faq-toggle-list
+                =t('faq.do-i-need-steel-toe')
+              .highlight
+                %div.hidden
+                  =t('faq.do-i-need-steel-toe-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.is-there-a-dress-code')
+              .highlight
+                %div.hidden
+                  =t('faq.is-there-a-dress-code-answer')
+            
+      
+      .columns.large-6
+        .faq-toggle#faqtoggle10
+          %i.icon-down-dir
+          %h4
+            %b  
+              =t('faq.w2')
+          
+        #faqtarget10{:style=>"display:none;"}
+          %ul#faq
+            %li
+              %button.faq-toggle-list
+                =t('faq.how-do-i-update')
+              .highlight
+                %div.hidden
+                  =t('faq.how-do-i-update-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.when-do-i-get')
+              .highlight
+                %div.hidden
+                  =t('faq.when-do-i-get-answer')  
+            %li
+              %button.faq-toggle-list
+                =t('faq.i-want-to-file')
+              .highlight
+                %div.hidden
+                  =t('faq.i-want-to-file-answer')  
+                  
+                  
+  %section#client-section        
+    .row
+      .columns.large-12
+        %h4
+          %b
+            =t('faq.iam3')
+          %b{:style=>"text-decoration: underline;"}
+            =t('faq.client')
+          
+      .columns.large-6
+        .faq-toggle#faqtoggle11
+          %i.icon-down-dir
+          %h4
+            %b  
+              =t('faq.contact')
+          
+        #faqtarget11{:style=>"display:none;"}
+          %ul#faq
+            %li
+              %button.faq-toggle-list
+                =t('faq.how-can-i-contact')
+              .highlight
+                %div.hidden
+                  =t('faq.how-can-i-contact-answer')  
+            %li
+              %button.faq-toggle-list
+                =t('faq.is-there-a-number')
+              .highlight
+                %div.hidden
+                  =t('faq.is-there-a-number-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.can-i-hire-any')
+              .highlight
+                %div.hidden
+                  =t('faq.can-i-hire-any-answer')
+            
+      .columns.large-6
+        .faq-toggle#faqtoggle12
+          %i.icon-down-dir
+          %h4
+            %b  
+              =t('faq.employment')
+          
+        #faqtarget12{:style=>"display:none;"}
+          %ul#faq
+            %li
+              %button.faq-toggle-list
+                =t('faq.class-a-cdl')
+              .highlight
+                %div.hidden
+                  =t('faq.class-a-cdl-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.how-many-hours')
+              .highlight
+                %div.hidden
+                  =t('faq.how-many-hours-answer1')
+                  =link_to t('faq.how-many-hours-answer2'), contact_index_path(:anchor=>"branch-address")
+                  =t('faq.how-many-hours-answer3')
+            
+            
+            %li
+              %button.faq-toggle-list
+                =t('faq.does-joynus-charge')
+              .highlight
+                %div.hidden
+                  =t('faq.does-joynus-charge-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.do-you-offer-your')
+              .highlight
+                %div.hidden
+                  =t('faq.do-you-offer-your-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.do-you-accommodate')
+              .highlight
+                %div.hidden
+                  =t('faq.do-you-accommodate-answer')
+    
+    .row
+      .columns.large-6
+        .faq-toggle#faqtoggle13
+          %i.icon-down-dir
+          %h4
+            %b  
+              =t('faq.policy-regulation')
+          
+        #faqtarget13{:style=>"display:none;"}
+          %ul#faq
+            %li
+              %button.faq-toggle-list
+                =t('faq.how-does-joynus-handle')
+              .highlight
+                %div.hidden
+                  =t('faq.how-does-joynus-handle-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.what-are-your-drug')
+              .highlight
+                %div.hidden
+                  =t('faq.what-are-your-drug-answer')  
+            %li
+              %button.faq-toggle-list
+                =t('faq.does-joynus-practice')
+              .highlight
+                %div.hidden
+                  =t('faq.does-joynus-practice-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.does-joynus-have-onsite')
+              .highlight
+                %div.hidden
+                  =t('faq.does-joynus-have-onsite-answer')
+      
+      .columns.large-6
+        .faq-toggle#faqtoggle14
+          %i.icon-down-dir
+          %h4
+            %b  
+              =t('faq.services')
+          
+        #faqtarget14{:style=>"display:none;"}
+          %ul#faq
+            %li
+              %button.faq-toggle-list
+                =t('faq.what-services-do')
+              .highlight
+                %div.hidden
+                  =t('faq.what-services-do-answer')
+                  =link_to t('header.services')  ,services_path
+            %li
+              %button.faq-toggle-list
+                =t('faq.what-is-your-fee')
+              .highlight
+                %div.hidden
+                  =t('faq.what-is-your-fee-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.what-are-your-markup')
+              .highlight
+                %div.hidden
+                  =t('faq.what-are-your-markup-answer-1')
+                  %a{:href=>"https://www.joynus.com/contact"}
+                    =t('faq.what-are-your-markup-answer-2')
+                  =t('faq.what-are-your-markup-answer-3')
+            %li
+              %button.faq-toggle-list
+                =t('faq.does-joynus-retention')
+              .highlight
+                %div.hidden
+                  =t('faq.does-joynus-retention-answer')
+            %li
+              %button.faq-toggle-list
+                =t('faq.what-differentiates')
+              .highlight
+                %div.hidden
+                  =t('faq.what-differentiates-answer')
+    
+  %section.m-top3
+    .faq-unanswered
+      .row
+        .columns.large-8.large-push-2
+          %fieldset#faq.mb--
+            %h2.text-center
+              %b
+                =t('faq.unanswered')
+            %p.text-center
+              =t('faq.unanswered-answer')
+            .m-top3
+            
+            /[if lte IE 8]
+              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+            %script{:charset => "utf-8", :src => "//js.hsforms.net/forms/v2.js", :type => "text/javascript"}
+            :javascript
+              hbspt.forms.create({
+              	portalId: "6831067",
+              	formId: "1e84729c-3062-4be7-9fa6-fbf6800acfaa"
+              });
+              
+  %section.no-spacing
+    .subscribe-content.m-top3
+      .row
+        .columns.large-5
+          %h4
+            %b Stay ahead of your game.
+            
+          %p
+            Get notified about updates and be the first to get early access to the new and smarter way to listen to podcasts.
+        .columns.large-6
+          %script{:charset => "utf-8", :src => "//js.hsforms.net/forms/shell.js", :type => "text/javascript"}
+          :javascript
+            hbspt.forms.create({
+            	portalId: "6831067",
+            	formId: "0fe5b610-c8d1-4ced-8011-e69768702e59"
+            });

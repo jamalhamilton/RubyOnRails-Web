@@ -1,0 +1,21 @@
+- if flash[:notice]
+  = render 'shared/success_notice'
+- content_for :title do
+  
+  
+  
+
+  %title  Latest News On Your Career | Joynus Staffing.
+  %meta{:content => "Get the latest industry scoop and informative knowledge.", :name => "Description"}
+
+
+%section
+.row
+  .columns.large-12
+    = link_to 'Back', @podcast
+    |
+    = link_to 'Podcasts', podcasts_path
+    %h1 Editing podcast
+    %fieldset.mb--
+      = render 'form'
+    

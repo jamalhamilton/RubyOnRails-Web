@@ -1,0 +1,104 @@
+@media only screen {
+  #jobs-header, #users-header {
+    table {
+      background: $primary-color;
+      border-collapse: separate;
+      border-width: 0;
+
+      padding-left: rem-calc(5);
+      padding-right: rem-calc(5);
+      width: 100%;
+
+      thead { background: transparent; }
+
+      td, th {
+        color: $white;
+        line-height: 1;
+        height: rem-calc(55);
+      }
+    }
+  }
+
+  .empty-table {
+    background: $white;
+    min-height: rem-calc(400);
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+
+    h2 {
+      color: $secondary-color;
+      margin: 0;
+      text-align: center;
+      padding-top: rem-calc(100);
+      opacity: .9;
+    }
+
+    p {
+      color: $black;
+      text-align: center;
+      opacity: .8;
+    }
+  }
+
+  #jobs-table, #users-table {
+    background: $white;
+    min-height: rem-calc(400);
+    width: 100%;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+
+    table {
+      background: $white;
+      border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-collapse: separate;
+      border-width: 0;
+      padding-left: rem-calc(5);
+      padding-right: rem-calc(5);
+      width: 100%;
+
+      td, th {
+        font-weight: 300;
+        line-height: 1.5;
+        background: $white;
+        vertical-align: top;
+      }
+    }
+  }
+
+  table.clickable-row {
+    tr {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width:320px) {}
+
+@media only screen and (min-width:480px) {
+  #jobs-header, #users-header {
+    table {
+      padding-left: rem-calc(40);
+      padding-right: rem-calc(40);
+    }
+  }
+
+  #jobs-table, #users-table {
+    table {
+      padding-left: rem-calc(40);
+      padding-right: rem-calc(40);
+    }
+  }
+}
+
+@media only screen and (min-width:768px) {}
+
+@media only screen and (min-width:1024px) {}
+
+@media only screen and (min-width:1140px) {}
+
+@media only screen and (min-width:1280px) {}
+
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {}

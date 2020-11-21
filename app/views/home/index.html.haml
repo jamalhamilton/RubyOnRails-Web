@@ -1,0 +1,338 @@
+!!!
+- content_for :title do
+  %link{:href => "https://www.joynus.com", :rel => "canonical"}
+  %title Staffing & Recruiting Solution | Joynus Staffing
+  %meta{:content => "Hello, we are Joynus Staffing; please choose to browse open positions, OR find exceptional candidates for hire as an employer.", :name => "Description"}
+  %meta{:content => "Staffing agency, Recruiting agency, Temp agency,Hire temp, Joynus, Joynus Staffing", :name => "keywords"} 
+  %meta{:content => "/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :property => "og:image"}
+  %meta{:content => "Website", :property => "og:type"}
+  %meta{:content => "	https://www.joynus.com", :property => "og:url"}
+  %meta{:content => "	Staffing & Recruiting solution | Joynus Staffing", :property => "og:title"}
+  %meta{:content => "Hello, we are Joynus Staffing; please choose to browse open positions, OR find exceptional candidates for hire as an employer.", :property => "og:description"}
+  %meta{:content => "summary_large_image", :name => "twitter:card"}
+  %meta{:content => "	Joynus Staffing | Staffing & Recruiting solution", :name => "twitter:title"}
+  %meta{:content => "Hello, we are Joynus Staffing; please choose to browse open positions, OR find exceptional candidates for hire as an employer.", :name => "twitter:description"}
+  %meta{:content => "/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :name => "twitter:image"}
+  
+
+/banner section
+%section.feature-section.no-spacing
+  .feature.animated.fadeIn
+    .feature-container
+      %img{ data: { interchange:"[#{asset_path('landing-mobile.jpg')}, (small)], [#{asset_path('landing-desktop.jpg')}, (medium)], [#{asset_path('landing-desktop.jpg')}, (large)]" } }
+
+      .feature-text.text-center
+        %h1
+          
+          Right People, Right Now
+        .m-top7
+        = link_to t('request.request'), get_talent_index_path, class: 'button landing-blue radius iprocess', target:'_blank'
+        = link_to t('home.work'), 'https://jobs.joynus.com', class: 'button landing-gray radius iprocess', target:'_blank'
+
+
+/industry section        
+%section
+  .row.m-top4
+    .columns.large-12
+      %h3
+        %strong  
+          = t('home.discover')
+      %p
+        =t('home.discover-p')
+        
+
+  .row
+    .columns.medium-6.industry-landing.m-top3
+      =active_link_to specialization_accounting_path do
+        .columns.small-2{:style => "padding:0;"}
+          =image_tag 'accounting & finance-home.png', :class => "img-icon-landing", :alt => "Accounting & Finance"
+        .columns.small-10
+          %p
+            %strong 
+              = t('accounting.banner')
+          %p
+            =t('home.accounting-p')
+          =link_to t('learnmore'), specialization_accounting_path, class: 'industry-link-landing'
+    .columns.medium-6.industry-landing.m-top3
+      =active_link_to specialization_healthcare_path do
+        .columns.small-2{:style => "padding:0;"}
+          =image_tag 'healthcare-home.png', :class => "img-icon-landing", :alt => "Healthcare"
+        .columns.small-10
+          %p
+            %strong 
+              =t('healthcare.banner')
+          %p
+            =t('home.healthcare-p')     
+          =link_to t('learnmore'), specialization_healthcare_path, class: 'industry-link-landing'
+  
+  .row
+    .columns.medium-6.industry-landing.m-top3
+      =active_link_to specialization_it_path do
+        .columns.small-2{:style => "padding:0;"}
+          =image_tag 'IT-home.png', :class => "img-icon-landing", :alt => "Information Technology"
+        .columns.small-10
+          %p{:style=>" letter-spacing:-0.5px;"}
+            %strong 
+              =t('informationtechnology.banner')
+          %p
+            =t('home.it-p')      
+          =link_to t('learnmore'), specialization_it_path, class: 'industry-link-landing'
+  
+    .columns.medium-6.industry-landing.m-top3
+      =active_link_to specialization_manufacturing_path do
+        .columns.small-2{:style => "padding:0;"}
+          =image_tag 'manufacturing-home.png', :class => "img-icon-landing", :alt => "Manufacturing"
+        .columns.small-10
+          %p
+            %strong 
+              =t('manufacturing.banner')
+          %p
+            =t('home.manufacturing-p')
+          =link_to t('learnmore'), specialization_manufacturing_path, class: 'industry-link-landing'
+    
+
+/testimonial slider section
+%section
+  .row
+    .columns.large-12
+      %h3
+        %b
+          =t('home.whyjoynus')
+        
+/testimonial slider section
+%section#testim.testim
+  .testimwrap
+    %span#right-arrow.arrow.right.fa.fa-chevron-right
+    %span#left-arrow.arrow.left.fa.fa-chevron-left
+    %ul#testim-dots.dots
+      %li.dot.active
+      /
+      %li.dot
+      /
+      %li.dot
+      
+      
+    #testim-content.cont
+      .active{:style=>"background-color:none"}
+        .img
+          =image_tag 'Vicki.jpg', alt: "Vickie Britt"
+          
+        %h2#testim 
+          %b  Vickie Britt
+        %h2#testim 
+          %b  HR Manager of Hyundai Transys
+          
+        %p#testim  
+          =t('home.testimonial-1')
+      %div
+        .img
+          =image_tag 'Joe-Davis.jpg', alt: "Joe Davis"
+        %h2#testim 
+          %b  Joe Davis
+        %h2#testim 
+          %b  HR Manager of Seoyon E-Hwa
+          
+        %p#testim
+          =t('home.testimonial-2')
+      
+      %div
+        .img
+          =image_tag 'Jeongdae-Kim.jpg', alt: "Jeongdae Kim"
+        %h2#testim 
+          %b  Jeongdae Kim
+        %h2#testim 
+          %b  Plant Manager of KOPLA
+        %p#testim
+          =t('home.testimonial-3')
+      
+        
+  %script{:src => "https://use.fontawesome.com/1744f3f671.js"}
+  
+        
+%section        
+/clients logo section
+%section
+  .row
+    .columns.large-12
+      %h3
+        %b
+          =t('home.trust')
+      %p
+        =t('home.trust-p')
+      
+  .row{"data-aos" => "zoom-in", "data-aos-delay" => "100"}
+  
+    .columns.small-3
+      = image_tag 'Tesla-c.png', :alt => 'Tesla', :class => 'img-home' 
+    .columns.small-3
+      = image_tag 'Samsung_c.png', :alt => 'Samsung', :class => 'img-home' 
+    .columns.small-3
+      = image_tag 'hyundai_c.png', :alt => 'Hyundai', :class => 'img-home'
+    .columns.small-3
+      = image_tag 'LG_c.png', :alt => 'LG', :class => 'img-home'
+    
+    
+    
+  .row{"data-aos" => "zoom-in", "data-aos-delay" => "300"}  
+    .columns.small-3
+      = image_tag 'Kia.png', :alt => 'Kia', :class => 'img-home'  
+    .columns.small-3
+      = image_tag 'Mobis.png', :alt => 'Hyundai', :class => 'img-home'
+    .columns.small-3
+      = image_tag 'CJ.png', :alt => 'CJ', :class => 'img-home'
+    .columns.small-3
+      = image_tag 'Spigen_c.png', :alt => 'CJ', :class => 'img-home' 
+      
+  .row{"data-aos" => "zoom-in", "data-aos-delay" => "500"}
+    .columns.small-3.small-push-1
+      = image_tag 'Posco_c.png', :alt => 'Posco', :class => 'img-home'
+    .columns.small-3.small-push-1
+      = image_tag 'Kumho.png', :alt => 'Kumho Tire', :class => 'img-home'
+    .columns.small-3.small-push-1
+      = image_tag 'Mando.png', :alt => 'Mando', :class => 'img-home'
+
+/some blogs and podcast section    
+
+%section
+  .row
+    .columns.large-12
+      %h3
+        %b
+          =t('home.update')
+      %p
+        =t('home.update-p')
+
+  .updates-landing
+    
+    /blog
+    .row
+      .columns.large-12
+        %h3#updates-landing
+          %b
+            =link_to t('home.blog'), posts_path
+      .columns.large-12.m-top4
+        %div{:style => "text-align:center"}
+          %span.blogdot{:onclick => "blogcurrentSlide(1)"}
+          %span.blogdot{:onclick => "blogcurrentSlide(2)"}
+          %span.blogdot{:onclick => "blogcurrentSlide(3)"}
+      .slideshow-container
+        .mySlides.fade
+          - @loadpostslandingfirst.each do |post|
+            .columns.medium-6.m-top3
+              = active_link_to post_path(post) do
+                .blog-landing
+                  = image_tag post.preview_image.try(:data).try(:thumb, Post.preview_image_dimensions).try(:url), alt: post.preview_image&.data&.name
+                  %div{:style=>"padding:0 2%;"}
+                    %p#date
+                      = post.created_at.to_date
+                    %p#blogtitle
+                      %b
+                        = truncate(post.blog_title, :length=>60)
+                    =link_to "Read more", post_path(post), class: 'industry-link-landing'
+        .mySlides.fade
+          - @loadpostslandingsecond.each do |post|
+            .columns.medium-6.m-top3
+              = active_link_to post_path(post) do
+                .blog-landing
+                  = image_tag post.preview_image.try(:data).try(:thumb, Post.preview_image_dimensions).try(:url), alt: post.preview_image&.data&.name
+                  %div{:style=>"padding:0 2%;"}
+                    %p#date
+                      = post.created_at.to_date
+                    %p#blogtitle
+                      %b
+                        = truncate(post.blog_title, :length=>60)    
+                    =link_to "Read more", post_path(post), class: 'industry-link-landing'
+        .mySlides.fade
+          - @loadpostslandingthird.each do |post|
+            .columns.medium-6.m-top3
+              = active_link_to post_path(post) do
+                .blog-landing
+                  = image_tag post.preview_image.try(:data).try(:thumb, Post.preview_image_dimensions).try(:url), alt: post.preview_image&.data&.name
+                  %div{:style=>"padding:0 2%;"}
+                    %p#date
+                      = post.created_at.to_date
+                    %p#blogtitle
+                      %b
+                        = truncate(post.blog_title, :length=>60)      
+                    =link_to "Read more", post_path(post), class: 'industry-link-landing'  
+
+        
+
+        
+      /podcasts
+    - if I18n.locale == :en    
+      .row.m-mobile
+        .columns.large-12.m-top2
+          %h3#updates-landing.text-center
+            %b
+              =link_to t('home.podcast'), podcasts_path
+              
+        .columns.large-10.large-push-1.m-top4
+          %div{:style => "text-align:center"}
+            %span.podcastdot{:onclick => "podcastcurrentSlide(1)"}
+            %span.podcastdot{:onclick => "podcastcurrentSlide(2)"}
+            %span.podcastdot{:onclick => "podcastcurrentSlide(3)"}
+          .slideshow-container
+            .podcastSlides.fade  
+              - @loadpodcastslandingfirst.each do |podcast|
+                .columns.medium-4.text-center
+                  = active_link_to podcast_path(podcast) do
+                    .podcast-landing
+                      %p#date
+                        = podcast.published_date
+                      %p#podcasttitle.m-top2
+                        %b
+                          = truncate(podcast.episode_title, :length=>80)
+                          
+                  .m-top3
+                    =link_to "Listen now", podcast, class: 'industry-link-landing'
+          .slideshow-container
+            .podcastSlides.fade  
+              - @loadpodcastslandingsecond.each do |podcast|
+                .columns.medium-4.text-center
+                  = active_link_to podcast_path(podcast) do
+                    .podcast-landing
+                      %p#date
+                        = podcast.published_date
+                      %p#podcasttitle.m-top2
+                        %b
+                          = truncate(podcast.episode_title, :length=>80)
+                  .m-top3
+                    =link_to "Listen now", podcast, class: 'industry-link-landing'    
+          .slideshow-container
+            .podcastSlides.fade  
+              - @loadpodcastslandingthird.each do |podcast|
+                .columns.medium-4.text-center
+                  = active_link_to podcast_path(podcast) do
+                    .podcast-landing
+                      %p#date
+                        = podcast.published_date
+                      %p#podcasttitle.m-top2
+                        %b
+                          = truncate(podcast.episode_title, :length=>80) 
+                  .m-top3
+                    =link_to "Listen now", podcast, class: 'industry-link-landing'
+
+
+  
+/contact form section
+%section
+  .row
+    .columns.large-6.large-push-4
+      %h3.text-center{:style=>"width:fit-content;none"}
+        %b
+          =t('home.contact-form')
+    
+    .columns.large-8.large-push-2
+      %p{:style=>"margin-top:20px;"}
+        =t('home.contact-form-p')
+      .mb--
+      %script{:charset => "utf-8", :src => "//js.hsforms.net/forms/v2.js", :type => "text/javascript"}
+      :javascript
+        hbspt.forms.create({
+        	portalId: "6831067",
+        	formId: "762a092b-d25a-4932-94f3-f3b4637c067f"
+        	
+          
+        });
+    

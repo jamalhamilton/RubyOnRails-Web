@@ -1,0 +1,520 @@
+
+
+@media only screen {
+  #home {
+    .updates-landing{
+      height: auto;
+      
+      margin-top:25px;
+      position:relative;
+      padding: 3% 0 7% 0;
+    }
+      
+      
+    .updates-landing:before{
+      background: rgba(215, 218, 218, 0.2);
+      content: "";
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      left:0;
+      top:0;
+      z-index:0;
+      
+    }
+    
+    
+    
+    h1{
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      background:linear-gradient(to right, #EBF7FF -10%, #1da3fc 11%, #EA4335 81%, #F6DFFF 110% );
+    	-webkit-background-clip: text;
+    	-webkit-text-fill-color: transparent;
+    	width:fit-content;
+    	margin:auto;
+    	
+    }  
+    h2{color:$white;}
+    .industry-link-landing{
+      position:relative;
+      padding:2% 3%;
+      border-radius:24px;
+      background:$white;
+      background-clip: padding-box;
+      border: 2px solid transparent;
+    }
+    
+    .industry-link-landing:after{
+     position: absolute;
+    top: -2px; bottom: -2px;
+    left: -2px; right: -2px;
+    background: linear-gradient(#18A0FB 0%, #EA4335 100%);
+    content: '';
+    z-index: -1;
+    border-radius: 24px;
+    }
+    
+    .industry-link-landing:hover:after{
+      background: linear-gradient(#EA4335 0%, #18A0FB 100%);
+      
+    }
+    
+    
+    
+    
+    
+
+.img-home{
+    height:100px;
+    width:100px;
+    margin-top:50px;
+}   
+
+.landingsection{
+  
+  display:flex;
+   align-items:center;
+   justify-content:center; 
+   padding:1em;
+   margin:50px 0 50px 0 ;
+   position:relative;
+}
+
+
+
+
+    
+    .home-section-img {
+      width: calc(100% + 30px);
+      position: relative !important;
+      left: -15px;
+    }
+
+    .content-section {
+      h2 { margin-top: rem-calc(30); }
+      p, .button { margin-bottom: rem-calc(30); }
+    }
+
+    .companies {
+      position: relative;
+      top: -1px;
+      padding-top: rem-calc(24);
+      padding-right: rem-calc(64);
+      padding-bottom: rem-calc(24);
+      padding-left: rem-calc(64);
+
+      h3 {
+        color: $white;
+        margin-bottom: rem-calc(24);
+      }
+
+      ul {
+        max-width: rem-calc(900);
+        margin: 0 auto;
+
+        li {
+          width: 50%;
+          float: right;
+          list-style-type: none;
+          text-align: center;
+
+          span {
+            color: #fff;
+            font-size: rem-calc(50);
+            opacity: 0.6;
+            width: 100%;
+            text-align: center;
+
+            &.icon-posco-logo {
+              position: relative;
+              top: 14px;
+              font-size: rem-calc(30);
+            }
+          }
+        }
+      }
+    }
+
+    #career {
+      position: relative;
+      top: -1px;
+    }
+  }
+}
+
+
+@media only screen and (min-width: rem-calc(320)) {
+ #home{
+   .podcast-landing{
+      background: #FFFFFF;
+      box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, 0.25);
+      min-height:200px;
+      height:auto;
+      padding: 5% 10% 10% 10%;
+      margin-bottom:25px;
+      margin-top:55px;
+      
+      
+      
+      p#date{
+        color:#867b79;
+      }
+      
+      p#podcasttitle{
+        color:#1475B7;
+        margin-top:35px;
+      }
+    }
+    
+    .podcast-landing:hover{
+      background:linear-gradient(180deg, rgba(183, 226, 255, 0.096) 0%, rgba(234, 67, 53, 0.12) 70%);
+    }
+   
+   
+   
+   
+   .blog-landing{
+      display:block;
+      
+      a{
+        color:#4b4d49;
+      }
+      
+      img{
+        width:100%;
+        padding:0 3%;
+        margin-top:25px;
+      }
+      
+      div{
+        width:98%;
+        
+        margin:auto;
+      
+      p#date{
+        color:#867b79;
+        margin-bottom:0.5rem;
+        margin-top:5px;
+        line-height:1rem;
+      }
+      
+      p#blogtitle{
+        color:#EA4335;
+      }
+      }
+    }
+   
+   
+   
+   .img-home{
+    height:40px;
+    width:auto;
+    }
+    
+    .industry-landing{
+      padding: 24px 0px 24px 12px;
+      .img-icon-landing{
+       
+       background: #E6EFFF;
+       border-radius: 99px;
+       width:45px;
+       height:auto;
+       padding:10%;
+     }
+     
+     a{
+       color:#4b4d49;
+     }
+     
+   
+   }
+   
+   .industry-landing:hover{
+     background:linear-gradient(180deg, rgba(183, 226, 255, 0.096) 0%, rgba(234, 67, 53, 0.12) 100%);
+     
+     
+     .img-icon-landing{
+       background:white;
+       
+     }
+   }
+   
+   
+   
+   
+   .landingsection{
+       display:block;
+       align-items:center;
+       justify-content:center; 
+       padding:1em;
+       margin: 30px 0 30px 0;
+    
+    img{
+      margin: 0 0 90px 0;
+    }
+     
+   }
+   
+   p{font-size:17px; }
+   
+   h2{font-size:30px;}
+    
+   h3{font-size:24px;
+     background: linear-gradient(to right, #F26741 0%,  #18A0FB 100%);
+     -webkit-background-clip: text;
+    	-webkit-text-fill-color: transparent;
+    	width:fit-content;
+     
+   }
+   
+   h3#updates-landing {
+     margin:auto;
+     a{
+     font-size:24px;
+     color:#737171;
+     -webkit-text-fill-color: #737171;
+     text-decoration:none;
+     }
+     
+     a:hover{
+       color:#5a5858;
+       text-decoration:underline;
+     }
+   }
+  .wwdContent4{min-height: 230px;
+    margin: -5% 0 -5% 0;
+  } 
+	.img5{
+    height:auto;
+    width:250px;
+    padding: 1em;
+}
+  h2{
+    padding-top:1em;
+  }
+
+
+ }
+} 
+
+// Small screens
+@media only screen and (min-width: rem-calc(501)) {
+  #home {
+    .companies ul li { width: 33%; }
+
+    section.content-section {
+
+      &.x-small, &.small {
+        padding-top: rem-calc(0);
+        padding-bottom: rem-calc(50);
+      }
+
+      &#career { padding-bottom: 0 !important; }
+      &#right-job { padding-top: 0 !important; }
+    }
+  
+    
+    
+    
+  }
+}
+
+// Medium screens
+@media only screen and (min-width: rem-calc(768)) {
+  #home {
+    .podcast-landing{      min-height:245px;   
+    padding: 5%;
+      
+    }
+     .img-home{
+    height:auto;
+    width:180px;
+    
+    }
+    .companies ul li { width: 20%; }
+    .home-section-img img { width: 100%; }
+    p { font-size: 18px;}
+    
+    h2{font-size: $h2-font-size;}
+    
+    
+   .landingsection{
+       display:block;
+   }
+   .wwdContent4{min-height: 460px;
+    margin:-5% 0 -8% 0;
+    
+  } 
+   .industry-landing{
+      padding: 24px 24px 60px 12px;
+   }
+  }
+}
+
+@media only screen and (min-width: rem-calc(1024)) {
+  #home {
+    .blog-landing{
+      display:flex;
+      
+      img{width:100%; padding:0;}
+      
+      div{width:75%;}
+    }
+    
+    .podcast-landing{      min-height:260px;   
+    padding: 5% 7% 10% 7%;
+      
+    }
+    
+    
+    .landingsection{
+       display:flex;
+       align-items:left;
+       justify-content:center; 
+       padding:2em 0 0 0em;
+       
+      h3{
+        width:90%;
+      } 
+      p{
+        width:90%;
+      }
+     
+    }
+    .home-section-img { display: none; }
+    
+    .wwdContent4{min-height: 580px;
+      margin:-1% 0 -7% 0;
+    }
+    
+    
+    section.content-section {
+      padding-top: rem-calc(150);
+      padding-bottom: rem-calc(150);
+      
+      h2 { margin-top: 0; }
+      p, .button { margin-bottom: 0; }
+      .button { margin-top: rem-calc(30); }
+
+      &.small {
+        padding-top: rem-calc(100);
+        padding-bottom: rem-calc(100);
+      }
+
+      &.x-small {
+        padding-top: rem-calc(50);
+        padding-bottom: rem-calc(50);
+      }
+
+      &#career {
+        //background: asset-url('career-img.jpg') no-repeat top right;
+        background: asset-url('LandingA.png') no-repeat top right;
+        padding-top: rem-calc(150) !important;
+        padding-bottom: rem-calc(150) !important;
+      }
+
+      &#best-decision {
+        //background: asset-url('best-decision-img.jpg') no-repeat top right;
+        background: asset-url('LandingC.png') no-repeat top right;
+        background-size: auto 100%;
+      }
+
+      &#employers { 
+        //background: asset-url('employer_homepage.jpg') no-repeat top left; 
+        background: asset-url('LandingD.png') no-repeat top left; 
+        
+      }
+
+      &#right-job {
+        padding-top: rem-calc(150) !important;
+        padding-bottom: rem-calc(150) !important;
+
+        .right-job-img {
+          position: absolute;
+          top: -100px;
+
+          img {
+            max-height: 400px;
+          }
+        }
+      }
+    }
+    
+
+  }
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: rem-calc(1440)) {
+  #home {
+    .blog-landing{
+     
+      div{width:75%;}
+    }
+    
+    .landingsection{
+       display:flex;
+       align-items:left;
+       justify-content:center; 
+       padding:2em 0 0 20em;
+    }
+      .wwdContent4{min-height: 630px;
+      margin:-3% 0 -4% 0;
+    }
+  }
+}
+
+@media all and (max-width:500px) {
+  #home{
+  h2{font-size:21px;  }  
+  p{font-size:15px;}
+  
+  
+  
+  
+  
+  .iprocess {
+    
+    padding: 9px 15px ;
+    font-size: 15px;
+    position: relative;
+    
+  }
+  
+  
+ 
+  
+  
+  
+  
+  .srvIco i{
+    font-size:25px;
+    color: #48522d;
+    display: inline-block;
+  }
+
+  
+  
+  
+  }
+}
+// Large screens
+@media only screen and (min-width: 64.063em) {}
+ 
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {}
+
+// XLarge screens
+@media only screen and (min-width: 90.063em) {}
+ 
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {}
+ 
+// XXLarge screens
+@media only screen and (min-width: 120.063em) {}
+
+
+

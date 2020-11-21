@@ -1,0 +1,133 @@
+- if flash[:notice]
+  = render 'shared/success_notice'
+- content_for :title do
+  
+  
+  
+  %title= @podcast.episode_title
+  %meta{:content => @podcast.episode_summary, :name => "Description"}
+  %script{:crossorigin => "anonymous", :integrity => "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo", :src => "https://code.jquery.com/jquery-3.3.1.slim.min.js"}
+  :javascript
+    $(function() {
+    	$('audio').audioPlayer();
+    });
+    
+
+
+%section.no-spacing
+  .pagecover-show-podcast
+    .row.m-mobile
+      .columns.large-12
+        .episode-button
+          Episode #
+          = @podcast.id
+        %h1#podcast-show
+          %b
+            = @podcast.episode_title
+    .row.m-top5  
+      .columns.medium-3.large-3.xlarge-2
+        %h4
+          =@podcast.published_date
+          
+          
+          %p#demo
+          
+      .columns.medium-3
+        %a{:href => @podcast.episode_audio_url, :download=>""}
+          .download-button
+            %i.icon-download
+            DOWNLOAD
+      
+      .columns.large-12.m-top5
+        %audio#myAudio{:controls => ""}
+          %source{:src => @podcast.episode_audio_url, :type => "audio/ogg"}
+        
+       
+          
+
+      
+%section
+  .row{:style=>"max-width: 98rem;"}
+    .columns.large-3
+    
+      = link_to podcasts_path do
+        %i.icon-left-big
+        PODCASTS
+    .columns.large-4
+      - if current_user
+        
+        = link_to 'Edit Podcast', edit_podcast_path(@podcast), class: 'button tiny radius ml'
+        
+  .row{:style=>"max-width: 98rem;"}
+    .columns.large-7
+      .columns.large-12{:style=>"overflow: hidden; text-overflow: ellipsis;"}
+        %p
+          =@podcast.raw_podcast
+    .columns.large-4  
+      .columns.large-12
+        %h3
+          %b  SHARE PODCAST
+        = social_share_button_tag @podcast.episode_title, desc: @podcast.episode_description
+      .columns.large-12  
+        %h3.m-top1
+          %b  TAGS
+          %div#show_tags{:style=>"margin-left:3%"}
+            = raw @podcast.tag_counts.map{ |p| link_to p.name, ""}.join(' ')
+      .columns.large-12
+        %h3.m-top1
+          %b
+            FOLLOW US
+        
+        .columns.xlarge-10{:style=>"margin-left:3%"}
+          %p
+            Get notified about updates and be the first to get early access to the new and smarter way to listen to podcasts.
+          %a{:href => "https://open.spotify.com/show/7gUxgSCrqFBeRJSITtPeCp", target:"_blank"}
+            =image_tag "listen_spotify.jpg",:class=>"listen-image"  
+            
+          
+          %a{:href => "https://podcasts.apple.com/us/podcast/career-daily/id1506283238", target:"_blank"}
+            =image_tag "listen_itunes.jpg",:class=>"listen-image"
+
+
+%section
+  .row{:style=>"max-width: 95rem;"}
+    .columns.large-11
+      #disqus_thread.m-top2
+      :javascript
+        var disqus_config = function () {
+        this.page.url = PAGE_URL  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://joynus.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+      %noscript
+        Please enable JavaScript to view the
+        %a{:href => "https://disqus.com/?ref_noscript"} comments powered by Disqus.
+      
+%section#podcast_list
+  =render 'podcasts_list'
+   
+  
+
+%section.no-spacing
+  .subscribe-content.m-top2
+    .row
+      .columns.large-5
+        %h3
+          %b Stay ahead of your game.
+          
+        %p
+          Get notified about updates and be the first to get early access to the new and smarter way to listen to podcasts.
+      .columns.large-6
+        %script{:charset => "utf-8", :src => "//js.hsforms.net/forms/shell.js", :type => "text/javascript"}
+        :javascript
+          hbspt.forms.create({
+          	portalId: "6831067",
+          	formId: "0fe5b610-c8d1-4ced-8011-e69768702e59"
+          });   
+%script#dsq-count-scr{:async => "", :src => "//joynus.disqus.com/count.js"}   

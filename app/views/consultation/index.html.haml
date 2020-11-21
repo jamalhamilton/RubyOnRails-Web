@@ -1,0 +1,72 @@
+- content_for :title do
+  %title Consultation | Joynus Staffing
+  %meta{:content => "Let our team of experts point your business in the right direction when it comes to Competitor Analysis, Hiring Foreign Nationals, Information on Local Demographics, Outsourcing, Strategic Marketing, and Targeted Advertising for the Right People.", :name => "Description"}/
+  %meta{:content => "Staffing Consultation, staffing Consulting, temp consultation, temp consult, staffing consult, recruiting consult, directhire consult", :name => "keywords"}  
+  %link{:href => "https://www.joynus.com/consultation", :rel => "canonical"}
+  %meta{:content => "/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :property => "og:image"}
+  %meta{:content => "Website", :property => "og:type"}
+  %meta{:content => "summary_large_image", :name => "twitter:card"}
+  %meta{:content => "https://www.joynus.com/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :name => "twitter:image"}
+  
+%body
+  %section.feature-section.no-spacing
+    .feature.animated.fadeIn
+      .feature-container
+        %img{ data: { interchange:"[#{asset_path('Consultation_mobile.jpg')}, (small)], [#{asset_path('Consultation_1_final.jpg')}, (medium)], [#{asset_path('Consultation_1_final.jpg')}, (large)]" } }
+        .feature-text
+          %h1.text-center.animated.fadeInDown{:style => "color:#333333; margin-left:-2%"}
+            %b
+              = t('consultation.consultation')
+          
+  
+    .row
+      .columns.large-12
+        .path
+          = active_link_to root_url do
+            .srvIco1
+              %i.icon-home
+          %h5
+            = active_link_to t('header.home'), root_url
+          .srvIco11
+            %i.icon-right  
+          %h5
+            = active_link_to t('header.services'), services_path
+            
+              
+          .srvIco11
+            %i.icon-right    
+          %h5 
+            = t('footer.consultation')
+        
+
+
+  .row#consultation
+    .columns.xlarge-7.vr{:style => "margin-bottom:25px"}
+      
+     
+          
+          
+      %p{:style =>"padding-top:7%"}
+        = t('consultation.consultation-p')
+      
+    
+    .columns.xlarge-4
+      
+      
+      %ul.checklist
+        %li
+          = t('consultation.feature-1')
+        %li
+          = t('consultation.feature-2')
+        %li
+          = t('consultation.feature-3')
+        %li
+          = t('consultation.feature-4')
+        %li
+          = t('consultation.feature-5')
+        %li
+          = t('consultation.feature-6')
+
+              
+  
+  

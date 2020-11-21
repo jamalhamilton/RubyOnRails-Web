@@ -1,0 +1,108 @@
+- content_for :title do
+  %link{:href => "https://www.joynus.com/services", :rel => "canonical"}
+  %title Staffing Services | Joynus Staffing
+  %meta{:content => "Grow your business with us as we offer staffing, direct hire, RPO, or consultation for the following industries: Automotive, Accounting & Finance, Healthcare, Manufacturing, Office & Administrative, and Information Technology.", :name => "Description"}
+  %meta{:content => "Joynus Staffing Services", :name => "keywords"} 
+  %meta{:content => "/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :property => "og:image"}
+  %meta{:content => "Website", :property => "og:type"}
+  %meta{:content => "summary_large_image", :name => "twitter:card"}
+  %meta{:content => "https://www.joynus.com/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :name => "twitter:image"}
+  
+%body
+  %section.feature-section.no-spacing
+    .feature.animated.fadeIn
+      .feature-container
+        %img{ data: { interchange:"[#{asset_path('Services_mobile.jpg')}, (small)], [#{asset_path('services_2_final.jpg')}, (medium)], [#{asset_path('services_2_final.jpg')}, (large)]" } }
+        .feature-text
+          %h1.text-center.animated.fadeInDown{:style => "color:#333333"}
+            %b WHAT WE DO
+          
+    .row#servicepath
+      .columns.large-12#industries
+        .path
+          = active_link_to root_url do
+            .srvIco1
+              %i.icon-home
+          %h5
+            = active_link_to t('header.home'), root_url
+          .srvIco11
+            %i.icon-right  
+          %h5
+            = t('header.services')
+  
+  %section#specialization-service
+    
+    
+  .row
+    .box
+      .columns.medium-4
+        = active_link_to staffing_index_path do
+          = image_tag 'Staffing_Service.png', :alt => 'Staffing', :class => "img000"
+    
+      .columns.medium-8
+        = active_link_to staffing_index_path do
+          %h3 
+            %b 
+              =t('footer.lstaffing')
+        %p
+          =t('services.staffing-p') 
+          <br>
+          %b
+            = active_link_to staffing_index_path do
+              = t('learnmore')
+  .row
+    .box
+      .columns.medium-4
+        = active_link_to directhire_index_path do
+          
+          = image_tag 'DirectHire_Service.png', :alt => 'Direct Hire', :class => "img000"
+          
+      .columns.medium-8
+        = active_link_to directhire_index_path do
+          %h3
+            %b 
+              =t('services.directhire') 
+        %p
+          =t('services.directhire-p') 
+          <br>
+          %b
+            = active_link_to directhire_index_path do
+              = t('learnmore')
+            
+  .row
+    .box
+      .columns.medium-4
+        = active_link_to rpo_index_path do
+          =image_tag 'RPO1.png', :class => "img000", :alt => 'RPO'
+      .columns.medium-8
+        = active_link_to rpo_index_path do 
+          %h3
+            %b
+              =t('services.rpo') 
+        %p 
+          =t('services.rpo-p') 
+          <br>
+          %b   
+            = active_link_to rpo_index_path do
+              = t('learnmore')
+  .row
+    .box
+      .columns.medium-4
+        = active_link_to consultation_index_path do    
+          =image_tag 'Consulting.png', :alt => "Consultation", :class => "img000"  
+      .columns.medium-8
+        = active_link_to consultation_index_path do   
+          %h3 
+            %b
+              =t('services.consultation')
+              
+        %p
+          =t('services.consultation-p')
+          <br>
+          %b   
+            = active_link_to consultation_index_path do   
+              = t('learnmore')
+
+
+
+  

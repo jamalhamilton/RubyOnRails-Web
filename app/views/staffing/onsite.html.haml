@@ -1,0 +1,106 @@
+- if flash[:notice]
+  = render 'shared/success_notice'
+  
+- content_for :title do
+  %title Staffing Onsite Management | Joynus Staffing
+  %meta{:content => "Find out how an ON-SITE Manager can dramatically impact your operations in Productivity, Quality, Leadership, and Innovation.", :name => "Description"}/
+  %meta{:content => "/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :property => "og:image"}
+  %meta{:content => "Website", :property => "og:type"}
+  %meta{:content => "summary_large_image", :name => "twitter:card"}
+  %meta{:content => "https://www.joynus.com/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :name => "twitter:image"}
+  %link{:href => "https://www.joynus.com/staffing/onsite", :rel => "canonical"}
+  
+
+%section.no-spacing
+  .subpage-cover
+    = image_tag "OnsiteManagement.png", :alt => "On-site"
+    .subpage-text
+      %h1
+        %b
+          =t('onsite.onsite1')
+          <br>
+          =t('onsite.onsite2')
+  .path
+    = active_link_to root_url do
+      .srvIco1
+        %i.icon-home
+    .srvIco11
+      %i.icon-right
+    %h5
+      = active_link_to t('header.services'), services_path
+    .srvIco11
+      %i.icon-right
+    %h5
+      = active_link_to t('footer.staffing'), staffing_index_path
+    .srvIco11
+      %i.icon-right
+    %h5 
+      =t('footer.onsite')
+%section
+  .wrap
+    .pageleft
+      .row
+        .columns.large-12
+          %p
+            =t('onsite.onsite-p1')
+          %p
+            =t('onsite.onsite-p2')
+      %section
+        .row
+          .columns.xlarge-12.text-center
+            %h3
+              %b
+                =t('onsite.why')
+          .box
+            .columns.xlarge-3.text-center
+              = image_tag 'Icon_Production_manage.png', :alt => "Productivity", :class => 'img44'
+            .columns.xlarge-9
+              %h5
+                %b
+                  =t('onsite.productivity')
+              %p
+                =t('onsite.productivity-p')
+
+          .box
+            .columns.xlarge-3.text-center
+              = image_tag 'Icon_Impact.png', :alt => "Impact", :class => 'img44'
+            .columns.xlarge-9
+              %h5
+                %b
+                  =t('onsite.impact')
+              %p
+                =t('onsite.impact-p')
+
+          .box
+            .columns.xlarge-3.text-center
+              = image_tag 'Icon_Leadership.png', :alt => "Leadership", :class => 'img44'
+            .columns.xlarge-9
+              %h5
+                %b
+                  =t('onsite.leadership')
+              %p
+                =t('onsite.leadership-p')
+
+          .box
+            .columns.xlarge-3.text-center
+              = image_tag 'Icon_Innovation.png', :alt => "Innovation", :class => 'img44'
+            .columns.xlarge-9
+              %h5
+                %b
+                  =t('onsite.innovation')
+              %p
+                =t('onsite.innovation-p')
+
+
+    .pageright
+      .row
+        .columns.large-10.large-offset-1
+          %h2.text-center.no-margin-top
+            %b= t 'contact.content-header'
+
+
+      .form-section.no-spacing.mb--
+        .row
+          .columns.large-10.large-offset-1
+            %fieldset.mb--
+              = render 'contact/form'

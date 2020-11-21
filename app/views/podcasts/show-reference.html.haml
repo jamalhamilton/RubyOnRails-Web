@@ -1,0 +1,41 @@
+- if flash[:notice]
+  = render 'shared/success_notice'
+- content_for :title do
+  
+  
+  
+
+  %title  Latest News On Your Career | Joynus Staffing.
+  %meta{:content => "Get the latest industry scoop and informative knowledge.", :name => "Description"}
+
+
+
+%section
+  %p#notice= notice
+  %p
+    %strong Episode number:
+    = @podcast.episode_number
+  
+  %p
+    %strong Episode url:
+    = @podcast.episode_url
+  
+  %p
+    %strong Episode title:
+    = @podcast.episode_title
+  %p
+    %strong Episode description:
+    = @podcast.episode_description
+  %p
+    %strong Episode audio url:
+    = link_to "Download", @podcast.episode_audio_url, download: "{@podcast.episode_audio_url}"
+    %a{:download => "#{@podcast.episode_audio_url}", :href => "#{@podcast.episode_audio_url}"} Download file
+    
+
+
+
+    
+    
+  = link_to 'Edit', edit_podcast_path(@podcast)
+  |
+  = link_to 'Back', podcasts_path

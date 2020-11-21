@@ -1,0 +1,8 @@
+
+.row
+  .columns.large-12
+    %fieldset.mb--
+      = form_for @post do |form|
+        = render form
+
+        = form.submit "Submit", class: 'button small no-margin right submit radius'

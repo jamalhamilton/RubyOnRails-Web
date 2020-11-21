@@ -1,0 +1,40 @@
+- if form.object.errors.any?
+  %div{:id => "error_explanation"}
+    .col-sm-12
+      %h2
+        = pluralize(form.object.errors.count, "error")
+        prohibited this form.object from being saved:
+
+      %ul
+        - form.object.errors.full_messages.each do |message|
+          %li= message
+
+.row
+  .columns.large-12
+    = form.text_field :title, placeholder: 'URL'
+
+.row
+  .columns.large-12
+    = form.text_field :blog_title, placeholder: 'Blog & Meta Title'
+
+.row
+  .columns.large-12
+    = form.text_field :social_title, placeholder: 'Social Title'    
+    
+.row
+  .columns.large-12
+    = form.select :author_id, options_for_select(author_options)
+.row
+  .columns.large-12
+    = form.text_field :category, placeholder: 'Category'
+.row
+  .columns.large-12
+    = form.text_field :summary, placeholder: 'Preview Summary'
+.row
+  .columns.large-12
+    = form.label :preview_image_id do
+      Post Image
+      = form.select :preview_image_id, options_for_select(preview_image_options, form.object.preview_image_id)
+.row
+  .columns.large-12
+    = form.cktext_area :contents, placeholder: 'Blog content', cols: 40, class: 'ckeditor'

@@ -1,0 +1,188 @@
+- content_for :title do
+  %link{:href => "https://www.joynus.com/staffing", :rel => "canonical"}
+  %title Staffing Service | Joynus Staffing
+  %meta{:content => "Experience Joynus. A flexible, fast and convenient way to add workforce per your immediate need.", :name => "Description"}
+  %meta{:content => "Staffing Services, temp service, staffing agencies, temp agencies, Joynus", :name => "keywords"} 
+  %meta{:content => "/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :property => "og:image"}
+  %meta{:content => "Website", :property => "og:type"}
+  %meta{:content => "summary_large_image", :name => "twitter:card"}
+  %meta{:content => "https://www.joynus.com/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :name => "twitter:image"}
+    
+%body
+  %section.feature-section.no-spacing
+    .feature.animated.fadeIn
+      .feature-container
+        %img{ data: { interchange:"[#{asset_path('Staffing_mobile.jpg')}, (small)], [#{asset_path('Staffing_final.jpg')}, (medium)], [#{asset_path('Staffing_final.jpg')}, (large)]" } }
+        .feature-text
+          %h1.text-center.animated.fadeInDown{:style => "color:black"}
+            %b 
+              = t('footer.lstaffing')
+          %h5{:style => "color:black"}
+            = t('staffing.staffing-p')
+            
+  
+    .row
+      .columns.large-12
+        .path
+          = active_link_to root_url do
+            .srvIco1
+              %i.icon-home
+          %h5
+            = active_link_to t('header.home'), root_url
+          .srvIco11
+            %i.icon-right  
+          %h5
+            = active_link_to t('header.services'), services_path
+          .srvIco11
+            %i.icon-right    
+          %h5 
+            = t('footer.staffing')
+  %section        
+    .row
+      .box
+        .columns.xlarge-4.text-center
+          = image_tag 'Temp.png', :alt => 'Temp', :class => "img55"  
+        .columns.xlarge-8
+          %h3
+            %b
+              = t('staffing.contingent')
+            
+          %p
+            = t('staffing.contingent-p')
+            
+    .row
+      .box
+        .columns.xlarge-4.text-center
+          = image_tag 'TempToPerm.png', :alt => 'Temp_To_Perm', :class => "img55"  
+        .columns.xlarge-8
+          %h3
+            %b
+              = t('staffing.contracttohire')
+          %p
+            = t('staffing.contracttohire-p')
+  %section
+    %hr    
+    
+  %section
+    .row
+      .box
+        .columns.xlarge-4.text-center
+          = image_tag 'Discovery.png', :alt => "Discovery", :class => 'img55' 
+        .columns.xlarge-8
+          %h3
+            %b
+              = t('staffing.discovery')
+          %p
+            = t('staffing.discovery-p')
+    .row
+      .box
+        .columns.xlarge-4.text-center
+          = image_tag 'Assessment.png', :alt => "Assessment", :class => 'img55' 
+        .columns.xlarge-8
+          %h3
+            %b
+              = t('staffing.assessment')
+          %p
+            = t('staffing.assessment-p')
+    
+    .row
+      .box
+        .columns.xlarge-4.text-center
+          = image_tag 'Orientation.png', :alt => "Orientation", :class => 'img55' 
+        .columns.xlarge-8
+          %h3
+            %b
+              = t('staffing.orientation')
+          %p
+            = t('staffing.orientation-p')
+            
+    .row
+      .box
+        .columns.xlarge-4.text-center
+          = image_tag 'Placement.png', :alt => "Placement", :class => 'img55' 
+        .columns.xlarge-8
+          %h3
+            %b
+              = t('staffing.placement')
+          %p
+            = t('staffing.placement-p')
+    .row
+      .box
+        .columns.xlarge-4.text-center
+          = image_tag 'HighVolume.png', :alt => "HighVolume", :class => 'img55' 
+        .columns.xlarge-8
+          %h3
+            %b
+              = t('staffing.highvolume')
+          %p
+            = t('staffing.highvolume-p')
+            <br>
+          
+            %b
+              = active_link_to t('learnmore'), staffing_highvolume_path
+                
+    
+    .row
+      .box
+        .columns.xlarge-4.text-center
+          = image_tag 'Retention.png', :alt => "Retention", :class => 'img55' 
+        .columns.xlarge-8
+          %h3
+            %b
+              = t('staffing.retention')
+          %p
+            = t('staffing.retention-p')
+            
+    .row
+      .box
+        .columns.xlarge-4.text-center
+          = image_tag 'Conversion.png', :alt => "Migration", :class => 'img55' 
+        .columns.xlarge-8
+          %h3
+            %b
+              = t('staffing.conversion')
+          %p
+            = t('staffing.conversion-p')
+  
+    
+    .row
+      .box
+        .columns.xlarge-4.text-center
+          = image_tag 'OnsiteManagement.png', :alt => "Onsite_Management", :class => 'img55' 
+        .columns.xlarge-8
+          %h3
+            %b
+              = t('staffing.onsite')
+          %p
+            = t('staffing.onsite-p')
+            <br>
+            
+
+          
+            %b
+              = active_link_to t('learnmore'), staffing_onsite_path
+                
+  .extra-navigation.m-top3    
+    = active_link_to directhire_index_path do
+      .item
+        = image_tag 'DirectHire.png', :alt => "Direct Hire", :class => 'img56' 
+        %h2
+          %b
+            = t('extranav.directhire')
+        %p{:style => "color:black"}
+          = t('extranav.directhire-p')
+        %p
+          %b
+            = active_link_to t('learnmore'), directhire_index_path
+    = active_link_to rpo_index_path do
+      .item
+        = image_tag 'RPO.png', :alt => "RPO", :class => 'img56' 
+        %h2
+          %b
+            = t('extranav.rpo')
+        %p{:style => "color:black"}
+          = t('extranav.rpo-p')
+        %p  
+          %b
+            = active_link_to t('learnmore'), rpo_index_path 
+      

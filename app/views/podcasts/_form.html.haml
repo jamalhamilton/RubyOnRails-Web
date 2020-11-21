@@ -1,0 +1,36 @@
+= form_for(@podcast) do |f|
+  - if @podcast.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@podcast.errors.count, "error")
+        prohibited this podcast from being saved:
+      %ul
+        - @podcast.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = f.label :episode_url, "Episode title on SERP(Search Engine Result Page) - Identical: up to 60 characters"
+    = f.text_field :episode_url
+    
+  .field
+    = f.label :episode_title, "Episode title on web page"
+    = f.text_field :episode_title
+  
+  .field
+    = f.label :published_date, "Episode Published Date... Type date or click calendar icon to select"
+    = f.date_field :published_date, "data-provide" => 'datepicker'  
+    
+  .field
+    = f.label :episode_audio_url, "Episode audio download URL link on Podbean"
+    = f.text_field :episode_audio_url
+  .field
+    = f.label :episode_summary, "Episode summary on SERP - Identical: up to 158 characters"
+    = f.text_field :episode_summary
+  .field
+    = f.label :tag_list, "Tags (Separated by commas)"
+    = f.text_field :tag_list
+  .field
+    = f.label :episode_description, "Paragraphs - Identical: around 1200 characters for the alignment of page layout"
+    %br/
+    = f.cktext_area :episode_description, placeholder: 'News content', cols: 40, class: 'ckeditor'
+  .actions
+    = f.submit "Submit", class: 'button small no-margin right submit radius'

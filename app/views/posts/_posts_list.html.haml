@@ -1,0 +1,20 @@
+.row
+  - @posts.each do |post|
+    .columns.small-12.medium-6.xlarge-4
+      .blog-post
+        = active_link_to post_path(post) do
+          .post-thumbnail
+            = image_tag post.preview_image.try(:data).try(:thumb, Post.preview_image_dimensions).try(:url), alt: post.preview_image&.data&.name
+          .meta
+            = active_link_to post.category, post_url(post)
+            
+          %h2
+            = active_link_to truncate(post.blog_title, :length=>120), post_url(post)
+          .bottom
+            = active_link_to post.created_at.to_date, post_url(post), format: :long
+              
+
+
+.row
+  .columns.large-12.text-center
+    = will_paginate @posts, previous_label: "Previous", next_label: "Next", :class=>"digg_pagination", :remote=>"true"

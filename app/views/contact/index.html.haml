@@ -1,0 +1,116 @@
+- if flash[:notice]
+  = render 'shared/success_notice'
+
+
+- content_for :title do
+  %link{:href => "https://www.joynus.com/contact", :rel => "canonical"}
+  %title Contact Us | Joynus Staffing
+  %meta{:content => "Fill out our information fields and be instantly connected with a branch office near you.", :name => "Description"}/
+  %meta{:content => "Staffing agency, Recruiting agency, Temp agency, Looking for job, Looking for Employee, Hire temp, hiring, recruiting, directhire", :name => "keywords"} 
+  
+%section.feature-section.no-spacing
+  .feature.animated.fadeIn
+    .feature-container
+      %img{ data: { interchange:"[#{asset_path('contact_mobile.jpg')}, (small)], [#{asset_path('contact_final.jpg')}, (medium)], [#{asset_path('contact_final.jpg')}, (large)]" } }
+      .feature-text
+        %h1.text-center.animated.fadeInDown
+          %b= t 'contact.feature-header'
+        
+
+  .row#contactpath
+    .columns.large-12
+      .path
+        = active_link_to root_url do
+          .srvIco1
+            %i.icon-home
+        %h5
+          = active_link_to t('header.home'), root_url
+        .srvIco11
+          %i.icon-right
+        %h5 
+          =t('header.contact')
+
+%section
+  .row
+    .columns.large-8.large-offset-2
+      %h2.text-center.no-margin-top
+        %b
+          = t 'contact.content-header'
+      %p.no-margin= t 'contact.content-text'
+
+  .row
+    .columns.large-8.large-offset-2
+      .mb--
+      %script{:charset => "utf-8", :src => "//js.hsforms.net/forms/v2.js", :type => "text/javascript"}
+      :javascript
+        hbspt.forms.create({
+        	portalId: "6831067",
+        	formId: "762a092b-d25a-4932-94f3-f3b4637c067f"
+        	
+          
+        });
+        
+
+%section.light-color-bg#branch-address
+  .row
+    .columns.large-12
+      %h2.text-center.primary-text.mb--
+        %b= t 'contact.office-locations'
+
+  #locations
+    .row
+      .columns.xlarge-3.xlarge-push-1.medium-6
+        %h4.text-thin.primary-text Dalton
+        %ul.no-bullet
+          %li.small 1401 D Cleveland Hwy.
+          %li.small Dalton, GA 30721
+          %li.small #{mail_to 'dalton@joynus.com'}
+          %li.small #{t('contact.phone-label')}: 706-529-6339
+          %li.small #{t('contact.fax-label')}: 706-529-8160
+      
+      //.columns.xlarge-2
+      //  %h4.text-thin.primary-text LaGrange
+      //  %ul.no-bullet
+      //    %li.small 1302 Lafayette Parkway Suite C
+      //    %li.small LaGrange, GA 30241
+      //    %li.small #{mail_to 'lagrange@joynus.com'}
+      //    %li.small #{t('contact.phone-label')}: 706-443-5184
+      //    %li.small #{t('contact.fax-label')}: 706-443-5186
+      .columns.xlarge-2.medium-6
+        %h4.text-thin.primary-text Norcross
+        %ul.no-bullet
+          %li.small 4855 Peachtree Industrial Blvd. #220
+          %li.small Norcross, GA 30092
+          %li.small #{mail_to 'norcross@joynus.com'}
+          %li.small #{t('contact.phone-label')}: 678-248-5833
+          %li.small #{t('contact.fax-label')}: 678-369-7222
+      
+      
+      .columns.xlarge-2.medium-6
+        %h4.text-thin.primary-text Greenville
+        %ul.no-bullet
+          %li.small 125 W Commerce St.
+          %li.small Greenville, AL 36037
+          %li.small #{mail_to 'greenville@joynus.com'}
+          %li.small #{t('contact.phone-label')}: 334-737-6551
+      
+      .columns.xlarge-2.medium-6
+        %h4.text-thin.primary-text Opelika
+        %ul.no-bullet
+          %li.small 2204 B Gateway Dr.
+          %li.small Opelika, AL 36801
+          %li.small #{mail_to 'opelika@joynus.com'}
+          %li.small #{t('contact.phone-label')}: 334-737-6550
+          %li.small #{t('contact.fax-label')}: 334-737-6552
+      
+
+      .columns.xlarge-2.medium-6
+        %h4.text-thin.primary-text Manteca
+        %ul.no-bullet
+          %li.small 1439 Historical Plaza Way
+          %li.small Manteca, CA 95336
+          %li.small #{mail_to 'manteca@joynus.com'}
+          %li.small #{t('contact.phone-label')}: 209-213-7803
+
+
+

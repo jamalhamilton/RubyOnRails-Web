@@ -1,0 +1,257 @@
+- if flash[:notice]
+  = render 'shared/success_notice'
+
+- content_for :title do 
+  %title Information Technology | Joynus Staffing
+  %meta{:content => "Joynus believe as time passes, one way or another, all companies will be a tech company.", :name => "Description"}
+  %meta{:content => "Staffing Information Technology, Contract IT, Looking for IT, Hiring IT, Staffing IT", :name => "keywords"}
+  %link{:href => "https://www.joynus.com/it", :rel => "canonical"}
+  %meta{:content => "/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :property => "og:image"}
+  %meta{:content => "Website", :property => "og:type"}
+  %meta{:content => "summary_large_image", :name => "twitter:card"}
+  %meta{:content => "https://www.joynus.com/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :name => "twitter:image"}
+  
+%body
+  
+  
+  %section
+    
+    .row.spec-font#spec-banner
+      .columns.large-12.text-center
+        %h1
+          %b INFORMATION TECHNOLOGY
+      
+  .columns.large-12
+
+    .path.m-top4
+
+      = active_link_to root_url do
+        .srvIco1
+          %i.icon-home
+      %h5
+        = active_link_to t('header.home'), root_url
+      .srvIco11
+        %i.icon-right  
+      %h5
+        = active_link_to t('header.services'), services_path
+      .srvIco11
+        %i.icon-right
+      %h5 
+        = t('footer.it')
+    
+  %svg.spec.m-top-n1#clouds{:height => "50", :preserveaspectratio => "none", :version => "1.1", :viewbox => "0 0 50 50", :width => "100%", :xmlns => "http://www.w3.org/2000/svg"}
+    %path{:d => "M-5 50 Q 0 20 5 50 Z\n         M0 50 Q 5 0 10 50\n         M5 50 Q 10 30 15 50\n         M10 50 Q 15 10 20 50\n         M15 50 Q 20 30 25 50\n         M20 50 Q 25 -10 30 50\n         M25 50 Q 30 10 35 50\n         M30 50 Q 35 30 40 50\n         M35 50 Q 40 10 45 50\n         M40 50 Q 45 50 50 50\n         M45 50 Q 50 20 55 50\n         M50 50 Q 55 40 60 50\n         M55 50 Q 60 60 65 50\n         M60 50 Q 65 50 70 50\n         M65 50 Q 70 20 75 50\n         M70 50 Q 75 45 80 50\n         M75 50 Q 80 30 85 50\n         M80 50 Q 85 20 90 50\n         M85 50 Q 90 50 95 50\n         M90 50 Q 95 25 50 50\n         M95 50 Q 50 15 105 50 Z"}
+  %section.m-top-n{:style=>"background:linear-gradient(#f9f9f9, #ffffff);"}
+    
+
+    
+    
+    .row.text-center
+      .columns.small-3
+        = image_tag 'Samsung_c.png', :alt => 'Samsung', :class => 'img-spec'
+        
+          
+      .columns.small-3
+        = image_tag 'LG_c.png', :alt => 'LG', :class => 'img-spec'
+        
+          
+      .columns.small-3
+        = image_tag 'CJ.png', :alt => 'CJ', :class => 'img-spec'
+      
+      .columns.small-3
+        = image_tag 'Spigen_c.png', :alt => 'CJ', :class => 'img-spec'  
+      
+        
+    .row.m-top3
+      .columns.large-12
+        %h3.text-center
+          %b
+            Get Creative With the Right People    
+          
+    .row
+      .box-specialization2
+        .columns.xlarge-5.xlarge-push-7.text-center
+          =image_tag 'IT_Get-Creative-(final).png', :class=>"img-story", :alt=>"IT_Get-Creative"
+        .columns.xlarge-7.xlarge-pull-4.spec-font
+          %p.m-top3
+            We are in a period of the Internet of Things. Driven by connectivity, automation and artificial intelligence, the IT department is no longer a cost center where it is in charge of buying and fixing computers. IT has become a source of competitive advantage.
+          %p
+            This transformation is so significant that it blurs the boundaries of what it means to be a “technology industry.” Now, every company is a tech company.
+
+
+ 
+    %section
+      
+      .row
+        .columns.large-12
+          %h3.text-center
+            %b
+              Every Company is a Tech Company 
+      
+      
+      .row
+        .box-specialization2
+          .columns.xlarge-5.text-center
+            =image_tag 'IT_Every company is a tech company.png', :class=>"img-story", :alt=>"IT_Every-company-is-a-tech-company"
+          .columns.xlarge-7.spec-font
+            
+            
+            %p.m-top3
+              What does it mean to have a competitive advantage? Winning competition is much more than great advertisements or excellent customer services. 
+            %p
+              It is about how fast a company can adapt to technology and how essential it is in their core business.
+            %p
+              In the past, investment in technology might have been risky. Now it is a necessity for survival and often the best bet to stay ahead. Your company needs someone who wears the core business hat with technology in mind.
+
+          
+            
+    %section
+      
+      .row
+        .columns.large-12.text-center
+          %h3.text-center
+            %b WHY JOYNUS
+          %h4.text-center.m-top4{:style=>"color:#4B4D49;"}
+            We enjoy being part of ever-changing business landscape that is  derived by technology. 
+    %section#fivefocus.m-top4
+      .row
+        .columns.large-12.text-center.spec-font
+          %h3.text-center
+            %b OUR TOP FOUR FOCUS
+            
+    
+      .row.m-top4.text-center
+        .columns.small-6.medium-3
+          = image_tag 'data driven icon.png', :alt => 'Attendance', :class => 'img-focus'
+          %p.m-top3
+            %b
+              Data-driven
+        .columns.small-6.medium-3
+          = image_tag 'effective communication.png', :alt => 'Product Demand', :class => 'img-focus'
+          %p.m-top3
+            %b
+              Effective<br> Communication
+        .columns.small-6.medium-3
+          = image_tag 'over sea recruitment icon.png', :alt => 'Quality', :class => 'img-focus'
+          %p.m-top3
+            %b
+              Oversea <br> Recruitment
+        .columns.small-6.medium-3
+          = image_tag 'skill deep dive.png', :alt => 'Retention', :class => 'img-focus'
+          %p.m-top3
+            %b
+              Skill Deep Dive
+    
+      
+      
+      
+      
+    
+    %section.m-top4          
+      
+      
+      
+      .row.text-center
+        .colunms.large-12.text-center.spec-font
+          %h3
+            %b Top Talents We Place
+      
+    
+      
+      .row.m-top3
+        .columns.small-5.medium-6
+          .spec-font.text-right.title-border
+            .vl
+            %h4
+              %b  WEB DEVELOPMENT
+        .columns.small-7.medium-6
+          .spec-padding
+            %ul.spec-role
+              %li UI/UX Designer
+              %li Information Architect
+              %li Product Desginer
+              %li Full Stack Developer
+      
+      .row.m-top4
+        .columns.small-5.medium-6
+          .spec-font.text-right.title-border
+            %h4
+              %b  DATA SCIENCE
+        .columns.small-7.medium-6
+          .spec-padding
+            %ul.spec-role
+              %li Data Architect
+              %li Data Analyst
+              %li Data Scientist
+              %li Database Administrator
+              %li System Administrator
+      
+      .row.m-top4
+        .columns.small-5.medium-6
+          .spec-font.text-right.title-border
+            %h4
+              %b  SOFTWARE ENGINEERING
+        .columns.small-7.medium-6
+          .spec-padding
+            %ul.spec-role
+              %li Test Engineer
+              %li Software Architect
+              %li Mobile App Developer
+              %li Design Engineer
+              %li Software Engineer
+      
+      .row.m-top4  
+        .columns.small-5.medium-6
+          .spec-font.text-right.title-border
+            %h4
+              %b CLOUD COMPUTING
+        .columns.small-7.medium-6
+          .spec-padding
+            %ul.spec-role
+              %li Cloud Solutions Architect
+              %li Development Operation Engineer
+              %li Software Architect
+              %li Design Engineer
+            
+      
+      .row.m-top4  
+        .columns.small-5.medium-6
+          .spec-font.text-right.title-border
+            %h4
+              %b INFORMATION TECHNOLOGY 
+        .columns.small-7.medium-6
+          .spec-padding
+            %ul.spec-role
+              
+              %li Information Security Analyst
+              %li IT Help Desk Technician
+              %li System Administrator
+              %li Network Administrator
+      
+            
+        
+    %section
+      .row.text-center
+        .colunms.large-12.text-center.spec-font
+          %h3
+            %b Top Skills of Our Talents
+      .row.text-center.row-wrap
+        .colunms.large-12.m-top4
+          =image_tag  'Top Skills Chart.png'   
+  
+    %section
+      .row
+        .columns.small-12
+          .spec-split.spec-font
+            %h3.text-center
+              %b  Geographical Focus
+            %p.m-top4
+              We are headquartered in Norcross, Georgia and located throughout the United States. Our talents have been mainly placed in San Francisco, Los Angeles, New Jersey, Huston, and cities in Alabama and Georgia.
+  
+      .row.m-top4
+        .columns.small-12.large-9.large-push-1
+          =image_tag 'geo map_IT.png'
+  
+
+
+

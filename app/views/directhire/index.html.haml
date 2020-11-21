@@ -1,0 +1,251 @@
+- content_for :title do
+  %link{:href => "https://www.joynus.com/directhire", :rel => "canonical"}
+  %title Recruitment Service | Joynus Staffing
+  %meta{:content => "We devote extensive time and resources to understand your organization’s unique culture, environment, leadership style, goals, and challenges. Then we carefully select potential candidates for you to choose.", :name => "Description"}/
+  %meta{:content => "Outsource Recruitment, directhire agency, recruiting agency, recruit agency, recruitment", :name => "keywords"}  
+  %meta{:content => "/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :property => "og:image"}
+  %meta{:content => "Website", :property => "og:type"}
+  %meta{:content => "summary_large_image", :name => "twitter:card"}
+  %meta{:content => "https://www.joynus.com/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :name => "twitter:image"}
+  
+%section.feature-section.no-spacing
+  .feature.animated.fadeIn
+    .feature-container
+      %img{ data: { interchange:"[#{asset_path('direct-hire_mobile.jpg')}, (small)], [#{asset_path('Direct-Hire_final.jpg')}, (medium)], [#{asset_path('Direct-Hire_final.jpg')}, (large)]" } }
+      .feature-text
+        %h1.text-center.animated.fadeInDown
+          %b 
+            = t('footer.ldirecthire')
+          
+  .row
+    
+    .columns.large-12
+      .path
+        = active_link_to root_url do
+          .srvIco1
+            %i.icon-home
+        %h5
+          = active_link_to t('header.home'), root_url
+        .srvIco11
+          %i.icon-right  
+        %h5
+          = active_link_to t('header.services'), services_path
+        .srvIco11
+          %i.icon-right    
+        %h5 
+          = t('footer.directhire')
+%section        
+  
+  .row
+    .box
+      .columns.xlarge-4.text-center
+        %a{:href => "#contingencysearch"}
+          = image_tag 'ContingencySearch.png', :alt => 'Contingency Search', :class => "img555"  
+      .columns.xlarge-8
+        %a{:href => "#contingencysearch"}
+          %h2
+            %b
+              = t('directhire.contingency')
+          
+        %p
+          = t('directhire.contingency-p')  
+          
+  .row
+    .box
+      .columns.xlarge-4.text-center
+        %a{:href => "#retainersearch"}
+          = image_tag 'RetainerSearch.png', :alt => 'Retainer Search', :class => "img555"  
+      .columns.xlarge-8
+        %a{:href => "#retainersearch"}
+          %h2
+            %b
+              = t('directhire.retainer') 
+        %p
+          = t('directhire.retainer-p') 
+%section
+  %hr    
+  
+%section#contingencysearch
+  .row
+    .text-center
+      %h2
+        %b
+          = t('directhire.contingencyprocess') 
+    .box
+      .columns.xlarge-4.text-center
+        = image_tag 'IntakeDiscoveryCall.png', :alt => "IntakeDiscoveryCall", :class => 'img55' 
+      .columns.xlarge-8
+        %h3
+          %b  
+            = t('directhire.discovery') 
+        %p
+          = t('directhire.discovery-p')
+        
+  .row
+    .box
+      .columns.xlarge-4.text-center
+        = image_tag 'ResearchCompany.png', :alt => "Research Company", :class => 'img55' 
+      .columns.xlarge-8
+        %h3
+          %b
+            = t('directhire.research')
+        %p
+          = t('directhire.research-p')
+  
+  .row
+    .box
+      .columns.xlarge-4.text-center
+        = image_tag 'Marketing.png', :alt => "Marketing", :class => 'img55' 
+      .columns.xlarge-8
+        %h3
+          %b
+            = t('directhire.marketing')
+        %p  
+          = t('directhire.marketing-p')
+          
+  
+  .row
+    .box
+      .columns.xlarge-4.text-center
+        = image_tag 'CandidatePresentation.png', :alt => "Presentation", :class => 'img55' 
+      .columns.xlarge-8
+        %h3
+          %b
+            = t('directhire.presentation')
+        %p
+          = t('directhire.presentation-p')
+          
+  .row
+    .box
+      .columns.xlarge-4.text-center
+        = image_tag 'Invoice.png', :alt => "Invoice", :class => 'img55' 
+      .columns.xlarge-8
+        %h3
+          %b
+            = t('directhire.invoice')
+        %p
+          = t('directhire.invoice-p')
+
+%section
+  %hr    
+  
+%section#retainersearch
+ 
+  .row
+    .text-center
+      %h2 
+        %b
+          = t('directhire.retainerprocess')
+  .row
+    .box
+      .columns.xlarge-4.text-center
+        = image_tag 'Engagement.png', :alt => "Engagement", :class => 'img55' 
+      .columns.xlarge-8
+        %h3
+          %b
+            = t('directhire.engagement')
+        %p
+          = t('directhire.engagement-p')
+          
+  .row
+    .box
+      .columns.xlarge-4.text-center
+        = image_tag 'Analysis.png', :alt => "Analysis", :class => 'img55' 
+      .columns.xlarge-8
+        %h3
+          %b
+            = t('directhire.analysis')
+        %p
+          = t('directhire.analysis-p')
+
+
+  .row
+    .box
+      .columns.xlarge-4.text-center
+        = image_tag 'AdvertisingRecruitment.png', :alt => "Advertising", :class => 'img55' 
+      .columns.xlarge-8
+        %h3
+          %b
+            = t('directhire.advertising')
+        %p
+          = t('directhire.advertising-p')
+  .row
+    .box
+      .columns.xlarge-4.text-center
+        = image_tag 'InitialScreen.png', :alt => "Screen", :class => 'img55' 
+      .columns.xlarge-8
+        %h3
+          %b
+            = t('directhire.screening')
+        %p
+          = t('directhire.screening-p')
+  .row
+    .box
+      .columns.xlarge-4.text-center
+        = image_tag 'Evaluation.png', :alt => "Evaluation", :class => 'img55' 
+      .columns.xlarge-8
+        %h3
+          %b
+            = t('directhire.evaluation')
+        %p
+          = t('directhire.evaluation-p')
+        	
+  .row
+    .box
+      .columns.xlarge-4.text-center
+        = image_tag 'InterviewProcess.png', :alt => "InterviewProcess", :class => 'img55' 
+      .columns.xlarge-8
+        %h3
+          %b
+            = t('directhire.interview')
+        %p
+          = t('directhire.interview-p')
+
+  .row
+    .box
+      .columns.xlarge-4.text-center
+        = image_tag 'Negotiation.png', :alt => "Negotiation", :class => 'img55' 
+      .columns.xlarge-8
+        %h3
+          %b
+            = t('directhire.negotiation')
+        %p
+          = t('directhire.negotiation-p')
+  .row
+    .box
+      .columns.xlarge-4.text-center
+        = image_tag 'OnboardingSupport.png', :alt => "OnboardingSupport", :class => 'img55' 
+      .columns.xlarge-8
+        %h3
+          %b
+            = t('directhire.onboard')
+        %p
+          = t('directhire.onboard-p')
+        
+          
+.extra-navigation.m-top3    
+  = active_link_to staffing_index_path do
+    .item
+      
+      = image_tag 'Staffing.png', :alt => "Staffing", :class => 'img56' 
+      %h2
+        %b
+          = t('extranav.staffing')
+      %p{:style => "color:black; text-align:none"}
+        = t('extranav.staffing-p')
+      %p
+        %b
+          = active_link_to t('learnmore'), staffing_index_path 
+            
+  = active_link_to rpo_index_path do
+    .item
+      = image_tag 'RPO.png', :alt => "RPO", :class => 'img56' 
+      %h2
+        %b
+          = t('extranav.rpo')
+      %p{:style => "color:black"}
+        = t('extranav.rpo-p')
+      %p  
+        %b
+          = active_link_to t('learnmore'), rpo_index_path 
+    

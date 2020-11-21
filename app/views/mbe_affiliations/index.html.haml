@@ -1,0 +1,38 @@
+- content_for :title do 
+  %title MBE Affiliations | Joynus Staffing
+  %meta{:content => "Joynus is certified as a Minority Business Enterprise (MBE) by the National Minority Supplier Development Council, Inc. (NMSDC). This accreditation qualifies all spend with Joynus as being diversity supplier compliant.", :name => "Description"}/
+  %meta{:content => "MBE certified staffing, MBE Affilications, MBE Certification, MBE certified agency", :name => "keywords"}  
+  %meta{:content => "/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :property => "og:image"}
+  %meta{:content => "Website", :property => "og:type"}
+  %meta{:content => "summary_large_image", :name => "twitter:card"}
+  %meta{:content => "https://www.joynus.com/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :name => "twitter:image"}
+  %link{:href => "https://www.joynus.com/mbe-affiliations", :rel => "canonical"}
+  
+  
+  
+
+
+%section
+  .row.m-top3
+    .columns.large-11
+    
+      %h1.text-center
+        %strong 
+          =t('MBE.MBE Affiliations')
+      %p
+        =t('MBE.MBE Description')
+  
+  .row.m-top3
+    .columns.xlarge-12.boxx
+      .columns.xlarge-2
+        = image_tag 'mbe.jpg', :alt => 'MBE Affiliations', :class => "img22"     
+        /= image_tag 'MBE.png', :alt => 'MBE Affiliations', :class => "img22"     
+      .columns.xlarge-4
+      
+        %h3 
+          %strong 
+            =t('MBE.NMSDC')
+      .columns.xlarge-6
+        %p
+          =t('MBE.NMSDC Description')
+    

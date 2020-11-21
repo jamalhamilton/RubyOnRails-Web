@@ -1,0 +1,54 @@
+- if flash[:notice]
+  = render 'shared/success_notice'
+- content_for :title do
+  %title  Latest Informative Blog | Joynus Staffing
+  %meta{:content => "Get the latest industry scoop and informative knowledge.", :name => "Description"}
+  %meta{:content => "Staffing information, Staffing news, incidents, OSHA, warehouse, Safety ", :name => "keywords"}
+  %link{:href => "https://www.joynus.com/blog", :rel => "canonical"}
+  
+
+%section.feature-section.no-spacing
+  .feature.animated.fadeIn
+    .feature-container
+      %img{ data: { interchange:"[#{asset_path('blog_mobile.jpg')}, (small)], [#{asset_path('blog_final.jpg')}, (medium)], [#{asset_path('blog_final.jpg')}, (large)]" } }
+
+      .feature-text
+        %h1.text-center.animated.fadeInDown{:style => "color:#333333"}
+          %b= t 'blog.feature-header'
+        
+  .row#newstpath
+    .columns.small-12
+      .path
+        = active_link_to root_url do
+          .srvIco1
+            %i.icon-home
+          %h5
+            = active_link_to t('header.home'), root_url
+        .srvIco11
+          %i.icon-right
+
+        %h5 
+          =t('header.blog')
+
+%section
+  .row.text-center
+    .columns.large-12
+      %h2
+        %b  ALWAYS FIRST
+    .blog-description
+      %p
+        Get the latest industry scoop and informative knowledge.
+
+  .row.m-top4
+    .blog-description
+      %div{:style=>"margin:auto; width:90%;"}
+        %script{:charset => "utf-8", :src => "//js.hsforms.net/forms/shell.js", :type => "text/javascript"}
+        :javascript
+          hbspt.forms.create({
+          	portalId: "6831067",
+          	formId: "047544cc-4dfc-4b04-bef8-f7f99bf8501b"
+          });
+           
+%section#post_list
+  =render 'posts_list'
+

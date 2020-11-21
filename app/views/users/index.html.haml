@@ -1,0 +1,33 @@
+
+    
+%section.no-spacing
+  .row
+    .columns.large-8.large-offset-2
+      .right.mt--
+        = link_to 'Add User', new_user_path, class: 'button tiny radius secondary'
+
+%section.no-spacing.mb--
+  .row
+    .columns.large-8.large-offset-2
+      %fieldset.mb--
+        .row
+          .columns.large-12
+            #users-header
+              %table.no-margin
+                %tbody
+                  %tr
+                    %td{ width: '190' } Name
+                    %td Email
+                    %td{ width: '70' }
+
+        .row
+          .columns.large-12
+            #users-table
+              %table.clickable-row
+                %tbody
+                  - @users.each do |user|
+                    - if user.email != 'hello@underbelly.is'
+                      %tr{ data: { url: "#{edit_user_path(user)}" } }
+                        %td{ width: '190' }= user.try(:full_name)
+                        %td= user.email
+                        %td.text-center{ width: '70' }= link_to 'Edit', edit_user_path(user)

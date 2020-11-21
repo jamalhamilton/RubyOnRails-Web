@@ -1,0 +1,272 @@
+- if flash[:notice]
+  = render 'shared/success_notice'
+
+
+-content_for :title do
+  %link{:href => "https://www.joynus.com/specialization/it", :rel => "canonical"}
+  %title Information Technology | Joynus Staffing
+  %meta{:content => "Joynus believe as time passes, one way or another, all companies will be a tech company.", :name => "Description"}
+  %meta{:content => "Staffing Information Technology, Contract IT, Looking for IT, Hiring IT, Staffing IT", :name => "keywords"}
+
+  
+  
+%body
+  
+  
+  %section
+    
+    .row.spec-font#spec-banner
+      .columns.large-12.text-center
+        %h1
+          %b
+            =t('informationtechnology.banner')
+      
+  .columns.large-12.m-bottom3  
+
+    .path.m-top4
+
+      = active_link_to root_url do
+        .srvIco1
+          %i.icon-home
+      
+      .srvIco11
+        %i.icon-right  
+      %h5
+        = t('header.specialization')
+      .srvIco11
+        %i.icon-right
+      %h5 
+        = t('footer.it')
+    
+  %svg.spec.m-top-n1#clouds{:height => "50", :preserveaspectratio => "none", :version => "1.1", :viewbox => "0 0 50 50", :width => "100%", :xmlns => "http://www.w3.org/2000/svg"}
+    %path{:d => "M-5 50 Q 0 20 5 50 Z\n         M0 50 Q 5 0 10 50\n         M5 50 Q 10 30 15 50\n         M10 50 Q 15 10 20 50\n         M15 50 Q 20 30 25 50\n         M20 50 Q 25 -10 30 50\n         M25 50 Q 30 10 35 50\n         M30 50 Q 35 30 40 50\n         M35 50 Q 40 10 45 50\n         M40 50 Q 45 50 50 50\n         M45 50 Q 50 20 55 50\n         M50 50 Q 55 40 60 50\n         M55 50 Q 60 60 65 50\n         M60 50 Q 65 50 70 50\n         M65 50 Q 70 20 75 50\n         M70 50 Q 75 45 80 50\n         M75 50 Q 80 30 85 50\n         M80 50 Q 85 20 90 50\n         M85 50 Q 90 50 95 50\n         M90 50 Q 95 25 50 50\n         M95 50 Q 50 15 105 50 Z"}
+  %section.m-top-n{:style=>"background:linear-gradient(#f9f9f9, #ffffff);"}
+    
+
+    
+    
+    .row.text-center
+      .columns.small-3
+        = image_tag 'Samsung_c.png', :alt => 'Samsung', :class => 'img-spec'
+        
+          
+      .columns.small-3
+        = image_tag 'LG_c.png', :alt => 'LG', :class => 'img-spec'
+        
+          
+      .columns.small-3
+        = image_tag 'CJ.png', :alt => 'CJ', :class => 'img-spec'
+      
+      .columns.small-3
+        = image_tag 'Spigen_c.png', :alt => 'CJ', :class => 'img-spec'  
+      
+        
+    .row
+      .columns.large-12.m-top2
+        %h3.text-center
+          %b
+            =t('informationtechnology.creative')   
+          
+    .row
+      .box-specialization2
+        .columns.large-5.large-push-7.text-center
+          =image_tag 'IT_Get-Creative-(final).png', :class=>"img-story", :alt=>"IT_Get-Creative"
+        .columns.large-7.large-pull-4.spec-font
+          %p.m-top3
+            =t('informationtechnology.creative-p1')   
+          %p
+            =t('informationtechnology.creative-p2')   
+
+
+ 
+    %section
+      
+      .row
+        .columns.large-12
+          %h3.text-center
+            %b
+              =t('informationtechnology.everycompany') 
+      
+      
+      .row
+        .box-specialization2
+          .columns.large-5.text-center
+            =image_tag 'IT_Every company is a tech company.png', :class=>"img-story", :alt=>"IT_Every-company-is-a-tech-company"
+          .columns.large-7.spec-font
+            
+            
+            %p.m-top3
+              =t('informationtechnology.everycompany-p1')
+            %p
+              =t('informationtechnology.everycompany-p2')
+            %p
+              =t('informationtechnology.everycompany-p3')
+
+    
+    %section#fivefocus.m-top4
+      .row
+        .columns.large-12.text-center.spec-font
+          %h3.text-center
+            %b
+              =t('informationtechnology.topfocus')
+            
+    
+      .row.m-top4.text-center
+        .columns.small-6.medium-3
+          = image_tag 'data driven icon.png', :alt => 'Attendance', :class => 'img-focus'
+          %p.m-top3
+            %b
+              =t('informationtechnology.focus1')
+        .columns.small-6.medium-3
+          = image_tag 'effective communication.png', :alt => 'Product Demand', :class => 'img-focus'
+          %p.m-top3
+            %b
+              =t('informationtechnology.focus2')
+              <br>
+              =t('informationtechnology.focus2-2')
+        .columns.small-6.medium-3
+          = image_tag 'over sea recruitment icon.png', :alt => 'Quality', :class => 'img-focus'
+          %p.m-top3
+            %b
+              =t('informationtechnology.focus3')
+              <br>
+              =t('informationtechnology.focus3-2')
+        .columns.small-6.medium-3
+          = image_tag 'skill deep dive.png', :alt => 'Retention', :class => 'img-focus'
+          %p.m-top3
+            %b
+              =t('informationtechnology.focus4')
+    
+    %section.m-top4          
+      .row.text-center
+        .colunms.large-10.large-offset-1.text-center.spec-font
+          %h3
+            %b
+              =t('informationtechnology.talents')
+        
+      .row.m-top3
+        .columns.small-6
+          .title-border.text-center
+            .vl
+            %h5
+              %b
+                =t('informationtechnology.webdevelopment')
+        .columns.small-6
+          .spec-padding
+            %ul.spec-role
+              %li 
+                =t('informationtechnology.webdevelopment-list1')
+              %li
+                =t('informationtechnology.webdevelopment-list2')
+              %li
+                =t('informationtechnology.webdevelopment-list3')
+              %li
+                =t('informationtechnology.webdevelopment-list4')
+      
+      .row.m-top4
+        .columns.small-6
+          .title-border.text-center
+            %h5
+              %b
+                =t('informationtechnology.datascience')
+        .columns.small-6
+          .spec-padding
+            %ul.spec-role
+              %li
+                =t('informationtechnology.datascience-list1')
+              %li
+                =t('informationtechnology.datascience-list2')
+              %li
+                =t('informationtechnology.datascience-list3')
+              %li
+                =t('informationtechnology.datascience-list4')
+              %li
+                =t('informationtechnology.datascience-list5')
+      
+      .row.m-top4
+        .columns.small-6
+          .title-border.text-center
+            %h5
+              %b
+                =t('informationtechnology.software')
+        .columns.small-6
+          .spec-padding
+            %ul.spec-role
+              %li
+                =t('informationtechnology.software-list1')
+              %li
+                =t('informationtechnology.software-list2')
+              %li
+                =t('informationtechnology.software-list3')
+              %li
+                =t('informationtechnology.software-list4')
+              %li
+                =t('informationtechnology.software-list5')
+      
+      .row.m-top4  
+        .columns.small-6
+          .title-border.text-center
+            %h5
+              %b
+                =t('informationtechnology.cloud')
+        .columns.small-6
+          .spec-padding
+            %ul.spec-role
+              %li
+                =t('informationtechnology.cloud-list1')
+              %li
+                =t('informationtechnology.cloud-list2')
+              %li
+                =t('informationtechnology.cloud-list3')
+              %li
+                =t('informationtechnology.cloud-list4')
+            
+      
+      .row.m-top4  
+        .columns.small-6
+          .title-border.text-center
+            %h5
+              %b
+                =t('informationtechnology.it')
+        .columns.small-6
+          .spec-padding
+            %ul.spec-role
+              
+              %li
+                =t('informationtechnology.it-list1')
+              %li
+                =t('informationtechnology.it-list2')
+              %li
+                =t('informationtechnology.it-list3')
+              %li
+                =t('informationtechnology.it-list4')
+      
+            
+        
+    %section
+      .row.text-center
+        .colunms.large-12.text-center.spec-font
+          %h3
+            %b
+              =t('informationtechnology.toptalents')
+      .row.text-center.row-wrap
+        .colunms.large-12.m-top4
+          =image_tag  'Top Skills Chart.png'   
+  
+    %section
+      .row
+        .columns.small-12.large-10.large-offset-1
+          .spec-split.spec-font
+            %h3.text-center
+              %b
+                =t('informationtechnology.geo-focus')
+            %p.m-top4
+              =t('informationtechnology.geo-focus-p')
+  
+      .row.m-top4
+        .columns.small-12.large-9.large-offset-1
+          =image_tag 'geo map_IT.png'
+  
+
+
+

@@ -1,0 +1,32 @@
+@media only screen and (max-width: 1980px){
+  #directhire{
+   p{font-size:20px;}
+   h2{font-size: $h2-font-size;}
+   
+ } 
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 480px) {
+  #directhire{
+   p{font-size:17px;}
+   h2{font-size:30px;}
+   .feature-text{
+       h1{
+           font-size:40px;
+       }
+   }
+ 
+  
+  
+  
+ 
+ p{
+   font-size:15px;
+ }
+  
+    
+      
+      
+  } 
+} 

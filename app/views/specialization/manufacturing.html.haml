@@ -1,0 +1,438 @@
+- if flash[:notice]
+  = render 'shared/success_notice'
+
+
+-content_for :title do
+  %link{:href => "https://www.joynus.com/specialization/manufacturing", :rel => "canonical"}
+  %title Manufacturing | Joynus Staffing
+  %meta{:content => "Joynus is an manufacturing industry experts when it comes to staffing, recruiting, and outsourcing.", :name => "Description"}/
+  %meta{:content => "Staffing Automotive, SKD, Automotive Assembly", :name => "keywords"}
+
+  
+  
+%body
+  
+  
+  %section
+    .row.spec-font#spec-banner
+      .columns.large-12.text-center
+        %h1
+          %b
+            =t('manufacturing.banner')
+      
+  .columns.large-12.m-bottom3  
+    .path.m-top4
+
+      = active_link_to root_url do
+        .srvIco1
+          %i.icon-home
+      %h5
+        = active_link_to t('header.home'), root_url
+      .srvIco11
+        %i.icon-right  
+      %h5
+        = t('header.specialization')
+      .srvIco11
+        %i.icon-right
+      %h5 
+        = t('footer.manufacturing')
+    
+  %svg.spec.m-top-n1#clouds{:height => "50", :preserveaspectratio => "none", :version => "1.1", :viewbox => "0 0 50 50", :width => "100%", :xmlns => "http://www.w3.org/2000/svg"}
+    %path{:d => "M-5 50 Q 0 20 5 50 Z\n         M0 50 Q 5 0 10 50\n         M5 50 Q 10 30 15 50\n         M10 50 Q 15 10 20 50\n         M15 50 Q 20 30 25 50\n         M20 50 Q 25 -10 30 50\n         M25 50 Q 30 10 35 50\n         M30 50 Q 35 30 40 50\n         M35 50 Q 40 10 45 50\n         M40 50 Q 45 50 50 50\n         M45 50 Q 50 20 55 50\n         M50 50 Q 55 40 60 50\n         M55 50 Q 60 60 65 50\n         M60 50 Q 65 50 70 50\n         M65 50 Q 70 20 75 50\n         M70 50 Q 75 45 80 50\n         M75 50 Q 80 30 85 50\n         M80 50 Q 85 20 90 50\n         M85 50 Q 90 50 95 50\n         M90 50 Q 95 25 50 50\n         M95 50 Q 50 15 105 50 Z"}
+  %section.m-top-n{:style=>"background:linear-gradient(#f9f9f9, #ffffff);"}
+    .row
+      .columns.large-12.text-center
+        %h3
+          %b
+            = t('manufacturing.people-1')
+        %h3
+          %b
+            = t('manufacturing.people-2')
+      
+      .columns.large-12.m-top4
+        %p.text-center.line-break
+          = t('manufacturing.people-p1')
+          <br>
+          = t('manufacturing.people-p2')
+          <br>
+          = t('manufacturing.people-p3')
+
+    
+    
+    .row.text-center.m-top3
+      .columns.small-3
+        = image_tag 'Mobis.png', :alt => 'Hyundai', :class => 'img-spec'
+        %p.m-top3
+          
+      .columns.small-3
+        = image_tag 'Kia.png', :alt => 'Kia', :class => 'img-spec'
+        %p.m-top3
+          
+      .columns.small-3
+        = image_tag 'Kumho.png', :alt => 'Kumho Tire', :class => 'img-spec'
+        %p.m-top3
+          
+      .columns.small-3
+        = image_tag 'Tesla-c.png', :alt => 'Tesla', :class => 'img-spec'
+        
+         
+          
+    .row.m-top3
+      .box-specialization
+        .columns.large-5.large-push-6.text-center
+          =image_tag 'manufacturing_retention.png', :class=>"img-story", :alt=>"manufacturing_retention"
+        .columns.large-7.large-pull-4.spec-font
+          %h3
+            %b
+              =t('manufacturing.retention')
+          
+          %p
+            =t('manufacturing.retention-p')
+          %ul
+            %li 
+              =t('manufacturing.retention-list1')
+            %li
+              =t('manufacturing.retention-list2')
+            %li
+              =t('manufacturing.retention-list3')
+            %li
+              =t('manufacturing.retention-list4')
+            %li
+              =t('manufacturing.retention-list5')
+            %li
+              =t('manufacturing.retention-list6')
+    %section
+      .row
+        .box-specialization
+          .columns.large-5.text-center
+            =image_tag 'manufacturing_clear communication and respect.png', :class=>"img-story", :alt=>"manufacturing_clear-communication-and-respect"
+          .columns.large-7
+            %h3
+              %b
+                =t('manufacturing.communication')
+            %p
+              =t('manufacturing.communication-p')
+
+            %ul
+              %li 
+                =t('manufacturing.communication-list1')
+              %li 
+                =t('manufacturing.communication-list2')
+              %li
+                =t('manufacturing.communication-list3')
+              %li
+                =t('manufacturing.communication-list4')
+              %li
+                =t('manufacturing.communication-list5')
+              %li
+                =t('manufacturing.communication-list6')
+              %li
+                =t('manufacturing.communication-list7')
+
+    
+   
+    %section        
+      .row
+        .columns.large-12.text-center
+          %h3
+            %b
+              =t('manufacturing.safety')
+          
+      
+      .row
+        .columns.large-10.large-offset-1
+          .columns.xlarge-4.medium-6
+            
+            .toggle.faq-toggle-list
+              %i.icon-angle-double-down
+              %p
+                =t('manufacturing.question1')
+              
+            .highlight
+              %div.hidden
+                %p 
+                  =t('manufacturing.answer1')
+          .columns.xlarge-4.medium-6
+            
+            .toggle.faq-toggle-list
+              %i.icon-angle-double-down
+              
+              
+              %p
+                =t('manufacturing.question2')
+              
+            .highlight
+              %div.hidden
+                %p
+                  =t('manufacturing.answer2')
+          .columns.xlarge-4.medium-6
+            
+            .toggle.faq-toggle-list
+              %i.icon-angle-double-down
+              %p 
+                =t('manufacturing.question3')
+              
+            .highlight
+              %div.hidden
+                %p 
+                  =t('manufacturing.answer3')
+      
+    
+            
+    %section
+      .row
+        .box-specialization
+          .columns.large-5.large-push-7.xlarge-push-6.text-center
+            =image_tag 'manufacturing_safety is a concern.png', :class=>"img-story", :alt=>"manufacturing_safety-is-a-concern"
+          .columns.large-7.large-pull-4.spec-font
+            %h3.m-top3
+              %b
+                =t('manufacturing.safety-concern')
+ 
+            %p
+              =t('manufacturing.safety-concern-p1')
+            %p
+              =t('manufacturing.safety-concern-p2')
+   
+      .row.m-top4
+        .box-specialization
+          .columns.medium-5
+            %ul
+              %li
+                =t('manufacturing.safety-concern-list1')
+              %li
+                =t('manufacturing.safety-concern-list2')
+              %li
+                =t('manufacturing.safety-concern-list3')
+              %li
+                =t('manufacturing.safety-concern-list4')
+              %li
+                =t('manufacturing.safety-concern-list5')
+              %li
+                =t('manufacturing.safety-concern-list6')
+  
+          .columns.medium-5
+            %ul
+              %li
+                =t('manufacturing.safety-concern-list7')
+              %li
+                =t('manufacturing.safety-concern-list8')
+              %li
+                =t('manufacturing.safety-concern-list9')
+              %li
+                =t('manufacturing.safety-concern-list10')
+              %li
+                =t('manufacturing.safety-concern-list11')
+    
+    %section
+      .row
+        .box-specialization
+          .columns.large-5.text-center
+            =image_tag 'manufacturing_selective screening.png', :class=>"img-story", :alt=>"manufacturing_selective-screening"
+          .columns.large-7.spec-font
+            %h3
+              %b
+                =t('manufacturing.selective')
+
+            %p.m-top3
+              =t('manufacturing.selective-p')
+            
+            
+            %ul
+              
+              %li
+                =t('manufacturing.selective-list1')
+              %li
+                =t('manufacturing.selective-list2')
+              %li
+                =t('manufacturing.selective-list3')
+              %li
+                =t('manufacturing.selective-list4')
+              %li
+                =t('manufacturing.selective-list5')
+    
+    .row.m-top4
+      
+
+      .columns.large-4.medium-6
+        .specialization-post-wrap
+          .specialization-post
+            .spec-post-thumbnail
+              = image_tag "manufacturing_Communication-(final).jpg", :alt=>"manufacturing_Communication"
+            
+          .spec-text-wrap#spec-padding
+            %h3
+              %b
+                =t('manufacturing.communication')
+            
+            %p.m-top3
+              =t('manufacturing.communication-p1')
+            
+      .columns.large-4.medium-6
+        .specialization-post-wrap
+          .specialization-post
+            .spec-post-thumbnail
+              = image_tag "manufacturin_Safety-(final)-.jpg" , :alt=>"manufacturin_Safety"
+            
+          .spec-text-wrap#spec-padding
+            %h3
+              %b
+                =t('manufacturing.safety')
+            %p.m-top3
+              =t('manufacturing.safety-p')
+      
+      .columns.large-4.medium-6
+        .specialization-post-wrap
+          .specialization-post
+            .spec-post-thumbnail
+              = image_tag "manufacturing_Expertise-(final).jpg", :alt=>"manufacturing_Expertise"
+            
+          .spec-text-wrap#spec-padding
+            %h3
+              %b
+                =t('manufacturing.expertise')
+            %p.m-top3
+              =t('manufacturing.expertise-p')
+      
+      
+    %section#fivefocus
+      .row.m-top3
+        .columns.large-12.text-center.spec-font
+          %h3.text-center
+            %b
+              =t('manufacturing.topfocus')
+            
+    
+      .row.text-center
+        .columns.medium-2.medium-offset-1.small-4
+          = image_tag 'attendance-icon.png', :alt => 'Attendance', :class => 'img-focus'
+          %p.m-top3
+            %b
+              =t('manufacturing.focus1')
+        .columns.medium-2.small-4
+          = image_tag 'product-demand-icon.png', :alt => 'Product Demand', :class => 'img-focus'
+          %p.m-top3
+            %b
+              =t('manufacturing.focus2')
+        .columns.medium-2.small-4
+          = image_tag 'Quality-icon.png', :alt => 'Quality', :class => 'img-focus'
+          %p.m-top3
+            %b
+              =t('manufacturing.focus3')
+        .columns.medium-2.small-6
+          = image_tag 'retention-icon.png', :alt => 'Retention', :class => 'img-focus'
+          %p.m-top3
+            %b
+              =t('manufacturing.focus4')
+              <br>
+              =t('manufacturing.focus4-2')
+        .columns.medium-2.medium-pull-1.small-6
+          = image_tag 'safety-icon.png', :alt => 'Safety', :class => 'img-focus'
+          %p.m-top3
+            %b
+              =t('manufacturing.focus5')
+              <br>
+              =t('manufacturing.focus5-2')
+    
+    
+
+    %section
+      
+      .row
+        .columns.medium-6.spec-vr-r
+          .spec-split.spec-font.hide-for-small-only
+            %h3.text-right
+              %b
+                =t('manufacturing.roles')
+            %ul.text-right
+              %li 
+                =t('manufacturing.role-1')
+              %li
+                =t('manufacturing.role-2')
+              %li
+                =t('manufacturing.role-3')
+              %li
+                =t('manufacturing.role-4')
+              %li
+                =t('manufacturing.role-5')
+              %li
+                =t('manufacturing.role-6')
+              %li
+                =t('manufacturing.role-7')
+              %li
+                =t('manufacturing.role-8')
+              %li
+                =t('manufacturing.role-9')
+              %li
+                =t('manufacturing.role-10')
+              %li
+                =t('manufacturing.role-11')
+              %li
+                =t('manufacturing.role-12')
+              %li
+                =t('manufacturing.role-13')
+              %li
+                =t('manufacturing.role-14')
+              %li
+                =t('manufacturing.role-15')
+              %li
+                =t('manufacturing.role-16')
+              %li
+                =t('manufacturing.role-17')
+          .spec-split.spec-font.hide-for-medium-up
+            %h3
+              %b
+                =t('manufacturing.roles')
+            %ul.manufacturing
+              %li 
+                =t('manufacturing.role-1')
+              %li
+                =t('manufacturing.role-2')
+              %li
+                =t('manufacturing.role-3')
+              %li
+                =t('manufacturing.role-4')
+              %li
+                =t('manufacturing.role-5')
+              %li
+                =t('manufacturing.role-6')
+              %li
+                =t('manufacturing.role-7')
+              %li
+                =t('manufacturing.role-8')
+              %li
+                =t('manufacturing.role-9')
+              %li
+                =t('manufacturing.role-10')
+              %li
+                =t('manufacturing.role-11')
+              %li
+                =t('manufacturing.role-12')
+              %li
+                =t('manufacturing.role-13')
+              %li
+                =t('manufacturing.role-14')
+              %li
+                =t('manufacturing.role-15')
+              %li
+                =t('manufacturing.role-16')
+              %li
+                =t('manufacturing.role-17')
+     
+        .columns.small-12.medium-6
+          .spec-split.spec-font
+           
+            
+            %h3
+              %b
+                =t('manufacturing.geo-focus')
+            %p
+              =t('manufacturing.geo-focus-p')
+            
+            =image_tag "geo map_manufacturing.png", :alt=>"Manufacturing distribution"
+      
+    
+            
+        
+    %section 
+

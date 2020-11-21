@@ -1,0 +1,167 @@
+@media only screen {nav ul.menu-right li.menu-item.language-link { display: none; }}
+
+@media only screen and (min-width:320px) {
+ ul#language-dropdown2 {
+    padding-top: rem-calc(25);
+    padding-bottom: rem-calc(15);
+    list-style-type:none;
+    &.align-dropdown {
+      margin-left: -276px;
+      margin-top: rem-calc(15);
+
+      
+    }
+
+    li a {
+      color: #e6e6e6;
+      line-height: rem-calc(35);
+      padding-left: rem-calc(63);
+      padding-bottom: rem-calc(5);
+      position: relative;
+      font-size: rem-calc(12) !important;
+      &:hover{
+        background: $info-color;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: rem-calc(19);
+        top: 50%;
+        width: rem-calc(35);
+        height: rem-calc(35);
+        -webkit-transform: translateY(-50%);
+           -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+             -o-transform: translateY(-50%);
+                transform: translateY(-50%);
+      }
+
+      &.en-link:before { background: image-url('en-flag2.png'); }
+      &.es-link:before { background: image-url('es-flag.png'); }
+      &.kr-link:before { background: image-url('kr-flag2.png'); }
+
+      &.en-link:before, &.es-link:before, &.kr-link:before {
+        background-position: -1px -1px;
+        background-size: 92%;
+        background-repeat: no-repeat;
+        
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width:480px) {}
+
+@media only screen and (min-width:768px) {
+  nav ul.menu-right li.menu-item.language-link { display: inline-block; }
+
+  button.language-dropdown {
+    border: 2px solid $primary-color;
+    border-radius: rem-calc(35);
+    background-color: transparent;
+    padding: 0;
+    margin: 0 0 5% 5%;
+    outline: none;
+    height: rem-calc(35);
+    width: rem-calc(35);
+    position: relative;
+    top: rem-calc(10);
+
+    &.en-selected { background: image-url('en-flag.png'); }
+    &.es-selected { background: image-url('es-flag.png'); }
+    &.kr-selected { background: image-url('kr-flag.png'); }
+
+    &.en-selected, &.es-selected, &.kr-selected {
+      background-position: -1px -1px;
+      background-size: 102%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  #language-dropdown {
+    padding-top: rem-calc(10);
+    padding-bottom: rem-calc(10);
+
+    &.align-dropdown {
+      margin-left: -176px;
+      margin-top: rem-calc(15);
+
+      .triangle {
+        position: absolute;
+        right: 8%;
+        -webkit-transform: translateX(42%);
+           -moz-transform: translateX(42%);
+            -ms-transform: translateX(42%);
+             -o-transform: translateX(42%);
+                transform: translateX(42%);
+        top: -15px;
+      	width: 0;
+      	height: 0;
+      	border-left: 20px solid transparent;
+      	border-right: 20px solid transparent;
+
+      	border-bottom: 15px solid $white;
+        z-index: 50000;
+      }
+
+      .triangle + .triangle {
+        top: -17px;
+      	border-bottom: 15px solid $primary-color;
+        z-index: 49999;
+      }
+    }
+
+    li a {
+      color: $primary-color;
+      line-height: rem-calc(52);
+      padding-left: rem-calc(73);
+      position: relative;
+
+      &:hover{
+        background: $info-color;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: rem-calc(19);
+        top: 50%;
+        width: rem-calc(35);
+        height: rem-calc(35);
+        -webkit-transform: translateY(-50%);
+           -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+             -o-transform: translateY(-50%);
+                transform: translateY(-50%);
+      }
+
+      &.en-link:before { background: image-url('en-flag.png'); }
+      &.es-link:before { background: image-url('es-flag.png'); }
+      &.kr-link:before { background: image-url('kr-flag.png'); }
+
+      &.en-link:before, &.es-link:before, &.kr-link:before {
+        background-position: -1px -1px;
+        background-size: 102%;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  
+  
+  
+  
+  .language-link .f-dropdown {
+    border: 2px solid $primary-color;
+    outline: none;
+  }
+}
+
+@media only screen and (min-width:1024px) {}
+
+@media only screen and (min-width:1140px) {}
+
+@media only screen and (min-width:1280px) {}
+
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {}

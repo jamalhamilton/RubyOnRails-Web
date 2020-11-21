@@ -1,0 +1,98 @@
+- if flash[:notice]
+  = render 'shared/success_notice'
+
+- content_for :title do
+  %title Highvolume Staffing | Joynus Staffing
+  %meta{:content => "Joynus handle volume in 4 critical components of Attendance, Training and Safety, No Drama, Transparency.", :name => "Description"}/
+  %meta{:content => "Staffing Services, temp service, staffing agencies, temp agencies", :name => "keywords"} 
+  %meta{:content => "/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :property => "og:image"}
+  %meta{:content => "Website", :property => "og:type"}
+  %meta{:content => "summary_large_image", :name => "twitter:card"}
+  %meta{:content => "https://www.joynus.com/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :name => "twitter:image"}
+  %link{:href => "https://www.joynus.com/staffing/highvolume", :rel => "canonical"}
+  
+%body
+  %section.no-spacing
+    .subpage-cover
+      = image_tag "HighVolume.png", :alt => "Highvolume"
+      .subpage-text
+        %h1{:style => "margin-left:3%"}
+          %b
+            = t('highvolume.highvolume')
+
+
+    .path
+      = active_link_to root_url do
+        .srvIco1
+          %i.icon-home
+      .srvIco11
+        %i.icon-right
+      %h5
+        = active_link_to t('header.services'), services_path
+      .srvIco11
+        %i.icon-right
+    
+      %h5
+        = active_link_to t('footer.staffing'), staffing_index_path
+        
+      .srvIco11
+        %i.icon-right
+      %h5
+        = t('footer.highvolume')
+  %section
+    .wrap
+
+      .pageleft
+        .row
+          .columns.large-12
+
+            %h2.text-center
+            %p
+              = t('highvolume.highvolume-p')  
+        %section
+          .row
+            .columns.large-12
+
+              %h5
+                %b
+                  = t('highvolume.attendence')
+
+              %p
+                = t('highvolume.attendence-p')
+
+              %h5
+                %b
+                  = t('highvolume.training')
+
+              %p
+                = t('highvolume.training-p1')
+              %p
+                = t('highvolume.training-p2')
+
+
+              %h5
+                %b
+                  = t('highvolume.nodrama')
+
+              %p
+                = t('highvolume.nodrama-p')
+              %h5
+                %b
+                  = t('highvolume.communication')
+              %p
+                = t('highvolume.communication-p')
+
+      .pageright
+        .row
+          .columns.large-10.large-offset-1
+            %h2.text-center.no-margin-top
+              %b= t 'contact.content-header'
+
+
+        .form-section.no-spacing.mb--
+          .row
+            .columns.large-10.large-offset-1
+              %fieldset.mb--
+                = render 'contact/form'
+
+

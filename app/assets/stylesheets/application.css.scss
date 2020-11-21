@@ -1,0 +1,63 @@
+
+
+/* Vendor */
+@import 'foundation_and_overrides';
+
+@import "animate.scss";
+@import "animation.scss";
+@import 'fontello-codes.scss';
+@import 'fontello-embedded.scss';
+@import 'fontello-ie7-codes.scss';
+@import 'fontello-ie7.scss';
+@import 'fontello.scss';
+/* Modules */
+@import 'modules/_mixins.scss';
+@import 'modules/_breadcrumbs.scss';
+@import 'modules/_buttons.scss';
+@import 'modules/_feature.scss';
+@import 'modules/_fonts.scss';
+@import 'modules/_footer.scss';
+@import 'modules/_forms.scss';
+@import 'modules/_general.scss';
+@import 'modules/_grid.scss';
+@import 'modules/_language_dropdown.scss';
+@import 'modules/_navbar.scss';
+@import 'modules/_mobile-nav.scss';
+@import 'modules/_sections.scss';
+@import 'modules/_spacing.scss';
+@import 'modules/_tables.scss';
+@import 'modules/_typography.scss';
+@import 'modules/_custom.scss';
+@import 'modules/_w3.scss';
+@import 'modules/_color.scss';
+@import 'modules/_slider.scss';
+/* Partials */
+@import 'partials/_about.scss';
+@import 'partials/_admin.scss';
+@import 'partials/_blog.scss';
+@import 'partials/_contact.scss';
+@import 'partials/_pagination.scss';
+@import 'partials/_employers.scss';
+@import 'partials/_home.scss';
+@import 'partials/_services.scss';
+@import 'partials/_staff.scss';
+@import 'partials/_podcast.scss';
+@import 'partials/_directhire.scss';
+@import 'partials/_rpo.scss';
+@import 'partials/_consultation.scss';
+@import 'partials/_specialization.scss';
+@import 'partials/_faq.scss';
+@import 'partials/_history.scss';
+@import 'partials/_career.scss';
+@import 'partials/_meettheteam.scss';
+@import 'partials/_uattend.scss';
+
+
+@import 'aos-2.1.1';
+@import 'ckeditor/contents';
+@import 'form_errors';
+@import 'image-picker';
+@import 'posts';
+@import 'cookiealert.css.scss';
+@import 'audioplayer.css.scss';
+@import "social-share-button";

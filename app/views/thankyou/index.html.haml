@@ -1,0 +1,106 @@
+- content_for :title do
+  %title Thank you | Joynus Staffing
+  
+  
+%body
+  %section.feature-section.no-spacing
+    .feature.animated.fadeIn
+      .feature-container
+        %img{ data: { interchange:"[#{asset_path('thankyou_main_s.png')}, (small)], [#{asset_path('thankyou_main_m.png')}, (medium)], [#{asset_path('thankyou_main.png')}, (large)]" } }
+        .feature-text{:style=>"bottom:28%"}
+          %h1.text-center.animated.fadeInDown{:style => "color:#333333"}
+            %b APPLICATION COMPLETE
+          %h2.m-top3{:style => "color:#333333"}
+            Thank you for applying!
+         
+          
+  
+   
+%section
+  .row
+    .columns.large-12.text-center
+      
+      %h2
+        What Happens Next?
+        
+  .row
+    .columns.large-2.large-push-1.hide-for-small-only.m-top-n
+      =image_tag "cloud.png", :class =>"img22"
+  
+  .row
+    .columns.large-12.text-center.m-top-n
+      %p  
+        Our team will review your application through a selective process.<br>
+      
+        One of our team members will reach you out shortly.<br>
+      
+        Please keep in mind that there are many applications.
+
+  .row.m-top4
+    .columns.large-12.text-center
+      =image_tag "pipe.png"
+  
+  .row.m-top4
+    .columns.large-10.large-push-1.text-center
+      %h2
+        How do I make myself standout?  
+    .columns.large-2.large-pull-1.show-for-large
+      =image_tag "sun.png"
+  
+  .row
+    .columns.large-8.large-push-3
+      %ol
+        %li 
+          Complete your profile including email, education, and work history.
+          <br>If you haven’t filled them out, click 
+          %a{:href=> "https://app.employstream.com/profile/#/joynus/login?signup=true", target:"_blank"}here
+          to complete.<br><br>
+        %li
+          Update your availability by clicking 
+          %a{:href=> "https://app.employstream.com/profile/#/joynus/login?signup=true", target:"_blank"}here.
+          <br><br>
+        %li
+          Our recruiter will reach out to you for next steps.
+
+
+  .row.m-top4
+    .columns.large-12.text-center
+      =image_tag "three lights.png"
+  
+  .row
+    .columns.large-12.text-center 
+      %h2 Follow Us
+      
+  .row.text-center
+    .columns.small-2.small-offset-2
+      %a{:href=>'https://facebook.com/joynusstaffing', target:"_blank"}
+        =image_tag "facebook.png" , class:'img-social'
+    .columns.small-2
+      %a{:href=> 'https://www.linkedin.com/company/joynus-staffing-inc-/', target:"_blank"}
+        =image_tag "linkedin.png" , class:'img-social'
+  
+    .columns.small-2
+      %a{:href=> 'https://twitter.com/joynusstaffing', target:"_blank"}
+        =image_tag "twitter.png" , class:'img-social'
+    .columns.small-2.small-pull-2
+      %a{:href=> 'https://www.youtube.com/channel/UCnVjLZydDtfaEsgEdI6NP3g', target:"_blank"}
+        =image_tag "youtube.png" , class:'img-social'
+  
+      
+  
+%section            
+  .row 
+    .columns.large-8.large-push-2
+      %h3.text-center
+        %b  Get the latest updates
+      
+
+      %script{:charset => "utf-8", :src => "//js.hsforms.net/forms/shell.js", :type => "text/javascript"}
+      :javascript
+        hbspt.forms.create({
+        	portalId: "6831067",
+        	formId: "047544cc-4dfc-4b04-bef8-f7f99bf8501b"
+        });note
+                        
+  
+  

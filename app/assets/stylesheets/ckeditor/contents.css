@@ -1,0 +1,9 @@
+/*
+
+This stylesheet is set as the external stylesheet for internal contents of CKEditor instances
+
+*/
+
+.cke_dialog_image_url .cke_dialog_ui_hbox_last, .cke_dialog_flash_url .cke_dialog_ui_hbox_last {
+  vertical-align: middle !important;
+}

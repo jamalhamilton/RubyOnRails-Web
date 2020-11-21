@@ -1,0 +1,139 @@
+- content_for :title do
+  
+  %link{:href => "https://www.joynus.com/about", :rel => "canonical"}
+  %title About Joynus | Joynus Staffing
+  %meta{:content => "Our core characteristics include goal crushing attitude, competence, real-time communication, steadfast commitment, a no excuses attitude, open and transparent policies.", :name => "Description"}
+  %meta{:content => "Staffing agency, Recruiting agency, Temp agency, Looking for job, Looking for Employee, Hire temp, hiring, recruiting, directhire", :name => "keywords"} 
+  %meta{:content => "/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :property => "og:image"}
+  %meta{:content => "Website", :property => "og:type"}
+  %meta{:content => "summary_large_image", :name => "twitter:card"}
+  %meta{:content => "https://www.joynus.com/assets/Logo_StackUp-209603de2620f5818742d56fbb0c67de.png", :name => "twitter:image"}
+  
+  
+%section.feature-section.no-spacing
+  .feature.animated.fadeIn
+    .feature-container
+      %img{ data: { interchange:"[#{asset_path('why-joynus_1_mobile.jpg')}, (small)], [#{asset_path('why-joynus_1_final.jpg')}, (medium)], [#{asset_path('why-joynus_1_final.jpg')}, (large)]" } }
+      .feature-text
+        %h1.text-center.animated.fadeInDown
+          %b
+            WHY WE DO <br>
+            WHAT WE DO
+        
+
+  .row#aboutpath
+    .columns.large-12
+      .path
+        = active_link_to root_url do
+          .srvIco1
+            %i.icon-home
+        %h5
+          = active_link_to t('header.home'), root_url
+            
+        .srvIco11
+          %i.icon-right  
+        %h5 
+          = t('footer.about')
+      
+
+%section
+  .row
+    .columns.xlarge-12
+      %p
+        =t ('about.whatwedo1')
+      %p
+        =t ('about.whatwedo2')
+%section      
+  .row
+    .columns.xlarge-12
+      %h2
+        %b
+          =t ('about.believe')
+      %p
+        =t ('about.believe-p')
+  
+%section#corevalue
+.wwdContent
+  .row
+    .columns.xlarge-12
+      %h2.text-center.-text.m-top3
+        %b
+          =t ('about.corevalue')
+      %p.text-center.m-bottom3
+        =t ('about.corevalue-p')
+  .row
+    .columns.xlarge-12
+      .columns.xlarge-6.boxx
+        .columns.xlarge-4
+        
+          = image_tag 'GoalCrush.png', :class => "img2"  
+        .columns.xlarge-8
+          %h5
+            %b
+              =t ('about.goal')
+              
+          %p 
+            =t ('about.goal-p')
+      .columns.xlarge-6.boxx
+        .columns.xlarge-4
+          
+          = image_tag 'Competence.png', :class => "img2"
+        .columns.xlarge-8
+          %h5
+            %b
+              =t ('about.compete')
+          
+          %p 
+            =t ('about.compete-p')
+  .row.m-top5
+    .columns.xlarge-12
+      .columns.xlarge-6.boxx
+        .columns.xlarge-4
+          
+          = image_tag 'Communication.png', :class => "img2 "
+        .columns.xlarge-8
+          %h5
+            %b
+              =t ('about.communication')
+          %p 
+            =t ('about.communication-p')
+      
+      .columns.xlarge-6.boxx
+        .columns.xlarge-4
+          = image_tag 'Commitment.png', :class => "img2 "
+          
+        .columns.xlarge-8
+          %h5
+            %b
+              =t ('about.commitment')
+                
+          %p
+            =t ('about.commitment-p')
+  
+    .columns.xlarge-12
+      .columns.xlarge-6.boxx
+        .columns.xlarge-4
+          = image_tag 'NoExcuse.png', :class => "img2"
+          
+        .columns.xlarge-8
+          %h5
+            %b
+              =t ('about.excuse')
+          %p 
+            =t ('about.excuse-p')
+        
+      .columns.xlarge-6.boxx  
+        .columns.xlarge-4
+          = image_tag 'Openness.png', :class => "img2"
+          
+        .columns.xlarge-8
+          %h5
+            %b
+              =t ('about.open')
+              
+           
+          %p 
+            =t ('about.open-p')
+           
+  
+

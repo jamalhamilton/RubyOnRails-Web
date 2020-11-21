@@ -1,0 +1,178 @@
+- if flash[:notice]
+  = render 'shared/success_notice'
+- content_for :title do
+  
+  %title  Latest News On Your Career | Joynus Staffing.
+  %meta{:content => "Get the latest industry scoop and informative knowledge.", :name => "Description"}
+  %link{:href => "https://www.joynus.com/podcasts", :rel => "canonical"}
+  %script{:crossorigin => "anonymous", :integrity => "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo", :src => "https://code.jquery.com/jquery-3.3.1.slim.min.js"}
+  :javascript
+    $(function() {
+    	$('audio').audioPlayer();
+    });
+
+%section.no-spacing
+  .pagecover-podcast
+    .row.m-mobile
+      .columns.large-5
+        .columns.large-12
+          %h1
+            %b
+              Career Daily
+          %p
+            Need latest news on your career? Looking for advices? You found us! Andy Moore, the host of Career Dailey, delivers you the most...
+    
+      .columns.large-7.m-top3
+        .columns.large-2.show-for-xlarge-up.m-top3
+          =image_tag "podcast-profile.png", :class=>"banner-pod-image"
+        .columns.large-10.m-top3
+          = active_link_to podcast_path(@most_recent_podcast) do
+            %h3
+              %b
+                =t('podcast.banner-episode')
+                = @most_recent_podcast.id
+                &nbsp;
+                = truncate(@most_recent_podcast.episode_title, :length => 90)
+            
+          %p{:style=>"color:black"}
+            = truncate(@most_recent_podcast.episode_summary, :length => 90)
+            %a
+              %b
+                =link_to 'Learn More', @most_recent_podcast, style:"color:#01144d;"
+            %audio{:controls => ""}
+              %source{:src =>@most_recent_podcast.episode_audio_url}, :type => "audio/mp3"}
+            .columns.large-6{:style=>"float:right; padding:0"}
+              %a{:href => "https://open.spotify.com/show/7gUxgSCrqFBeRJSITtPeCp", target:"_blank"}
+                =image_tag "Spotify_Icon_RGB_Green.png", :class=>"podcast-image"
+        
+              %a{:href => "https://podcasts.apple.com/us/podcast/career-daily/id1506283238", target:"_blank"}
+                =image_tag "Apple_Podcast_Icon.png", :class=>"podcast-image"
+      
+
+
+  
+  .row.m-top3
+    .columns.large-12
+      %h2.text-center
+        %b
+          Latest Episodes
+  .division-wrap
+    .division-left  
+      - @next_three_most_recent_podcasts.each do |podcast|
+        .row.m-top5
+          .columns.medium-12
+            .border-iframe  
+              .row
+                
+                .columns.xlarge-3.show-for-xlarge-up
+                  =image_tag "logo_highratio.jpg", :class=>"pod-img"
+                .columns.xlarge-9.xxlarge-9
+                  = active_link_to podcast_path(podcast) do
+                    %h4
+                      %b
+                        =t('podcast.banner-episode')
+                        = podcast.id
+                        &nbsp;
+                        = truncate(podcast.episode_title, :length=>60)
+                  %audio{:controls => "", :preload => "auto"}
+                    %source{:src => podcast.episode_audio_url}
+                  %p
+                    = truncate(podcast.episode_summary, :length=>220)
+                    %a
+                      %b
+                        =link_to 'Learn More', podcast, style:"color:#01144d;"
+                        
+                
+    .division-right.m-top5.show-for-xxlarge-up
+      .side-navigation
+        %h4
+          %b  FOLLOW US!
+        %p
+          Get notified about updates and be the first to get early access to the new and smarter way to listen to podcasts.
+        
+        %a{:href => "https://podcasts.apple.com/us/podcast/career-daily/id1506283238", target:"_blank"}
+          =image_tag "listen_itunes.jpg"
+        
+        %a{:href => "https://open.spotify.com/show/7gUxgSCrqFBeRJSITtPeCp", target:"_blank"}
+          =image_tag "listen_spotify.jpg"  
+  
+
+/Guest && Host section            
+/
+  %section.m-top3 
+  .row.text-center
+    .columns.large-12
+      %h2
+        %b
+          Our Host and Latest Guests
+      
+      %h4
+        We invite these experts to win your journey in your career.
+  
+  .row.m-top4{:style=>"padding: 0 5%;"}
+    .columns.large-4.text-center.medium-6
+      
+        
+      =image_tag "img_avatar.png", class:"img-podcast", alt:"img_avatar"  
+      
+      %h3.m-top3
+        %b  Andy Moore
+      %h4.m-top3
+        Designer
+      %p.m-top3
+        Other half of the Podcaster Podcast. Loves exploring the career journey with experts
+          
+    .columns.large-4.text-center.medium-6
+      
+      =image_tag "img_avatar.png", class:"img-podcast", alt:"img_avatar"
+      
+      %h3.m-top3
+        %b  Andy Boore
+      %h4.m-top3
+        Marketer
+      %p.m-top3
+        Other half of the Podcaster Podcast. Loves exploring the career journey with experts
+    .columns.large-4.text-center.medium-6
+      
+      =image_tag "img_avatar.png", class:"img-podcast", alt:"img_avatar"  
+      %h3.m-top3
+        %b  Andy Coore
+      %h4.m-top3
+        Journalist
+      %p.m-top3
+        Other half of the Podcaster Podcast. Loves exploring the career journey with experts
+
+%section#podcast_list
+  
+  =render 'podcasts_list'
+   
+  
+  
+%section.no-spacing
+  .subscribe-content.m-top3
+    .row
+      .columns.large-5
+        %h3
+          %b Stay ahead of your game.
+          
+        %p
+          Get notified about updates and be the first to get early access to the new and smarter way to listen to podcasts.
+      .columns.large-6
+        %script{:charset => "utf-8", :src => "//js.hsforms.net/forms/shell.js", :type => "text/javascript"}
+        :javascript
+          hbspt.forms.create({
+          	portalId: "6831067",
+          	formId: "0fe5b610-c8d1-4ced-8011-e69768702e59"
+          });
+  
+%script#dsq-count-scr{:async => "", :src => "//joynus.disqus.com/count.js"}
+
+  
+
+
+
+
+
+
+
+  

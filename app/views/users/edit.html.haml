@@ -1,0 +1,19 @@
+- if flash[:alert]
+  = render 'shared/error_notice'
+
+- if current_user.admin?
+  .row
+    .columns.large-10.large-offset-1
+      .breadcrumb
+        = link_to users_path do
+          %i.icon-left-open
+          Users
+
+.row
+  .columns.large-10.large-offset-1
+    %fieldset
+      = form_for @user do |form|
+        = render form
+        = form.submit 'Save User', class: 'button small no-margin right submit radius'
+        - if current_user.id != @user.id
+          = link_to 'Delete User', user_path(@user), class: 'button small right radius no-hover', action: 'destroy', method: :delete, data: { confirm: 'Are you sure?' }

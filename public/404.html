@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html ng-app='Joynus'>
+  <head>
+    
+    <meta charset='utf-8'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"2f4e5e1d72","applicationID":"6334556","transactionName":"IVZfEkEMVQ9VShZABxBPWAVWEBYCRUxWXg0WUEcD","queueTime":0,"applicationTime":228,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <link href="/assets/application.css?body=1" media="all" rel="stylesheet" />
+    <link href="/assets/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    
+    <meta content="authenticity_token" name="csrf-param" />
+    <meta content="AMx1LE3HZR98Tl3oLr4hMj5nGvo3tb76D4pfGNeDChQ=" name="csrf-token" />
+  </head>
+  <body class=' services automotive'>
+    <header>
+      <nav role='navigation'>
+        <div class='navbar-container'>
+          <div class='navbar-header'>
+            <a class='img-logo' href='/'></a>
+          </div>
+          <ul class='menu'>
+            <div class='hide-for-large-up'></div>
+            <li class='menu-item'><a href="https://d57bdbf5491b40c18abe008c0c8dce07.vfs.cloud9.us-east-1.amazonaws.com/">Home</a></li>
+            <li class='menu-item'><a href="/about">About</a></li>
+            <!-- %li.menu-item= active_link_to t('header.employers'), employers_path -->
+            <li class='menu-item'><a class="active" href="/services">Services</a></li>
+            <li class='menu-item'><a href="/news">News</a></li>
+            <li class='menu-item'><a href="/contact">Contact</a></li>
+            <li class='menu-item'><a class="button primary radius" href="https://app.employstream.com/jobs/joynus/search/" target="_blank">Jobs</a></li>
+            <li class='menu-item'><a class="button secondary radius" href="https://app.employstream.com/profile/#/joynus/login?signup=true" target="_blank">Apply</a></li>
+            
+            <div class='menu-footer'>
+              <ul class='inline-list social-icons'>
+                <li>
+                  <a class='fa fa-facebook' href='https://facebook.com/joynusstaffing'></a>
+                </li>
+                <li>
+                  <a class='fa fa-twitter' href='https://twitter.com/joynusstaffing'></a>
+                </li>
+                <li>
+                  <a class='fa fa-linkedin' href='https://www.linkedin.com/company/3499330?trk=vsrp_jobs_res_name&amp;trkInfo=VSRPsearchId%3A2080338161420490145807%2CVSRPtargetId%3A38262556%2CVSRPcmpt%3Aprimary'></a>
+                </li>
+              </ul>
+              <div class='copyright'>
+                <small>&#169; Joynus Staffing 2019.</small>
+              </div>
+            </div>
+          </ul>
+          
+        </div>
+      </nav>
+    </header>
+    <main id='services' role='main'>
+      <head>
+        <title>Joynus | Staffing & Recruiting Solution</title>
+        
+        <link href="/assets/industry.css?body=1" media="all" rel="stylesheet" />
+        
+       
+        
+      </head>
+      <body>
+     <div class="errorsection">
+  <h1 class="error">404</h1>
+  <div class="errorpage">Ooops!!! The page you are looking for is not found</div>
+  <p>You may have mistyped the address or the page may have moved.</p>
+  <a class="back-home" href="/">Back to home</a>
+</div>
+        
+      </body>  
+    
+    </main>
+        
+
+
+
+
+
+
+    <div id='pusher'></div>
+    <footer>
+      <div class='row'>
+        <div class='columns xlarge-3'>
+          <h3>
+            <b>
+              <a href='/services'>SERVICES</a>
+            </b>
+          </h3>
+          <ul class='links'>
+            <li>
+              <a href='/staffing'>Staffing</a>
+            </li>
+            <li>
+              <a href='/directhire'>Direct Hire</a>
+            </li>
+            <li>
+              <a href='/rpo'>RPO</a>
+            </li>
+            <li style='margin-bottom:30px'>
+              <a href='/consultation'>Consultation</a>
+            </li>
+          </ul>
+          <h3>
+            <b>
+              <a href='/staffing'>STAFFING</a>
+            </b>
+          </h3>
+          <ul class='links'>
+            <li>
+              <a href='/staffing/onsite'>On-Site Management</a>
+            </li>
+            <li style='margin-bottom:45px'>
+              <a href='/staffing/highvolume'>High Volume</a>
+            </li>
+          </ul>
+        </div>
+        <div class='columns xlarge-3'>
+          <h3>
+            <b>
+              <a href='/services'>SPECIALIZATION</a>
+            </b>
+          </h3>
+          <ul class='links'>
+            <li>
+              <a href='/services/automotive'>Automotive</a>
+            </li>
+            <li>
+              <a href='/services/accounting'>Accounting & Finance</a>
+            </li>
+            <li>
+              <a href='/services/healthcare'>Healthcare</a>
+            </li>
+            <li>
+              <a href='/services/manufacturing'>Manufacturing</a>
+            </li>
+            <li>
+              <a href='/services/office'>Office & Administrative</a>
+            </li>
+            <li style='margin-bottom:30px'>
+              <a href='/services/it'>Information Technology</a>
+            </li>
+          </ul>
+        </div>
+        <div class='columns xlarge-3'>
+          <h3>
+            <b>
+              <a href='/about'>ABOUT</a>
+            </b>
+          </h3>
+          <ul class='links'>
+            <li style='margin-bottom:30px'>
+              <a href='/about#corevalue'>Core Value</a>
+            </li>
+          </ul>
+          <h3 style='margin-bottom:45px'>
+            <b>
+              <a href='/news'>NEWS</a>
+            </b>
+          </h3>
+        </div>
+        <div class='columns xlarge-3'>
+          <h3>
+            <b>
+              <a href='/contact'>Contact</a>
+            </b>
+          </h3>
+          <p>
+            contact@joynus.com<br>
+            (888) 338-7832
+          </p>
+          <div class='button-container'>
+            <a class="button secondary radius small" href="/contact">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='colums large-12'>
+          <hr>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='columns large-5 large-push-7'>
+          <div class='social-icons-container'>
+            <ul class='inline-list social-icons'>
+              <li>
+                <a class='fa fa-facebook' href='https://facebook.com/joynusstaffing' target='_blank'></a>
+              </li>
+              <li>
+                <a class='fa fa-twitter' href='https://twitter.com/joynusstaffing' target='_blank'></a>
+              </li>
+              <li>
+                <a class='fa fa-linkedin' href='https://www.linkedin.com/company/3499330?trk=vsrp_jobs_res_name&amp;trkInfo=VSRPsearchId%3A2080338161420490145807%2CVSRPtargetId%3A38262556%2CVSRPcmpt%3Aprimary' target='_blank'></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class='columns large-7 large-pull-5'>
+          <small>&#169; Joynus 2019. All Rights Reserved.</small>
+        </div>
+      </div>
+    </footer>
+<style>
+
+
+
+
+.errorsection{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #E7FFFF;
+  padding: 4rem 2rem;
+}
+
+.errorsection .error{
+  font-size: 150px;
+  color: #5ECBEE;
+  text-shadow: 
+    1px 1px 1px #16a1d0,    
+    2px 2px 1px #16a1d0,
+    3px 3px 1px #16a1d0,
+    4px 4px 1px #16a1d0,
+    5px 5px 1px #16a1d0,
+    6px 6px 1px #16a1d0,
+    7px 7px 1px #16a1d0,
+    8px 8px 1px #16a1d0,
+    25px 25px 8px rgba(0,0,0, 0.2);
+}
+
+.errorpage{
+  margin: 2rem 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #444;
+}
+
+.back-home{
+  display: inline-block;
+  border: 2px solid #222;
+  color: #222;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.75rem 1rem 0.6rem;
+  transition: all 0.2s linear;
+  box-shadow: 0 3px 8px rgba(0,0,0, 0.3);
+}
+.back-home:hover{
+  background: #222;
+  color: #ddd;
+}
+a { 
+  
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color:#16a1d0;
+}
+.container {
+  margin: 5% auto;
+  max-width: 650px;
+  min-width: 200px;
+}
+.errorbox hr {
+  diplay: block;
+  border: none;
+  border-bottom: 1px dashed #ccc;
+}
+.errorbox {
+  margin-top: 100px;
+  background-color: #fbfbfb;
+  border: 1px solid #AAA;
+  border-bottom: 1px solid #888;
+  border-radius: 3px;
+  color: black;
+  box-shadow: 0px 2px 2px #AAA;
+  padding: 20px;
+}
+.errorbox h1, .errorbox h2 {
+  display: block;
+  text-align: center;
+}
+.errorbox h1 {
+  color: #666;
+  font-weight: normal;
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  line-height:50px
+}
+.errorbox h2 {
+  color: #666;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+.errorbox p {
+  display: block;
+  margin-bottom: 10px;
+}
+.errorbox ul li {
+  margin-bottom: 7px;
+}
+
+/**** Copyright Information ****/
+.copyright {
+  display: block;
+  text-align: center;
+  color: #999;
+  font-weight: normal;
+  margin-top: 20px;
+}
+  
+</style>
+
+    
+  
+</html>

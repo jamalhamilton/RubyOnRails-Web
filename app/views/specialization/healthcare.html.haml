@@ -1,0 +1,217 @@
+- if flash[:notice]
+  = render 'shared/success_notice'
+
+-content_for :title do
+  %link{:href => "https://www.joynus.com/specialization/healthcare", :rel => "canonical"}
+  %title Healthcare | Joynus Staffing
+  %meta{:content => "Joynus chooses Healthcare candidates through credential, experience and attitude toward excellence.", :name => "Description"}/
+  %meta{:content => "Staffing Healthcare, Healthcare Service, Looking for nurse, Looking for caregiver", :name => "keywords"}
+
+  
+%body
+
+  %section
+    
+    .row.spec-font#spec-banner
+      .columns.large-12.text-center
+        %h1
+          %b
+            = t('healthcare.banner')
+      
+    
+
+  .columns.large-12.m-bottom3
+
+
+    .path
+      = active_link_to root_url do
+        .srvIco1
+          %i.icon-home
+      %h5
+        = active_link_to t('header.home'), root_url
+      .srvIco11
+        %i.icon-right  
+      %h5
+        = t('header.specialization')
+      .srvIco11
+        %i.icon-right
+      %h5 
+        =t('footer.healthcare')
+  %svg.spec.m-top-n1#clouds{:height => "50", :preserveaspectratio => "none", :version => "1.1", :viewbox => "0 0 50 50", :width => "100%", :xmlns => "http://www.w3.org/2000/svg"}
+    %path{:d => "M-5 50 Q 0 20 5 50 Z\n         M0 50 Q 5 0 10 50\n         M5 50 Q 10 30 15 50\n         M10 50 Q 15 10 20 50\n         M15 50 Q 20 30 25 50\n         M20 50 Q 25 -10 30 50\n         M25 50 Q 30 10 35 50\n         M30 50 Q 35 30 40 50\n         M35 50 Q 40 10 45 50\n         M40 50 Q 45 50 50 50\n         M45 50 Q 50 20 55 50\n         M50 50 Q 55 40 60 50\n         M55 50 Q 60 60 65 50\n         M60 50 Q 65 50 70 50\n         M65 50 Q 70 20 75 50\n         M70 50 Q 75 45 80 50\n         M75 50 Q 80 30 85 50\n         M80 50 Q 85 20 90 50\n         M85 50 Q 90 50 95 50\n         M90 50 Q 95 25 50 50\n         M95 50 Q 50 15 105 50 Z"}
+  %section.m-top-n{:style=>"background:linear-gradient(#f9f9f9, #ffffff);"}
+    .row
+      .columns.large-12
+        %h3.text-center
+          %b
+            = t('healthcare.patient-center')
+      .columns.large-10.large-push-1.text-center
+        %p.m-top3
+          = t('healthcare.patient-center-p')
+    .row
+      .columns.large-2.large-offset-2.small-6.text-center
+        =image_tag "healthcare_patient-cared_1.png", class:"img-healthcare", alt:"healthcare_patient-cared_1"
+      .columns.large-2.small-6.text-center
+        =image_tag "healthcare_patient-cared_2.png", class:"img-healthcare", alt:"healthcare_patient-cared_2"
+      .columns.large-2.small-6.text-center
+        =image_tag "healthcare_patient-cared_3.png", class:"img-healthcare", alt:"healthcare_patient-cared_3"
+      .columns.large-2.small-6.text-center
+        =image_tag "healthcare_patient-cared_4.png", class:"img-healthcare", alt:"healthcare_patient-cared_4"
+  
+  
+    
+    .row.m-top3
+      .box-specialization
+        .columns.large-5.text-center
+          =image_tag 'healthcare_acuity-based staffing.png', :class=>"img-story", :alt=>"healthcare_acuity-based-staffing"
+        .columns.large-7.spec-font
+          %h3.m-top3
+            %b
+              = t('healthcare.acuity-based')
+          
+          %p.m-top3
+            = t('healthcare.acuity-based-p')
+          
+    .row.m-top3
+      
+      .box-specialization
+        .columns.large-5.large-push-7.text-center
+          =image_tag 'healthcare_hospital and institution.png', :class=>"img-story", :alt=>"healthcare_hospital-and-institution"
+        .columns.large-7.large-pull-4.spec-font
+          %h3
+            %b
+              = t('healthcare.hospital')
+          
+          %p.m-top3
+            = t('healthcare.hospital-p') 
+    
+    .row.m-top3
+      .box-specialization2
+        .columns.large-5.text-center
+          =image_tag 'healthcare_geriatic care.png', :class=>"img-story", :alt=>"healthcare_geriatic-care"
+        .columns.large-7.spec-font
+          %h3
+            %b
+              = t('healthcare.geriatric')
+
+          
+          %p.m-top3
+            = t('healthcare.geriatric-p1')
+            
+          %ul
+            %li
+              = t('healthcare.geriatric-list1')
+            %li
+              = t('healthcare.geriatric-list2')
+            %li
+              = t('healthcare.geriatric-list3')
+            %li
+              = t('healthcare.geriatric-list4')
+            %li
+              = t('healthcare.geriatric-list5')
+            %li
+              = t('healthcare.geriatric-list6')
+            %li
+              = t('healthcare.geriatric-list7')
+          %p  
+            = t('healthcare.geriatric-p2')
+          
+    
+    
+  %section#fivefocus
+    .row
+      .columns.large-12.text-center
+        %h3.text-center
+          %strong
+            = t('healthcare.topfocus')
+    
+    .row.spec-font
+      .columns.small-4.text-center
+        =image_tag "data driven icon.png", class: "img-healthcare2"
+        %p.m-top4
+          %b
+            = t('healthcare.focus1')
+        
+      .columns.small-4.text-center
+        =image_tag "integrity assessment icon.png", class: "img-healthcare2"
+        %p.m-top4
+          %b
+            = t('healthcare.focus2')
+      .columns.small-4.text-center
+        =image_tag "geriatic care icon.png", class: "img-healthcare2"  
+        %p.m-top4
+          %b
+            = t('healthcare.focus3')
+    
+  %section
+    .wwd-spec-healthcare
+      .row
+        .columns.large-12.text-center.m-top3
+          %h3
+            %b
+              = t('healthcare.healthcare')
+          
+          %p
+            = t('healthcare.healthcare-p1')
+            <br>
+            = t('healthcare.healthcare-p2')
+            %b{:style=>"font-size:120%;"}
+              = t('healthcare.healthcare-p3')
+            
+  
+  %section      
+    .row.text-center
+      .colunms.large-10.large-offset-1.text-center.spec-font
+        
+        %h3
+          %strong
+            = t('healthcare.role')
+    .row
+
+      .columns.large-12.boxx
+        .columns.large-4.small-12
+          = image_tag 'roles we staff icon.png', :alt => 'Healthcare Roles', :class => "img-healthcare-role"     
+        
+        .columns.large-4.small-6
+          .spec-padding
+            %ul.spec-role
+              %li
+                = t('healthcare.role-1')
+              %li
+                = t('healthcare.role-2')
+              %li
+                = t('healthcare.role-3')
+              %li
+                = t('healthcare.role-4')
+              %li
+                = t('healthcare.role-5')
+              %li
+                = t('healthcare.role-6')
+              %li
+                = t('healthcare.role-7')
+              
+                
+        .columns.large-4.small-6
+          .spec-padding
+            %ul.spec-role
+              %li
+                = t('healthcare.role-8')
+              %li
+                = t('healthcare.role-9')
+              %li
+                = t('healthcare.role-10')
+              %li
+                = t('healthcare.role-11')
+              %li
+                = t('healthcare.role-12')
+              %li
+                = t('healthcare.role-13')
+              %li
+                = t('healthcare.role-14')
+
+
+
+      
+
+
+

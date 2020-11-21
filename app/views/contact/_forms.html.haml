@@ -1,0 +1,92 @@
+= form_tag(send_mail_path) do |f|
+  = invisible_captcha
+  
+  
+  .row
+    .columns.xlarge-6
+      = text_field_tag 'first_name', nil, 'required' => '', placeholder: t('contact-form.first-name')
+  
+    .columns.xlarge-6
+      = text_field_tag 'last_name', nil, 'required' => '', placeholder: t('contact-form.last-name')
+
+  .row
+    .columns.xlarge-12
+      = email_field_tag 'email', nil, 'required' => '', placeholder: t('contact-form.email')
+  .row
+    .columns.xlarge-12
+      = text_field_tag 'phone', nil, 'required' => '', placeholder: t('contact-form.phone')
+  
+  .row
+    .columns.xlarge-12
+      = text_field_tag 'company', nil, 'required'=>'', placeholder: t('contact-form.company_R')
+  .row
+    .columns.xlarge-12
+      = text_field_tag 'website', nil, 'required'=>'', placeholder: t('contact-form.website')
+    
+  .row    
+    .columns.xlarge-12
+      = text_field_tag 'jobtitle', nil, 'required'=>'', placeholder: t('contact-form.jobtitle')
+  .row
+    .columns.xlarge-12
+      = text_area_tag 'jobdescription', nil, 'required'=>'', placeholder: t('contact-form.jobdescription') , rows:5 
+  .row
+    .columns.xlarge-12
+      = text_field_tag 'skillsneeded', nil,  placeholder: t('contact-form.skillsneeded')
+  .row
+    .columns.large-6
+      = label_tag do
+        = check_box_tag 'typeofservice', t("contact-form.temporary"), false,{:onclick => "myFunction()"} 
+        = t("contact-form.temporary")
+  
+    .columns.large-6
+      = label_tag do
+        = check_box_tag 'typeofservice', t("contact-form.temporarytohire"), false,{:onclick => "myFunction()"} 
+        = t("contact-form.temporarytohire")
+  .row
+    .columns.large-6
+      = label_tag do
+        = check_box_tag 'typeofservice', t("contact-form.directhire"), false
+        = t("contact-form.directhire")
+  
+    .columns.large-6
+      = label_tag do
+        = check_box_tag 'typeofservice', t("contact-form.outsourcing")  , false
+        = t("contact-form.outsourcing")  
+  .row
+    .columns.large-6
+      = label_tag do
+        = check_box_tag 'typeofservice', t("contact-form.notsure") , false
+        = t("contact-form.notsure")     
+   
+  .row
+    .columns.large-12
+      #size{:style => "display:none;"}
+        = text_field_tag 'companysize', nil,  placeholder: t('contact-form.companysize')
+  .row  
+    .columns.xlarge-12
+      = text_field_tag 'payrate', nil, placeholder: t('contact-form.payrate')
+  .row  
+    .columns.xlarge-12
+      = text_field_tag 'hoursperweek', nil,  placeholder: t('contact-form.hoursperweek')
+  
+  .row
+    .columns.xlarge-12
+      = submit_tag t('contact-form.button'), class: 'button secondary submit small radius no-margin right', 'disabled' => ''
+
+:javascript
+  function myFunction() {
+  var x = document.getElementById("size");
+  if (x.style.display === "none") {
+  x.style.display = "block";
+  } else {
+  x.style.display = "none";
+  }
+  }
+
+/
+  .row
+    .columns.xlarge-12
+      - if I18n.locale == :en
+        = select_tag 'resource', options_for_select(Contact::RESOURCES_E, ''), exclude_blank: t('contact-form.resource')
+      - if I18n.locale == :kr
+        = select_tag 'resource', options_for_select(Contact::RESOURCES_K, ''), include_blank: t('contact-form.resource')  

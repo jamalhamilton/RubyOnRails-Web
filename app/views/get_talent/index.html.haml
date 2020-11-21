@@ -1,0 +1,40 @@
+- if flash[:notice]
+  = render 'shared/success_notice'
+
+
+-content_for :title do
+  %title Get Talent | Joynus Staffing
+  %meta{:content => "Always render more and better service than is expected of you, no matter what your task may be.", :name => "Description"}
+  %meta{:content => "Staffing agency, Recruiting agency, Temp agency, Looking for job, Looking for Employee, Hire temp, hiring, recruiting, directhire", :name => "keywords"} 
+  %link{:href => "https://www.joynus.com/get-talent", :rel => "canonical"}
+  
+  
+%section
+
+%section
+  .row
+    .columns.xlarge-12
+    
+      %h1.text-center{:style => "font-size: 230%;"}
+        %b
+          = t('request.request')
+      %p
+        = t('request.request-p')
+  .row.m-top3
+    .columns.xlarge-7
+      .video-responsive
+        %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "400", :src => "https://www.youtube.com/embed/wYHrMM1_4f0?rel=0", :width => "97%" }
+
+      
+      
+    .columns.xlarge-5
+      .form-section.no-spacing.mb--
+        .mb--
+          /[if lte IE 8]
+            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+          %script{:charset => "utf-8", :src => "//js.hsforms.net/forms/v2.js", :type => "text/javascript"}
+          :javascript
+            hbspt.forms.create({
+            	portalId: "6831067",
+            	formId: "d98200ed-0186-41cb-857d-817841d30d3b"
+            });
